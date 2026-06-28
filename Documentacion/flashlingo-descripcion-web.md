@@ -8,7 +8,8 @@ pagina web, landing page, ficha de producto o material de Play Store.
 FlashLingo es una app Android de flashcards para estudiar vocabulario con
 repeticion espaciada. Importa mazos `.flashjp`, funciona de forma local-first,
 guarda el progreso en el dispositivo y ofrece estadisticas detalladas,
-exportaciones CSV/PDF, modo escritura y configuracion avanzada por mazo.
+exportaciones CSV/PDF, backup manual de progreso por mazo, modo escritura y
+configuracion avanzada por mazo.
 
 ## Propuesta De Valor
 
@@ -39,8 +40,9 @@ Mensajes principales para web:
 - Plataforma principal: Android.
 - Distribucion prevista: Play Store.
 - App id: `com.flashlingo.app`.
-- Idiomas de interfaz activos en v1: ingles y espanol.
-- Datos: locales en el dispositivo mediante Isar.
+- Idiomas de interfaz activos en v1: ingles, espanol, rumano, aleman, frances,
+  japones y chino.
+- Datos: locales en el dispositivo mediante Isar Community.
 - No hay cuentas.
 - No hay nube ni sincronizacion.
 - No hay descargas remotas de mazos desde la app en el scope actual.
@@ -51,13 +53,14 @@ Mensajes principales para web:
 
 1. El usuario abre la app.
 2. La app muestra una bienvenida y ofrece un tour guiado.
-3. El usuario importa un mazo `.flashjp` o `.zip`.
+3. El usuario importa un mazo oficial `.flashjp` o restaura un backup
+   `.flashjp` de usuario.
 4. La app analiza el paquete, muestra progreso de importacion y presenta un
    resumen.
 5. El usuario estudia tarjetas del mazo.
 6. La app guarda respuestas, tiempos, sesiones y programacion SRS.
 7. El usuario revisa estadisticas, detecta tarjetas problematicas y exporta
-   reportes si lo necesita.
+   reportes o un backup de progreso si lo necesita.
 
 ## Home Y Gestion De Mazos
 
@@ -75,6 +78,7 @@ Acciones por mazo:
 - abrir configuracion del mazo
 - navegar tarjetas
 - abrir estadisticas
+- exportar progreso del mazo
 - traer repasos futuros a hoy
 - renombrar
 - eliminar
@@ -87,9 +91,15 @@ diarias y despues limpia media sin referencias.
 FlashLingo acepta archivos:
 
 - `.flashjp`
-- `.zip`
 
-Internamente son ZIP con:
+Hay dos perfiles `.flashjp` aceptados:
+
+- paquete oficial cifrado con AES-256-GCM y firmado con Ed25519
+- backup de usuario generado por la app con `flashlingo_user_backup_v1`
+
+El paquete oficial no es un ZIP plano. El formato generado actual es v3 por
+chunks; v2 queda como compatibilidad para mazos antiguos. Despues de
+verificarlo y descifrarlo a un archivo temporal, contiene un ZIP interno con:
 
 - `manifest.json`
 - base SQLite referenciada por `db_filename`
@@ -97,20 +107,28 @@ Internamente son ZIP con:
 
 La importacion soporta:
 
+- seleccion desde el file picker del sistema sin permisos amplios de
+  almacenamiento; el archivo elegido se copia a cache propia antes de leerlo
 - paquetes planos
 - paquetes envueltos en un unico directorio raiz
 - preview antes de importar
+- preview e importacion de mazos grandes sin descartar el estado del importador
+  durante descifrados prolongados
 - barra de progreso por fase
 - deteccion de conflictos de nombre
 - resumen final de tarjetas, settings, media y diagnosticos
 - actualizacion de mazos existentes sin resetear progreso
+- preview e importacion diferenciada de backups de usuario
 
 ### Conflictos De Nombre
 
-Si el `pack_name` ya existe, el usuario puede:
+Si el `pack_name` de un paquete oficial ya existe, el usuario puede:
 
 - actualizar el mazo existente
 - crear un nuevo mazo con otro nombre
+
+Si el backup de usuario corresponde a un mazo que ya existe, la app pregunta
+siempre si restaurar encima o crear una copia.
 
 El nombre `FlashLingo` esta reservado para el mazo de inicio del tour, por lo
 que un paquete normal con ese nombre debe guardarse con otro nombre.
@@ -259,6 +277,7 @@ Cada mazo tiene configuracion independiente:
 - nuevas por dia
 - max reviews por dia
 - ocultar nuevas cuando hay overflow de reviews
+- recordatorios de estudio por mazo
 - hora/minuto de inicio del dia de estudio
 - orden de estudio:
   - nuevas primero
@@ -313,9 +332,41 @@ Al deshacer, la app revierte:
 - repeticion reinsertada en la cola si existia
 - estadisticas diarias afectadas
 
+## Recordatorios De Estudio
+
+FlashLingo programa recordatorios de estudio locales por mazo, sin servidor ni
+notificaciones push remotas. Se activan y ajustan desde la configuracion de cada
+mazo:
+
+- activar o desactivar recordatorios por mazo (`study_reminders_enabled`)
+- intervalo minimo entre recordatorios en horas
+  (`study_reminder_interval_hours`, rango `1..168`)
+
+Comportamiento:
+
+- Solo se notifica cuando el mazo tiene tarjetas pendientes ese dia de estudio;
+  si no quedan pendientes, no se envia recordatorio.
+- Ademas del recordatorio periodico, hay avisos de cierre de dia que recuerdan
+  terminar las tarjetas pendientes antes de que termine el dia.
+- La notificacion muestra el icono del mazo y un mensaje localizado; al tocarla
+  abre directamente ese mazo.
+- Los textos de notificacion estan localizados en los siete idiomas de la app.
+- Hay un boton de vista previa para probar la notificacion del mazo.
+- Tras reiniciar el dispositivo, un receptor de arranque reprograma los
+  recordatorios pendientes.
+
+Detalles tecnicos:
+
+- En Android 13+ la app solicita el permiso runtime `POST_NOTIFICATIONS`.
+- Usa `RECEIVE_BOOT_COMPLETED` para reprogramar tras reinicio.
+- La programacion usa `AlarmManager` con alarmas inexactas, por lo que no
+  requiere permiso de alarmas exactas.
+- El puente nativo vive en `StudyReminderScheduler` (`com.flashlingo.app`) y se
+  comunica con Dart por un method channel desde `lib/features/notifications`.
+
 ## Persistencia Local
 
-La app usa Isar para datos locales.
+La app usa Isar Community para datos locales.
 
 Modelos principales:
 
@@ -410,6 +461,18 @@ El PDF incluye:
 
 El PDF usa fuentes embebidas para soportar texto multilingue.
 
+### Backup `.flashjp`
+
+La exportacion de progreso genera un `.flashjp` de usuario para un mazo
+concreto. Incluye contenido restaurable del mazo, media local referenciada,
+configuracion, estado SRS, logs, sesion activa, historial de sesiones y
+estadisticas diarias. Durante la exportacion se muestra una barra de progreso
+con porcentaje (recopilacion, hashing de media, compresion del ZIP) y al
+terminar abre el share sheet de Android.
+
+En v1 el backup no tiene contrasena ni cifrado propio. Quien tenga el archivo
+puede importarlo o inspeccionarlo.
+
 ## Browser De Tarjetas
 
 El browser permite:
@@ -455,9 +518,15 @@ El paquete starter se copia a documentos locales al arrancar si hace falta.
 La pantalla de settings globales permite:
 
 - cambiar apariencia: system, light, dark
-- cambiar idioma: English, Espanol
+- cambiar idioma: English, Espanol, Romana, Deutsch, Francais, Japones y Chino
 - reiniciar tour
 - abrir enlace externo de descarga/ayuda configurado en strings
+- abrir politica de privacidad: `https://flashlingo.github.io/privacy.html`
+- abrir terminos y condiciones: `https://flashlingo.github.io/terms.html`
+- abrir aviso legal: `https://flashlingo.github.io/legal.html`
+- abrir la pagina oficial para sugerencias, dudas o reportes:
+  `https://flashlingo.github.io`
+- abrir opciones de privacidad de anuncios cuando UMP indica que son requeridas
 - usar Time Machine en debug para pruebas de fechas
 
 ## Ads
@@ -472,6 +541,15 @@ Areas:
 
 Debug usa ids de prueba de Google. Release/profile usan ids de produccion o
 valores override por build/env.
+
+El arranque de la app actualiza el estado de consentimiento con UMP, muestra el
+formulario requerido cuando corresponde e inicializa Google Mobile Ads solo si
+`canRequestAds` es verdadero. Los banners verifican ese estado antes de cargar.
+
+El codigo solicita anuncios con `AdRequest()` sin parametros de targeting
+propios. La configuracion de AdMob Privacy & messaging / CMP debe estar
+preparada y probada fuera del codigo antes de servir anuncios en regiones donde
+sea obligatorio.
 
 ## Diseno Visual
 
@@ -500,7 +578,7 @@ Para la pagina web conviene mostrar:
 - tarjeta de estudio con audio/imagen
 - modo escritura con comparacion
 - panel de estadisticas con graficos
-- resumen de exportacion CSV/PDF
+- resumen de exportacion CSV/PDF y backup de progreso
 
 ## Privacidad Y Datos
 
@@ -510,8 +588,23 @@ Puntos importantes para comunicar:
 - El progreso se guarda localmente en el dispositivo.
 - Los mazos importados y sus medios se copian a almacenamiento local de la app.
 - No hay sincronizacion cloud en el scope actual.
+- El respaldo del sistema esta desactivado (`android:allowBackup="false"` y reglas
+  de extraccion de datos que excluyen respaldo en la nube y transferencia entre
+  dispositivos), por lo que los datos locales sin cifrar no salen del dispositivo
+  por mecanismos de backup del sistema; la migracion se hace con el backup
+  `.flashjp` por mazo.
+- Hay backup manual por mazo mediante archivo `.flashjp` exportado por accion
+  del usuario.
 - No hay descarga remota de mazos desde la app.
 - La app contiene ads en builds moviles soportados.
+- La app declara `POST_NOTIFICATIONS` para recordatorios de estudio y
+  `RECEIVE_BOOT_COMPLETED` para reprogramarlos despues de reiniciar el
+  dispositivo.
+- La app no tiene backend propio ni analitica propia, pero Google Mobile Ads y
+  los enlaces externos abiertos por accion del usuario pueden implicar trafico
+  de red.
+- El WebView de tarjetas renderiza HTML local saneado; el contenido importado no
+  conserva links externos ni recursos remotos en `href`/`src`.
 
 ## Diferenciadores Para Marketing
 
@@ -522,6 +615,7 @@ Puntos importantes para comunicar:
 - Modo escritura con comparacion visual.
 - SRS configurable, no una caja negra simple.
 - Estadisticas avanzadas y exportables.
+- Backup/restauracion manual de progreso por mazo.
 - Tour guiado con mazo inicial.
 - Buen soporte de estudio offline.
 
@@ -532,17 +626,21 @@ Puntos importantes para comunicar:
 - No prometer marketplace de mazos dentro de la app.
 - No prometer edicion manual de tarjetas dentro de la app.
 - No prometer soporte activo de escritorio/web como producto final.
-- No prometer idiomas de interfaz fuera de ingles y espanol, aunque existan
-  archivos de strings no conectados.
+- No prometer que la app esta libre de red en builds con anuncios habilitados.
+- No presentar el cifrado `.flashjp` como DRM o secreto contra ingenieria
+  inversa: la app incluye la clave de descifrado para poder importar mazos
+  oficiales offline. La firma Ed25519 es la proteccion de autenticidad.
 
 ## Especificaciones Tecnicas
 
 - Framework: Flutter.
 - Lenguaje: Dart.
 - Estado: Riverpod.
-- Base local: Isar.
+- Base local: Isar Community.
 - Importacion SQLite: `sqflite`.
-- ZIP: `archive`.
+- Payload ZIP interno: `archive`.
+- Backups de usuario: JSON versionado, hashes SHA-256 y media dentro de ZIP
+  `.flashjp`.
 - WebView de tarjetas: `flutter_inappwebview`.
 - Export/share: `share_plus`.
 - PDF: paquete `pdf`.
@@ -554,9 +652,11 @@ Puntos importantes para comunicar:
 
 - `lib/data`: modelos y persistencia local.
 - `lib/features/home`: pantalla principal y acciones de mazo.
+- `lib/features/backup`: exportacion/restauracion de backups de progreso.
 - `lib/features/importer`: importador `.flashjp`.
 - `lib/features/library`: configuracion, browser y overview de mazo.
 - `lib/features/study_session`: estudio, SRS, HTML y undo.
+- `lib/features/notifications`: recordatorios de estudio locales y puente nativo.
 - `lib/features/stats`: estadisticas, graficos, exportaciones.
 - `lib/features/settings`: ajustes globales.
 - `lib/features/onboarding`: tour y starter deck.
@@ -576,6 +676,7 @@ Puntos importantes para comunicar:
    - write mode
    - configuracion por mazo
    - stats/export
+   - backup manual de progreso
 5. Privacidad: sin cuenta, progreso local.
 6. Screenshots o mockups: home, study, write mode, stats, import summary.
 7. Para creadores de mazos: SQLite + manifest + media.
@@ -600,8 +701,8 @@ Descripcion corta:
 
 ```text
 Importa mazos `.flashjp`, estudia recognition y production cards, activa modo
-escritura y revisa tu progreso con graficos, CSV y PDF. Sin cuenta y con datos
-guardados localmente en tu dispositivo.
+escritura y revisa tu progreso con graficos, CSV, PDF y backup manual por
+mazo. Sin cuenta y con datos guardados localmente en tu dispositivo.
 ```
 
 Bullets:
@@ -611,3 +712,4 @@ Bullets:
 - Ajusta limites diarios, lapses, learning steps y modo escritura.
 - Analiza precision, tiempo, sesiones, forecast y tarjetas dificiles.
 - Exporta estadisticas en CSV y PDF.
+- Exporta y restaura progreso por mazo con un archivo `.flashjp`.

@@ -1,33 +1,28 @@
-# Referencia completa de `manifest.json` para mazos `.flashjp`
+# Referencia de `manifest.json` para mazos `.flashjp`
 
-Este documento describe el comportamiento real del importador actual de
-FlashLingo. La fuente de verdad es
-`lib/features/importer/importer_service.dart`.
+Este documento describe las claves que acepta el importador de FlashLingo para
+crear o actualizar un mazo oficial desde `manifest.json`. Los backups de usuario
+`.flashjp` generados por la app usan `backup_manifest.json` y el formato
+`flashlingo_user_backup_v1`; ese perfil se documenta en
+[flashjp-format.md](flashjp-format.md).
 
-## Alcance
+Fuente de verdad tecnica:
 
-Cubre:
+- `lib/features/importer/importer_service.dart`
+- `lib/data/models/deck_settings.dart`
 
-- claves que el importador lee desde `manifest.json`
-- ubicacion valida de cada clave
-- tipos aceptados por el parser
-- defaults y normalizacion
-- configuraciones existentes en la app que no se importan desde el manifiesto
-- comportamiento al crear mazos y al actualizar mazos existentes
+## Estructura minima del paquete
 
-## Estructura Minima Del Paquete
-
-El importador acepta dos layouts:
-
-1. Archivos en la raiz del ZIP.
-2. Un unico directorio contenedor con todo el paquete dentro.
-
-Ejemplos validos:
+El paquete `.flashjp` oficial aceptado por la app ya no es un ZIP plano. Es un
+contenedor cifrado y firmado que contiene un ZIP interno. El formato generado
+actual es `flashlingo_encrypted_v3`; `flashlingo_encrypted_v2` se acepta solo
+por compatibilidad con mazos antiguos. Ese ZIP interno debe tener uno de estos
+layouts:
 
 ```text
 manifest.json
 flashcards.db
-audio/cat.mp3
+audio/word_001.mp3
 images/cover.png
 ```
 
@@ -35,315 +30,251 @@ images/cover.png
 starter_pack/
   manifest.json
   flashcards.db
-  audio/cat.mp3
+  audio/word_001.mp3
   images/cover.png
 ```
 
-Si hay varios archivos llamados `manifest.json`, el importador usa el que tenga
-la ruta mas corta, es decir, el que quede mas cerca de la raiz extraida.
+Si hay mas de un `manifest.json`, se usa el que este mas cerca de la raiz
+extraida.
 
-## Regla General De Parseo
+## Reglas generales
 
 - `manifest.json` debe ser un objeto JSON.
 - Las claves desconocidas se ignoran.
-- Si una clave conocida viene con tipo invalido, se usa el fallback.
-- Los `String` obligatorios se leen con `toString().trim()`.
-- `language_id` no se valida contra una lista ISO; solo debe quedar no vacio.
+- Si una clave conocida viene con un tipo invalido, se usa su valor por defecto.
+- Los numeros pueden venir como numero JSON o como string parseable.
+- Los decimales escritos como string aceptan coma o punto decimal.
+- Las claves de configuracion del mazo van dentro de `settings`.
+- `new_card_min_correct_reps` y `new_card_intra_day_minutes` tambien se aceptan
+  en la raiz por compatibilidad. Si aparecen tambien en `settings`, gana el
+  valor de `settings`.
 
-## Claves Validas En La Raiz
+## Claves de raiz
 
-| Clave | Obligatoria | Tipo esperado | Uso |
+| Clave | Obligatoria | Tipo | Descripcion |
 | --- | --- | --- | --- |
-| `language_id` | Si | `String` | Codigo de idioma del mazo. |
+| `language_id` | Si | `String` | Codigo de idioma usado como `isoCode` y para construir los tipos `{language_id}_recog` y `{language_id}_prod`. |
 | `pack_name` | Si | `String` | Nombre importado del mazo. |
-| `db_filename` | Si | `String` | Nombre o ruta relativa del SQLite. |
-| `settings` | No | `Object` | Configuraciones del mazo. |
-| `new_card_min_correct_reps` | No | `int`/`num`/`String` entero | Aciertos iniciales para nuevas. |
-| `new_card_intra_day_minutes` | No | `int`/`num`/`String` entero | Demora intra-dia para nuevas. |
-| `deck_icon` | No | `String` | Referencia a icono del mazo. |
-| `deckIcon` | No | `String` | Alias camelCase de icono. |
-| `deck_icon_path` | No | `String` | Alias de icono. |
-| `deckIconPath` | No | `String` | Alias camelCase de icono. |
-| `icon` | No | `String` | Alias corto de icono. |
-| `icon_path` | No | `String` | Alias corto de icono. |
-| `iconPath` | No | `String` | Alias camelCase de icono. |
+| `db_filename` | Si | `String` | Nombre o ruta relativa del SQLite dentro del paquete. |
+| `settings` | No | `Object` | Configuracion del mazo. |
+| `new_card_min_correct_reps` | No | entero | Alias raiz para la misma clave de `settings`. |
+| `new_card_intra_day_minutes` | No | entero | Alias raiz para la misma clave de `settings`. |
+| `deck_icon` | No | `String` | Referencia a un icono incluido en el paquete. |
+| `deckIcon` | No | `String` | Alias de `deck_icon`. |
+| `deck_icon_path` | No | `String` | Alias de `deck_icon`. |
+| `deckIconPath` | No | `String` | Alias de `deck_icon`. |
+| `icon` | No | `String` | Alias de `deck_icon`. |
+| `icon_path` | No | `String` | Alias de `deck_icon`. |
+| `iconPath` | No | `String` | Alias de `deck_icon`. |
 
-## Claves Validas Dentro De `settings`
+## Claves dentro de `settings`
 
-| Clave | Tipo esperado | Uso |
-| --- | --- | --- |
-| `new_cards_per_day` | `int`/`num`/`String` entero | Limite diario de nuevas. |
-| `max_reviews_per_day` | `int`/`num`/`String` entero | Limite diario de repasos. |
-| `hide_new_cards_on_review_overflow` | `bool`/`num`/`String` | Oculta nuevas si el limite de repasos tiene overflow. |
-| `new_card_min_correct_reps` | `int`/`num`/`String` entero | Aciertos iniciales para nuevas. |
-| `new_card_intra_day_minutes` | `int`/`num`/`String` entero | Demora intra-dia para nuevas. |
-| `lapse_tolerance` | `int`/`num`/`String` entero | Fallos consecutivos antes de relearning. |
-| `use_fixed_interval_on_lapse` | `bool`/`num`/`String` | Usa intervalo fijo tras fallo en review. |
-| `lapse_fixed_interval` | `double`/`num`/`String` numerico | Intervalo fijo tras lapse, en dias. |
-| `p_min` | `double`/`num`/`String` numerico | Probabilidad minima para el intervalo. |
-| `alpha` | `double`/`num`/`String` numerico | Ajuste tras acierto. |
-| `beta` | `double`/`num`/`String` numerico | Ajuste tras fallo. |
-| `offset` | `double`/`num`/`String` numerico | Valor restado al intervalo. |
-| `initial_nt` | `double`/`num`/`String` numerico | Decaimiento inicial. |
-| `learning_steps` | `List` de numeros o strings numericos | Pasos fijos de aprendizaje, en dias. |
-| `enable_write_mode` | `bool`/`num`/`String` | Activa escritura en produccion. |
-| `write_mode_threshold` | `int`/`num`/`String` entero | Exactitud minima para habilitar "Good". |
-| `write_mode_max_reps` | `int`/`num`/`String` entero | Repeticiones maximas antes de apagar escritura. |
-| `deck_icon` | `String` | Alias de icono dentro de `settings`. |
-| `deck_icon_path` | `String` | Alias de icono dentro de `settings`. |
-| `icon` | `String` | Alias de icono dentro de `settings`. |
-| `icon_path` | `String` | Alias de icono dentro de `settings`. |
+| Clave | Tipo | Default importador | Valor aceptado al importar | Descripcion |
+| --- | --- | --- | --- | --- |
+| `new_cards_per_day` | entero | `20` | `0..10000` | Maximo de tarjetas nuevas disponibles por dia de estudio. |
+| `max_reviews_per_day` | entero | `200` | `0..100000` | Maximo de reviews no nuevas por dia de estudio. |
+| `hide_new_cards_on_review_overflow` | booleano | `false` | booleano parseable | Si es `true`, oculta nuevas cuando los reviews del dia tienen overflow. |
+| `study_reminders_enabled` | booleano | `true` | booleano parseable | Activa o desactiva recordatorios de estudio para el mazo. |
+| `study_reminder_interval_hours` | entero | `3` | `1..168` | Intervalo minimo entre recordatorios, en horas. |
+| `day_cutoff_hour` | entero | `4` | `0..23` | Hora en la que empieza el dia de estudio. |
+| `day_cutoff_minute` | entero | `0` | `0..59` | Minuto en el que empieza el dia de estudio. |
+| `new_card_min_correct_reps` | entero | `2` | `1..20` | Aciertos necesarios en fase inicial de una tarjeta nueva. |
+| `new_card_intra_day_minutes` | entero | `10` | `1..1440` | Minutos entre repeticiones intra-dia de tarjetas nuevas. |
+| `learning_steps` | lista de decimales | `[1.0, 4.0]` | valores finitos `> 0`, clamp `1/1440..3650`, maximo 50 pasos | Pasos fijos de aprendizaje en dias. Admite fracciones. |
+| `p_min` | decimal | `0.9` | `0.000001..0.999999` | Probabilidad minima usada por la formula SRS. |
+| `alpha` | decimal | `0.1` | `0..10` | Reduccion de `nt` despues de un acierto en review. |
+| `beta` | decimal | `0.5` | `0..10` | Aumento de `nt` despues de un fallo en review. |
+| `offset` | decimal | `0.0` | `-3650..3650` | Dias restados al intervalo calculado. |
+| `initial_nt` | decimal | `0.015` | `0.000001..3650` | Tasa inicial de olvido usada al crear tarjetas nuevas. |
+| `lapse_tolerance` | entero | `0` | `0..1000` | Fallos consecutivos antes de mandar una tarjeta a relearning. `0` desactiva ese castigo duro. |
+| `use_fixed_interval_on_lapse` | booleano | `true` | booleano parseable | Si es `true`, un fallo en review usa `lapse_fixed_interval`. |
+| `lapse_fixed_interval` | decimal | `1.0` | `1/1440..3650` | Intervalo fijo tras lapse, en dias. `0.5` equivale a 12 horas. |
+| `enable_write_mode` | booleano | `false` | booleano parseable | Activa modo escritura para tarjetas de produccion. |
+| `write_mode_threshold` | entero | `80` | `0..100` | Porcentaje minimo para permitir `Good` en modo escritura. |
+| `write_mode_max_reps` | entero | `0` | `0..1000000` | Repeticiones maximas antes de dejar de pedir escritura. `0` significa sin limite. |
+| `enable_undo` | booleano | `true` | booleano parseable | Activa el boton de deshacer en sesiones de estudio. |
+| `study_mix_mode` | string | `reviews_first` | ver valores abajo | Orden base de mezcla entre reviews y nuevas. |
+| `interleave_reviews_count` | entero | `2` | `1..9999` | Tamano del bloque de reviews cuando `study_mix_mode` intercala. |
+| `interleave_new_cards_count` | entero | `1` | `1..9999` | Tamano del bloque de nuevas cuando `study_mix_mode` intercala. |
+| `deck_icon` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
+| `deckIcon` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
+| `deck_icon_path` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
+| `deckIconPath` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
+| `icon` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
+| `icon_path` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
+| `iconPath` | `String` | ninguno | referencia de media | Alias de icono dentro de `settings`. |
 
-## Ubicacion De Claves
+## Valores de `study_mix_mode`
 
-- `new_card_min_correct_reps` y `new_card_intra_day_minutes` funcionan en la
-  raiz y tambien dentro de `settings`.
-- Si una de esas claves aparece en ambos lugares, el valor dentro de `settings`
-  gana porque se aplica despues del valor raiz.
-- En la raiz se aceptan alias camelCase de icono.
-- Dentro de `settings`, solo se aceptan los alias snake_case listados arriba:
-  `deck_icon`, `deck_icon_path`, `icon`, `icon_path`.
+`study_mix_mode` acepta exactamente estos strings:
 
-## Ejemplo Completo Recomendado
-
-```json
-{
-  "language_id": "ja",
-  "pack_name": "Japones Basico",
-  "db_filename": "flashcards.db",
-  "new_card_min_correct_reps": 2,
-  "new_card_intra_day_minutes": 10,
-  "deck_icon": "images/cover.png",
-  "settings": {
-    "new_cards_per_day": 20,
-    "max_reviews_per_day": 200,
-    "hide_new_cards_on_review_overflow": false,
-    "lapse_tolerance": 0,
-    "use_fixed_interval_on_lapse": true,
-    "lapse_fixed_interval": 1.0,
-    "p_min": 0.9,
-    "alpha": 0.1,
-    "beta": 0.5,
-    "offset": 0.0,
-    "initial_nt": 0.015,
-    "learning_steps": [1.0, 4.0],
-    "enable_write_mode": false,
-    "write_mode_threshold": 80,
-    "write_mode_max_reps": 0
-  }
-}
-```
-
-## Detalle De Cada Parametro
-
-### `language_id`
-
-- Obligatorio.
-- Se convierte a `String` y se aplica `trim()`.
-- Si queda vacio, la importacion falla.
-- Se usa como `isoCode` del mazo.
-- Se usa para construir los tipos de tarjeta:
-  - `{language_id}_recog`
-  - `{language_id}_prod`
-
-### `pack_name`
-
-- Obligatorio.
-- Se convierte a `String` y se aplica `trim()`.
-- Si queda vacio, la importacion falla.
-- Es el nombre logico importado.
-- Si ya existe, la UI ofrece actualizar el mazo existente o crear otro nombre.
-- El nombre `FlashLingo` esta reservado para el mazo de inicio guiado; una
-  importacion normal con ese nombre requiere elegir otro nombre.
-
-### `db_filename`
-
-- Obligatorio.
-- Se convierte a `String` y se aplica `trim()`.
-- Puede ser nombre (`flashcards.db`) o ruta relativa (`data/flashcards.db`).
-- Se busca en este orden:
-  1. ruta exacta relativa a la carpeta del `manifest.json`
-  2. coincidencia exacta de ruta relativa al recorrer el paquete
-  3. coincidencia por basename
-
-### `settings`
-
-- Opcional.
-- Solo se usa si es un objeto JSON.
-- Si no existe o no es objeto, se usan defaults.
-
-### `new_card_min_correct_reps`
-
-- Opcional.
-- Puede estar en raiz o dentro de `settings`.
-- Default del importador: `2`.
-- Rango normalizado al importar: `1..20`.
-- Define cuantas respuestas correctas necesita una tarjeta nueva antes de
-  completar la fase inicial intra-dia.
-
-### `new_card_intra_day_minutes`
-
-- Opcional.
-- Puede estar en raiz o dentro de `settings`.
-- Default del importador: `10`.
-- Rango normalizado al importar: `1..1440`.
-- Define los minutos de demora entre repeticiones intra-dia de tarjetas nuevas.
-
-### Icono Del Mazo
-
-Alias validos en raiz, en este orden:
-
-1. `deck_icon`
-2. `deckIcon`
-3. `deck_icon_path`
-4. `deckIconPath`
-5. `icon`
-6. `icon_path`
-7. `iconPath`
-
-Si no hay icono en raiz, se revisan dentro de `settings`:
-
-1. `deck_icon`
-2. `deck_icon_path`
-3. `icon`
-4. `icon_path`
-
-La referencia puede ser ruta relativa, basename o `file://`. El archivo debe
-existir dentro del paquete y tener extension.
-
-## Defaults Del Importador
-
-Estos defaults se usan al crear un mazo desde manifiesto. No son identicos a los
-defaults del modelo `DeckSettings`.
-
-```json
-{
-  "new_card_min_correct_reps": 2,
-  "new_card_intra_day_minutes": 10,
-  "settings": {
-    "new_cards_per_day": 20,
-    "max_reviews_per_day": 200,
-    "hide_new_cards_on_review_overflow": false,
-    "lapse_tolerance": 0,
-    "use_fixed_interval_on_lapse": true,
-    "lapse_fixed_interval": 1.0,
-    "p_min": 0.9,
-    "alpha": 0.1,
-    "beta": 0.5,
-    "offset": 0.0,
-    "initial_nt": 0.015,
-    "learning_steps": [1.0, 4.0],
-    "enable_write_mode": false,
-    "write_mode_threshold": 80,
-    "write_mode_max_reps": 0
-  }
-}
-```
-
-## Normalizacion Del Importador
-
-Despues de parsear, el importador limita valores a rangos seguros:
-
-| Campo | Rango importado |
+| Valor | Comportamiento |
 | --- | --- |
-| `new_cards_per_day` | `0..10000` |
-| `max_reviews_per_day` | `0..100000` |
-| `new_card_min_correct_reps` | `1..20` |
-| `new_card_intra_day_minutes` | `1..1440` |
-| `lapse_tolerance` | `0..100` |
-| `lapse_fixed_interval` | `1/1440..3650` dias |
-| `p_min` | `0.000001..0.999999` |
-| `alpha` | `0..10` |
-| `beta` | `0..10` |
-| `offset` | `-3650..3650` |
-| `initial_nt` | `0.000001..3650` |
-| `write_mode_threshold` | `0..100` |
-| `write_mode_max_reps` | `0..10000` |
-| `learning_steps` | valores finitos `> 0`, clamp `1/1440..3650`, maximo 50 pasos |
+| `new_first` | Muestra nuevas antes que reviews. |
+| `reviews_first` | Muestra reviews antes que nuevas. |
+| `interleave_reviews_then_new` | Intercala bloque de reviews y luego bloque de nuevas. |
+| `interleave_new_then_reviews` | Intercala bloque de nuevas y luego bloque de reviews. |
 
-La UI puede tener validaciones mas amplias en algunos campos, pero al importar
-mandan los rangos anteriores.
+Si el valor no coincide, se usa `reviews_first`.
 
-## Conversion De Tipos
+## Conversion de tipos
 
 ### Enteros
 
 - `int`: se usa tal cual.
 - `num`: se convierte con `toInt()`.
-- `String`: se usa `int.tryParse(trim())`.
-- Si falla, se usa fallback.
+- `String`: se parsea con `int.tryParse(trim())`.
+- Si falla, se usa el default o el valor previo de fallback.
 
 ### Decimales
 
 - `double`: se usa tal cual.
 - `num`: se convierte con `toDouble()`.
 - `String`: se hace `trim()` y se reemplaza `,` por `.` antes de parsear.
-- Si falla, se usa fallback.
+- Si falla, se usa el default o el valor previo de fallback.
 
 ### Booleanos
 
-Acepta:
+Valores aceptados:
 
 - `true` / `false`
-- numeros: `0` es false, cualquier otro numero es true
-- strings: `true`, `false`, `1`, `0`, `yes`, `no`, `si`, `si` con tilde
+- numeros: `0` es `false`, cualquier otro numero es `true`
+- strings: `true`, `false`, `1`, `0`, `yes`, `no`, `si` y `sí`
 
-## Configuraciones Que Existen Pero No Se Importan
+### Listas de decimales
 
-El modelo `DeckSettings` contiene mas campos que el manifiesto no lee:
+`learning_steps` debe ser un array JSON:
 
-- `dayCutoffHour`
-- `dayCutoffMinute`
-- `enableUndo`
-- `studyMixMode`
-- `interleaveReviewsCount`
-- `interleaveNewCardsCount`
+```json
+"learning_steps": [0.25, 1.0, 4.0]
+```
+
+Tambien acepta strings numericos dentro del array:
+
+```json
+"learning_steps": ["0.25", "1", "4"]
+```
+
+Los valores no positivos o no parseables se descartan. Si no queda ningun paso
+valido, se usa `[1.0, 4.0]`.
+
+## Icono del mazo
+
+El icono debe ser un archivo incluido en el paquete. Puede indicarse en raiz o
+dentro de `settings` con cualquiera de los alias documentados.
+
+Resolucion de media:
+
+1. ruta exacta relativa al paquete
+2. ruta exacta dentro del ZIP interno
+3. nombre de archivo, solo cuando la referencia tambien es un nombre simple
+4. variantes decodificadas y lowercase de las reglas anteriores
+5. stem sin extension dentro del mismo tipo de media
+
+La regla de stem permite, por ejemplo, que `AUDIO_PALABRA` apunte a
+`de-DE00001_PALABRA.wav` mientras el ZIP contiene
+`media/de-DE00001_PALABRA.mp3`. Esa coincidencia solo se aplica entre audios.
+Una imagen con el mismo stem no se copiara para una referencia de audio, ni un
+audio se copiara para una referencia de imagen. Los archivos sin extension se
+omiten como media.
+
+## Ejemplo completo de `manifest.json`
+
+```json
+{
+  "language_id": "ja",
+  "pack_name": "Japones Basico",
+  "db_filename": "flashcards.db",
+  "deck_icon": "images/cover.png",
+  "settings": {
+    "new_cards_per_day": 20,
+    "max_reviews_per_day": 200,
+    "hide_new_cards_on_review_overflow": false,
+    "study_reminders_enabled": true,
+    "study_reminder_interval_hours": 3,
+    "day_cutoff_hour": 4,
+    "day_cutoff_minute": 0,
+    "new_card_min_correct_reps": 2,
+    "new_card_intra_day_minutes": 10,
+    "learning_steps": [1.0, 4.0],
+    "p_min": 0.9,
+    "alpha": 0.1,
+    "beta": 0.5,
+    "offset": 0.0,
+    "initial_nt": 0.015,
+    "lapse_tolerance": 0,
+    "use_fixed_interval_on_lapse": true,
+    "lapse_fixed_interval": 1.0,
+    "enable_write_mode": false,
+    "write_mode_threshold": 80,
+    "write_mode_max_reps": 0,
+    "enable_undo": true,
+    "study_mix_mode": "reviews_first",
+    "interleave_reviews_count": 2,
+    "interleave_new_cards_count": 1
+  }
+}
+```
+
+## Campos que no debe configurar el manifest
+
+Estos campos existen en la base local, pero son estado interno o rutas
+persistidas por la app:
+
+- `id`
+- `deckIconUri`
 - `newCardsSeenToday`
 - `lastNewCardStudyDate`
-- `deckIconUri` como URI persistida directa
 
-Si esas claves aparecen en `manifest.json`, hoy se ignoran, salvo el icono por
-los alias documentados.
+No los escribas en `manifest.json`. Para icono usa los alias de icono y una ruta
+a un archivo incluido en el paquete.
 
-## Al Crear Un Mazo Nuevo
+## Crear un mazo nuevo
 
-- Se crea `DeckSettings` usando el manifiesto y los defaults del importador.
-- Si hay icono valido, se guarda como `deckIconUri`.
-- Cada fila SQLite genera:
-  - reconocimiento: `{language_id}_recog`
-  - produccion: `{language_id}_prod`
-- `initial_nt` se usa como `decayRate` inicial de ambas tarjetas.
+Cuando se crea un mazo nuevo:
 
-## Al Actualizar Un Mazo Existente
+- se crea `DeckSettings` desde `settings`
+- se normalizan todos los rangos anteriores
+- si hay icono resoluble, se guarda como `deckIconUri`
+- cada fila SQLite genera dos tarjetas:
+  - `{language_id}_recog`
+  - `{language_id}_prod`
+- `initial_nt` se copia como `decayRate` inicial de ambas tarjetas
 
-La UI actual llama la importacion con:
+## Actualizar un mazo existente
+
+La UI normal de FlashLingo actualiza mazos con:
 
 ```text
 updateDeckSettingsFromManifest: false
 ```
 
-Eso implica:
+Eso preserva las configuraciones editadas por el usuario y solo refresca el
+contenido importado de las tarjetas. El icono puede actualizarse si el paquete
+nuevo trae uno valido.
 
-- se preservan las configuraciones del usuario
-- se preservan progreso, review logs, sesiones y estadisticas diarias
-- se actualiza contenido importado de las tarjetas existentes
-- se agregan tarjetas nuevas que no existian
-- no se eliminan tarjetas existentes ausentes del nuevo paquete
-- el icono puede actualizarse si el paquete nuevo trae uno valido
+Si una ruta interna ejecuta la importacion con:
 
-Si una importacion se ejecuta internamente con
-`updateDeckSettingsFromManifest: true`, el manifiesto sobreescribe settings,
-pero se preservan:
+```text
+updateDeckSettingsFromManifest: true
+```
+
+entonces `settings` del manifest reemplaza la configuracion del mazo. Aun asi se
+preservan los contadores de progreso diario:
 
 - `newCardsSeenToday`
 - `lastNewCardStudyDate`
-- el icono previo si el paquete nuevo no resuelve un icono valido
 
-## Recomendaciones Practicas
+Tambien se conserva el icono previo si el paquete nuevo no trae un icono valido.
 
-- Usa rutas relativas exactas para `db_filename` y media.
-- Evita depender de colisiones por basename o stem.
-- Da extension real a todos los assets multimedia.
-- Mantén los valores dentro de los rangos normalizados.
-- Usa `settings` solo para las claves soportadas.
-- No asumas que cualquier campo de `DeckSettings` puede venir del manifiesto.
+## Recomendaciones para creadores de mazos
+
+- Usa siempre `settings` para configuracion de mazo.
+- Mantener `new_card_min_correct_reps` y `new_card_intra_day_minutes` en raiz es
+  opcional y solo se recomienda por compatibilidad con paquetes antiguos.
+- Escribe `study_mix_mode` exactamente como uno de los valores permitidos.
+- Mantén los valores dentro de los rangos aceptados para evitar clamps
+  silenciosos.
+- Usa rutas relativas exactas para `db_filename`, audio, imagenes e icono.
+- Si cambias la extension real de audio o imagen, conserva el mismo nombre sin
+  extension; el fallback por stem solo se aplica dentro del mismo tipo de media.

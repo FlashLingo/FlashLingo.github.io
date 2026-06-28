@@ -1,263 +1,175 @@
-# Flashlingo — Paleta de colores
+# FlashLingo color palette
 
-Este documento define la paleta visual de **Flashlingo** para **modo claro** y **modo oscuro**. La identidad de la app se basa en una estética minimalista, amigable y moderna, con colores pastel inspirados en el logo: turquesa, menta, azul claro, durazno y lavanda.
+Este documento resume la identidad visual actual de FlashLingo segun
+`lib/theme/app_ui_colors.dart`, `lib/theme/app_theme.dart` y los colores usados
+en exportaciones PDF.
 
----
+## Principios
 
-## 1. Principios generales de uso
+- Interfaz clara, local-first y centrada en sesiones largas de estudio.
+- Marca principal turquesa, con acentos menta, azul, durazno y lavanda.
+- Estados funcionales consistentes: verde para acierto, rojo/coral para error,
+  naranja para aprendizaje y rojo intenso para atrasadas.
+- Modo claro y modo oscuro deben sentirse como la misma marca.
+- Los graficos y PDFs reutilizan la misma paleta base.
 
-La paleta debe mantener una interfaz:
+## Tipografia
 
-- limpia y fácil de leer;
-- suave para sesiones largas de estudio;
-- amigable y motivadora;
-- coherente entre logo, pantalla principal, sesiones de estudio, estadísticas, importación y configuración;
-- accesible, evitando contrastes demasiado bajos entre texto y fondo.
+La interfaz no define una familia tipografica propia: usa la fuente por defecto
+de Material/Flutter (Roboto en Android), con jerarquia basada en peso y tamano
+definida en `lib/theme/app_theme.dart`:
 
-Regla general:
+- Titulo de AppBar: 18 px, peso 700, centrado.
+- Titulo de dialogo: 20 px, peso 700; cuerpo de dialogo: 15 px, interlineado 1.45.
+- Boton elevado (accion principal): 16 px, peso 700.
+- Boton outlined / texto: 15 px, peso 600.
+- Chips y etiquetas: peso 600.
 
-- Usar **turquesa** como color principal de marca.
-- Usar **menta** para estados positivos, equilibrio y repaso.
-- Usar **azul claro** para información, progreso y confianza.
-- Usar **durazno** para acciones intermedias, advertencias suaves o pasos de aprendizaje.
-- Usar **lavanda** para elementos lingüísticos, audio, lectura, categorías y detalles especiales.
-- Usar **coral/rojo suave** para errores, atrasadas o respuestas incorrectas.
+Las fuentes embebidas en `lib/assets/fonts` (`DejaVuSans`, `DejaVuSans-Bold` y
+`ArialUnicodeMS`) se usan **solo para los PDF exportados**, no para la interfaz;
+estan para garantizar cobertura multilingue (incluido CJK) en los reportes.
 
----
+## Formas Y Tema (Material 3)
 
-# 2. Paleta para modo claro
+La app usa Material 3 (`useMaterial3: true`) con `ColorScheme.fromSeed` a partir
+del turquesa de marca y un estilo plano y redondeado:
 
-## 2.1 Colores principales
+- Esquinas redondeadas: tarjetas 20, dialogos 24, botones 18, campos de entrada
+  y bordes 14, chips 14, snackbar 16, menus 16.
+- Diseno plano: AppBar sin elevacion ni tinte de superficie, `surfaceTint`
+  transparente, tarjetas con elevacion baja (2 en claro, 1 en oscuro) y botones
+  sin elevacion.
+- Snackbars flotantes y redondeados.
+- Altura minima de botones: 52 (elevado) y 48 (outlined).
+- Realces sutiles: splash con primary al 8 %, highlight transparente, seleccion
+  de texto con primary translucido.
+- La barra de progreso usa el color primary sobre una pista primary translucida.
 
-| Color | HEX | RGB | Uso recomendado |
-|---|---:|---:|---|
-| Turquesa | `#40C0CC` | `rgb(64, 192, 204)` | Color principal de marca. Ideal para logo, botones principales, iconos activos, barras de progreso y acentos importantes. |
-| Menta | `#8EDFD4` | `rgb(142, 223, 212)` | Color de equilibrio y frescura. Ideal para tarjetas secundarias, repaso, estados positivos suaves y fondos informativos. |
-| Azul claro | `#8CCBFF` | `rgb(140, 203, 255)` | Color de confianza y claridad. Ideal para botones secundarios, accesos, gráficos, filtros seleccionados y elementos informativos. |
-| Durazno | `#FFC19E` | `rgb(255, 193, 158)` | Color cálido. Ideal para llamadas a la acción secundarias, pasos de aprendizaje, botones de lectura/notas y avisos no críticos. |
+## Paleta Principal
 
-## 2.2 Color secundario
+| Token | Light | Dark | Uso |
+| --- | --- | --- | --- |
+| Primary / Turquesa | `#40C0CC` | `#4BD3E0` | Marca, botones principales, progreso, iconos activos. |
+| Menta | `#8EDFD4` | `#6EE4D7` | Estados positivos suaves, apoyo visual. |
+| Azul claro | `#8CCBFF` | `#7EB6FF` | Informacion, secundarios, graficos. |
+| Durazno | `#FFC19E` | `#FFB68C` | Acciones intermedias, notas, paneles calidos. |
+| Lavanda | `#CDB7F0` | `#D1B8FF` | Modo escritura, contenido linguistico, detalles especiales. |
 
-| Color | HEX | RGB | Uso recomendado |
-|---|---:|---:|---|
-| Lavanda | `#CDB7F0` | `rgb(205, 183, 240)` | Color secundario para variedad visual. Ideal para categorías, etiquetas, audio, contenido lingüístico, modo escritura y detalles especiales. |
+## Estados
 
-## 2.3 Colores neutros
+| Estado | Light | Dark | Uso |
+| --- | --- | --- | --- |
+| Success | `#4FB477` | `#4ADE80` | Boton Good, respuestas correctas, review positivo. |
+| Danger | `#F66B6B` | `#FF5C5C` | Boton Bad, errores, fallos. |
+| Overdue | `#D83A3A` | `#FF6B6B` | Tarjetas atrasadas. |
+| Learning | `#FF8A00` | `#FFB020` | Tarjetas en learning/relearning. |
 
-| Color | HEX | RGB | Uso recomendado |
-|---|---:|---:|---|
-| Azul oscuro | `#374151` | `rgb(55, 65, 81)` | Texto principal, títulos, iconos importantes y alto contraste sobre fondos claros. |
-| Gris medio | `#6B7280` | `rgb(107, 114, 128)` | Texto secundario, explicaciones, subtítulos y descripciones. |
-| Gris claro | `#E5E7EB` | `rgb(229, 231, 235)` | Bordes, divisores, fondos de campos y líneas de gráficos. |
-| Gris muy claro | `#F3F4F6` | `rgb(243, 244, 246)` | Fondo general de pantalla y superficies suaves. |
-| Blanco | `#FFFFFF` | `rgb(255, 255, 255)` | Cards, modales, campos y áreas principales de lectura. |
+## Neutros
 
-## 2.4 Colores funcionales en modo claro
+| Token | Light | Dark |
+| --- | --- | --- |
+| Background | `#F3F4F6` | `#0F172A` |
+| Background alt | `#F8FAFC` | `#162235` |
+| Surface | `#FFFFFF` | `#1E293B` |
+| Border | `#E5E7EB` | `#334155` |
+| Text primary | `#374151` | `#E2E8F0` |
+| Text secondary | `#6B7280` | `#94A3B8` |
 
-| Función | Color sugerido | HEX | Uso |
-|---|---|---:|---|
-| Acción principal | Turquesa | `#40C0CC` | Botón “Mostrar respuesta”, botón “+”, iconos activos. |
-| Acción secundaria | Azul claro | `#8CCBFF` | Filtros, botones secundarios, chips seleccionados. |
-| Lectura / notas | Durazno | `#FFC19E` | Botón “Mostrar lectura / notas”. |
-| Audio / pronunciación | Lavanda | `#CDB7F0` | Botones play, lectura fonética y detalles lingüísticos. |
-| Respuesta correcta | Verde menta | `#4FB477` | Botón “Bien”, estados correctos y repaso positivo. |
-| Respuesta incorrecta | Coral suave | `#F66B6B` | Botón “Mal”, errores y tarjetas difíciles. |
-| Atrasadas | Rojo suave | `#D83A3A` | Conteos o indicadores de tarjetas atrasadas. |
-| Aprendizaje | Naranja suave | `#FF8A00` | Paso de aprendizaje, tarjetas en learning. |
+## Area De Estudio
 
----
+| Token | Light | Dark | Uso |
+| --- | --- | --- | --- |
+| Study word | `#6B4DE6` | `#D1B8FF` | Palabra principal y lectura. |
+| Study text | `#2E246B` | `#E2E8F0` | Texto de tarjeta. |
+| Study line | `#E6DFFF` | `#334155` | Separadores internos. |
 
-# 3. Paleta para modo oscuro
+## Aplicacion Por Pantalla
 
-El modo oscuro debe conservar la personalidad pastel de Flashlingo, pero con colores ligeramente más luminosos y fondos azul noche para mantener legibilidad y comodidad visual.
+### Home
 
-## 3.1 Colores principales adaptados
+- Fondo: `lightBackground` / `darkBackground`.
+- Cards de mazo: `surface`.
+- Logo: icono `ICO_2.png` y texto Flash en primary, Lingo en texto principal.
+- Nuevas: primary/info.
+- Learning: warning.
+- Reviews: success.
+- Overdue: overdue.
+- Precision 7d: texto secundario.
 
-| Color | HEX | RGB | Uso recomendado |
-|---|---:|---:|---|
-| Turquesa oscuro/luminoso | `#4BD3E0` | `rgb(75, 211, 224)` | Color principal en modo oscuro. Ideal para títulos activos, botones principales, progreso e iconos seleccionados. |
-| Menta luminosa | `#6EE4D7` | `rgb(110, 228, 215)` | Estados positivos, repaso, fondos suaves y acentos de confirmación. |
-| Azul claro luminoso | `#7EB6FF` | `rgb(126, 182, 255)` | Información, gráficos, estados seleccionados y botones secundarios. |
-| Durazno luminoso | `#FFB68C` | `rgb(255, 182, 140)` | Acciones intermedias, aprendizaje, notas y avisos cálidos. |
+### Importacion
 
-## 3.2 Color secundario adaptado
+- Dialogos y resumen usan `surface`.
+- Barra de progreso usa primary.
+- Chips de resumen usan primary, secondary, warning y success.
+- Errores de importacion usan danger.
 
-| Color | HEX | RGB | Uso recomendado |
-|---|---:|---:|---|
-| Lavanda luminosa | `#D1B8FF` | `rgb(209, 184, 255)` | Contenido lingüístico, palabras principales, audio, etiquetas y detalles especiales. |
+### Estudio
 
-## 3.3 Colores neutros para modo oscuro
+- Barra superior indica progreso y una franja de color por tipo/estado:
+  - new: info
+  - learning inicial: warning
+  - review/resto: success
+- Tarjeta HTML usa fondo claro/oscuro propio:
+  - light page: `rgb(248, 250, 252)`
+  - dark page: `rgb(15, 23, 42)`
+- Boton Show answer: primary.
+- Boton Show reading: warning.
+- Bad: danger.
+- Good: success.
+- Write mode usa lavanda y muestra diferencias en verde/rojo.
 
-| Color | HEX | RGB | Uso recomendado |
-|---|---:|---:|---|
-| Azul noche | `#0F172A` | `rgb(15, 23, 42)` | Fondo principal de la app en modo oscuro. |
-| Azul grisáceo oscuro | `#1E293B` | `rgb(30, 41, 59)` | Cards principales, modales y superficies elevadas. |
-| Gris azulado | `#334155` | `rgb(51, 65, 85)` | Bordes, campos, contenedores secundarios y divisores. |
-| Gris claro azulado | `#94A3B8` | `rgb(148, 163, 184)` | Texto secundario, ayudas, labels y placeholders. |
-| Blanco suave | `#E2E8F0` | `rgb(226, 232, 240)` | Texto principal sobre fondos oscuros. |
+### Settings
 
-## 3.4 Colores funcionales en modo oscuro
+- Limites diarios y algoritmo usan primary.
+- Day cutoff usa secondary.
+- Write mode usa lavender/tertiary.
+- Undo usa peach.
+- Lapses usan primary y danger segun estado.
 
-| Función | Color sugerido | HEX | Uso |
-|---|---|---:|---|
-| Acción principal | Turquesa luminoso | `#4BD3E0` | Botón “Mostrar respuesta”, iconos activos, progreso. |
-| Acción secundaria | Azul claro luminoso | `#7EB6FF` | Filtros, botones secundarios, chips seleccionados. |
-| Lectura / notas | Durazno luminoso | `#FFB68C` | Botón “Mostrar lectura / notas” y acciones intermedias. |
-| Audio / pronunciación | Lavanda luminosa | `#D1B8FF` | Botones play, lectura y detalles fonéticos. |
-| Respuesta correcta | Verde menta | `#4ADE80` | Botón “Bien”, respuestas correctas y estados positivos. |
-| Respuesta incorrecta | Coral luminoso | `#FF5C5C` | Botón “Mal”, errores y tarjetas difíciles. |
-| Atrasadas | Rojo suave luminoso | `#FF6B6B` | Indicadores de atraso o riesgo. |
-| Aprendizaje | Naranja suave luminoso | `#FFB020` | Paso de aprendizaje y tarjetas en fase learning. |
+### Stats
 
----
+- Graficos reutilizan primary, success, warning, danger, lavender y blue.
+- Heatmap usa intensidad progresiva: surface alt, primary soft, mint, blue,
+  brand.
+- Problem cards usan tags y acciones con los colores de estado.
 
-# 4. Aplicación por pantalla
+### PDF
 
-## 4.1 Pantalla principal
+Los PDF usan `AppPdfColors` con la misma paleta clara:
 
-### Modo claro
+- brand `#40C0CC`
+- mint `#8EDFD4`
+- blue `#8CCBFF`
+- peach `#FFC19E`
+- lavender `#CDB7F0`
+- success `#4FB477`
+- danger `#F66B6B`
+- overdue `#D83A3A`
+- learning `#FF8A00`
 
-- Fondo: `#F3F4F6` o `#F7FBFC`.
-- Cards de mazos: `#FFFFFF`.
-- Título “Flashlingo”: turquesa + azul oscuro.
-- Nuevas: turquesa `#40C0CC`.
-- Atrasadas: rojo suave `#D83A3A`.
-- Repaso: verde menta `#4FB477`.
-- Paso de aprendizaje: naranja suave `#FF8A00`.
-
-### Modo oscuro
-
-- Fondo: `#0F172A`.
-- Cards de mazos: `#1E293B`.
-- Texto principal: `#E2E8F0`.
-- Texto secundario: `#94A3B8`.
-- Iconos activos: `#4BD3E0`.
-
----
-
-## 4.2 Sesión de estudio
-
-### Modo claro
-
-- Fondo: `#F8FAFC`.
-- Card principal: `#FFFFFF`.
-- Palabra principal: lavanda intenso, por ejemplo `#6B4DE6`.
-- Texto de contenido: azul oscuro violáceo, por ejemplo `#2E246B`.
-- Separadores internos: lavanda muy claro, por ejemplo `#E6DFFF`.
-- Botón “Mostrar respuesta”: turquesa `#40C0CC`.
-- Botón “Mostrar lectura / notas”: durazno `#FFC19E`.
-- Botón “Mal”: coral `#F66B6B`.
-- Botón “Bien”: verde menta `#4FB477`.
-
-### Modo oscuro
-
-- Fondo: `#0F172A`.
-- Card principal: `#1E293B`.
-- Palabra principal: lavanda luminosa `#D1B8FF`.
-- Texto de contenido: blanco suave `#E2E8F0`.
-- Separadores internos: `#334155`.
-- Botón “Mostrar respuesta”: turquesa luminoso `#4BD3E0`.
-- Botón “Mostrar lectura / notas”: durazno luminoso `#FFB68C`.
-- Botón “Mal”: coral luminoso `#FF5C5C`.
-- Botón “Bien”: verde menta `#4ADE80`.
-
----
-
-## 4.3 Configuración
-
-### Modo claro
-
-- Bloque “Day cutoff”: azul claro muy suave.
-- Bloque “Orden del estudio / mezcla”: menta claro.
-- Bloque “Modo escritura”: lavanda claro.
-- Bloque “Botón deshacer”: durazno claro.
-- Campos: blanco con borde gris claro.
-- Switch activo: turquesa o lavanda, según la sección.
-
-### Modo oscuro
-
-- Fondo: `#0F172A`.
-- Bloques: `#1E293B`.
-- Bordes: `#334155`.
-- Títulos de sección: `#4BD3E0`.
-- Campos: `#0F172A` con borde `#334155`.
-- Switch activo: turquesa luminoso `#4BD3E0`.
-
----
-
-## 4.4 Estadísticas
-
-### Modo claro
-
-- Cards resumen: fondos pastel muy suaves.
-- Gráficos: turquesa, menta, azul claro, durazno y lavanda.
-- Grilla de gráficos: gris claro `#E5E7EB`.
-- Texto principal: azul oscuro `#374151`.
-
-### Modo oscuro
-
-- Fondo: azul noche `#0F172A`.
-- Cards: azul grisáceo oscuro `#1E293B`.
-- Gráficos: versiones luminosas de la paleta.
-- Grilla: `#334155`.
-- Texto principal: `#E2E8F0`.
-- Texto secundario: `#94A3B8`.
-
----
-
-## 4.5 Importación de archivos
-
-### Modo claro
-
-- Modal: blanco `#FFFFFF`.
-- Barra de progreso: turquesa `#40C0CC`.
-- Fondo de barra: turquesa muy claro.
-- Chips de resumen: fondos pastel suaves.
-
-### Modo oscuro
-
-- Overlay: negro/azul noche con opacidad.
-- Modal: `#1E293B`.
-- Barra de progreso: `#4BD3E0`.
-- Texto principal: `#E2E8F0`.
-- Texto secundario: `#94A3B8`.
-
----
-
-# 5. Recomendación de variables de diseño
-
-Estas variables pueden servir como base para implementar temas en Flutter.
+## Variables De Referencia
 
 ```dart
-// Light mode
 const flLightPrimary = Color(0xFF40C0CC);
 const flLightMint = Color(0xFF8EDFD4);
 const flLightBlue = Color(0xFF8CCBFF);
 const flLightPeach = Color(0xFFFFC19E);
 const flLightLavender = Color(0xFFCDB7F0);
 
-const flLightTextPrimary = Color(0xFF374151);
-const flLightTextSecondary = Color(0xFF6B7280);
-const flLightBorder = Color(0xFFE5E7EB);
-const flLightBackground = Color(0xFFF3F4F6);
-const flLightSurface = Color(0xFFFFFFFF);
-
-// Dark mode
 const flDarkPrimary = Color(0xFF4BD3E0);
 const flDarkMint = Color(0xFF6EE4D7);
 const flDarkBlue = Color(0xFF7EB6FF);
 const flDarkPeach = Color(0xFFFFB68C);
 const flDarkLavender = Color(0xFFD1B8FF);
-
-const flDarkBackground = Color(0xFF0F172A);
-const flDarkSurface = Color(0xFF1E293B);
-const flDarkBorder = Color(0xFF334155);
-const flDarkTextSecondary = Color(0xFF94A3B8);
-const flDarkTextPrimary = Color(0xFFE2E8F0);
 ```
 
----
+## Reglas Para Material De Marketing
 
-# 6. Resumen final
-
-La paleta de Flashlingo debe transmitir una experiencia de aprendizaje agradable, clara y motivadora. El modo claro se apoya en fondos blancos y tonos pastel suaves, mientras que el modo oscuro utiliza una base azul noche con acentos luminosos. Ambos modos deben sentirse como la misma marca: minimalista, amigable, moderna y fácil de reconocer.
+- Usar turquesa como color de marca dominante.
+- Mostrar la app como moderna, clara y local-first.
+- Evitar fondos muy oscuros si no representan una pantalla real de modo oscuro.
+- Para pagina web o screenshots, priorizar:
+  - home con mazos y contadores
+  - tarjeta de estudio con palabra, audio e imagen
+  - panel de estadisticas con graficos
+  - import summary o write mode como funciones diferenciadoras
