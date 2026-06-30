@@ -4,437 +4,207 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlashLingo Privacy Policy</title>
-  <meta name="description" content="Privacy Policy for FlashLingo Android app.">
-  <style>
-
-:root {
-  --primary: #40C0CC;
-  --primary-dark: #278A96;
-  --mint: #8EDFD4;
-  --blue: #8CCBFF;
-  --peach: #FFC19E;
-  --lavender: #CDB7F0;
-  --bg: #F3F4F6;
-  --surface: #FFFFFF;
-  --text: #374151;
-  --muted: #6B7280;
-  --border: #E5E7EB;
-  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.65;
-  background:
-    radial-gradient(circle at top left, rgba(64, 192, 204, 0.18), transparent 30rem),
-    radial-gradient(circle at top right, rgba(205, 183, 240, 0.20), transparent 28rem),
-    var(--bg);
-  color: var(--text);
-}
-
-a { color: var(--primary-dark); font-weight: 650; }
-a:hover { text-decoration-thickness: 2px; }
-
-.site-header {
-  padding: 32px 20px 18px;
-}
-
-.header-inner,
-.page {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.brand-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--primary), var(--lavender));
-  box-shadow: var(--shadow);
-}
-
-.brand-name {
-  font-size: 1.6rem;
-  line-height: 1;
-  font-weight: 850;
-  letter-spacing: -0.04em;
-}
-
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.nav a,
-.lang-switch a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 8px 13px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.76);
-  border: 1px solid var(--border);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.nav a:hover,
-.lang-switch a:hover {
-  border-color: var(--primary);
-  color: var(--primary-dark);
-}
-
-.hero {
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.72));
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 34px;
-  box-shadow: var(--shadow);
-  margin-bottom: 22px;
-}
-
-.eyebrow {
-  color: var(--primary-dark);
-  font-weight: 850;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  font-size: .78rem;
-}
-
-h1 {
-  margin: 8px 0 12px;
-  font-size: clamp(2.1rem, 6vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: -0.06em;
-}
-
-h2 {
-  margin-top: 2.1rem;
-  padding-top: 0.35rem;
-  font-size: 1.55rem;
-  letter-spacing: -0.03em;
-}
-
-h3 {
-  margin-top: 1.6rem;
-  font-size: 1.12rem;
-}
-
-.lead {
-  font-size: 1.12rem;
-  color: var(--muted);
-  max-width: 760px;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 24px;
-  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.05);
-  margin: 18px 0;
-}
-
-.notice {
-  border-left: 5px solid var(--primary);
-  background: rgba(64, 192, 204, 0.10);
-  padding: 16px 18px;
-  border-radius: 18px;
-  margin: 18px 0;
-}
-
-.warning {
-  border-left: 5px solid #FF8A00;
-  background: rgba(255, 193, 158, 0.20);
-  padding: 16px 18px;
-  border-radius: 18px;
-  margin: 18px 0;
-}
-
-.meta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.meta-item {
-  padding: 14px 16px;
-  background: rgba(248,250,252,0.9);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-}
-
-.meta-label {
-  display: block;
-  color: var(--muted);
-  font-size: .82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-ul { padding-left: 1.35rem; }
-li { margin: .35rem 0; }
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  margin: 42px 0;
-}
-
-.lang-switch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0 0;
-}
-
-.footer {
-  max-width: 980px;
-  margin: 34px auto 0;
-  padding: 24px 20px 48px;
-  color: var(--muted);
-  font-size: .95rem;
-}
-
-code {
-  background: rgba(15, 23, 42, 0.06);
-  padding: .12rem .32rem;
-  border-radius: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #4BD3E0;
-    --primary-dark: #6EE4D7;
-    --bg: #0F172A;
-    --surface: #1E293B;
-    --text: #E2E8F0;
-    --muted: #94A3B8;
-    --border: #334155;
-    --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  }
-
-  body {
-    background:
-      radial-gradient(circle at top left, rgba(75, 211, 224, 0.14), transparent 30rem),
-      radial-gradient(circle at top right, rgba(209, 184, 255, 0.16), transparent 28rem),
-      var(--bg);
-  }
-
-  .hero {
-    background: linear-gradient(135deg, rgba(30,41,59,0.96), rgba(22,34,53,0.84));
-  }
-
-  .nav a,
-  .lang-switch a,
-  .meta-item {
-    background: rgba(30,41,59,0.82);
-  }
-
-  code { background: rgba(255,255,255,0.08); }
-}
-
-  </style>
+  <meta name="description" content="Privacy Policy for the FlashLingo Android app.">
+  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
+  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand" aria-label="FlashLingo">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-name">FlashLingo</div>
-      </div>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="legal.html">Legal Notice</a>
-        <a href="decks.html">Decks</a>
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
+        <a href="index.html">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Terminos</a>
+        <a href="legal.html">Legal</a>
+        <a href="contact.html">Soporte</a>
       </nav>
     </div>
   </header>
-  <main class="page">
 
-    <section class="hero">
-      <span class="eyebrow">Legal · Privacy</span>
+  <main class="legal-page">
+    <section class="legal-hero">
+      <span class="eyebrow">Legal &middot; Privacy</span>
       <h1>Privacy Policy</h1>
-      <p class="lead">This Privacy Policy explains how FlashLingo handles data in the Android app <strong>com.flashlingo.app</strong>. FlashLingo is designed as a local-first language-learning app: your decks, study progress, settings, and statistics stay on your device unless you choose to export or share them.</p>
+      <p class="lead">This Privacy Policy explains how FlashLingo handles data in the Android app <strong>com.flashlingo.app</strong>. FlashLingo is designed as a local-first language-learning app: decks, progress, settings and statistics stay on your device unless you choose to export or share them.</p>
       <div class="meta-grid">
         <div class="meta-item"><span class="meta-label">Data controller</span>Javier Ponce / FlashLingo</div>
         <div class="meta-item"><span class="meta-label">Contact</span><a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a></div>
         <div class="meta-item"><span class="meta-label">Last updated</span>2026-06-28</div>
-        <div class="meta-item"><span class="meta-label">Governing jurisdiction</span>Romania</div>
+        <div class="meta-item"><span class="meta-label">Jurisdiction</span>Romania</div>
       </div>
       <div class="lang-switch">
         <a href="#english">English</a>
-        <a href="#spanish">Español</a>
+        <a href="#spanish">Espa&ntilde;ol</a>
       </div>
     </section>
 
-    <section id="english" class="card">
-      <h2>Privacy Policy — English</h2>
+    <section id="english" class="legal-card">
+      <h2>Privacy Policy - English</h2>
 
       <h3>1. Introduction</h3>
-      <p>FlashLingo is an Android app for studying vocabulary with flashcards, spaced repetition, audio, local decks, statistics, and manual deck-progress backups. This policy explains what information is stored locally, what third-party services may process data, and what choices you have.</p>
+      <p>FlashLingo is an Android app for studying vocabulary with flashcards, spaced repetition, audio, local decks, statistics and manual per-deck backups. This policy explains what information is stored locally, what third-party services may process data, and what choices you have.</p>
 
       <h3>2. Quick summary</h3>
       <ul>
-        <li>No online account is required. FlashLingo does not ask you for a name, email address, password, profile photo, phone number, or payment information.</li>
-        <li>FlashLingo does not operate its own backend server, cloud synchronization, first-party analytics, or first-party crash reporting.</li>
-        <li>Your imported decks, study progress, settings, sessions, review history, statistics, and local media are stored in the private storage area of the app on your device.</li>
-        <li>The app displays ads through Google AdMob / Google Mobile Ads SDK. Google may process certain device, advertising, diagnostic, approximate-location, and ad-interaction data according to Google’s own policies.</li>
-        <li>Android system auto-backup and device-to-device transfer for app data are disabled in the release configuration. You can migrate your progress manually by exporting a per-deck <code>.flashjp</code> backup.</li>
+        <li>No online account is required. FlashLingo does not ask for your name, email address, password, profile photo, phone number or payment information.</li>
+        <li>FlashLingo does not operate its own backend server, cloud synchronization, first-party analytics or first-party crash reporting.</li>
+        <li>Imported decks, study progress, settings, sessions, review history, statistics and local media are stored in the private storage area of the app on your device.</li>
+        <li>The app displays ads through Google AdMob / Google Mobile Ads SDK. Google may process device, advertising, diagnostic, approximate-location and ad-interaction data under Google's own policies.</li>
+        <li>Android system auto-backup and device-to-device transfer for app data are disabled in the release configuration. You can migrate progress manually with per-deck <code>.flashjp</code> backups.</li>
       </ul>
 
-      <h3>3. Data stored locally on your device</h3>
+      <h3>3. Data stored locally</h3>
       <p>The following data is stored locally and is not sent to FlashLingo servers, because FlashLingo does not operate its own app backend:</p>
       <ul>
-        <li>Imported decks and deck content, such as words, meanings, example sentences, readings, forms, translations, images, audio, and deck icons.</li>
-        <li>Study progress, including card state, spaced-repetition scheduling, review dates, correct and incorrect answers, learning steps, lapses, session progress, and study time.</li>
-        <li>Statistics, including daily statistics, review history, recent sessions, problem-card indicators, and forecast information.</li>
-        <li>App and deck settings, such as language, theme, onboarding state, daily limits, reminders, write mode, undo, and spaced-repetition parameters.</li>
+        <li>Imported decks and deck content, including words, meanings, sentences, readings, forms, translations, images, audio and deck icons.</li>
+        <li>Study progress, including card state, spaced-repetition scheduling, review dates, correct and incorrect answers, learning steps, lapses, session progress and study time.</li>
+        <li>Statistics, including daily statistics, review history, recent sessions, problem-card indicators and forecast information.</li>
+        <li>App and deck settings, such as language, theme, onboarding state, daily limits, reminders, write mode, undo and spaced-repetition parameters.</li>
       </ul>
 
       <h3>4. Advertising and Google AdMob</h3>
-      <p>FlashLingo uses Google AdMob / Google Mobile Ads SDK to display ads. FlashLingo does not add your name, email, deck content, card answers, imported files, or study progress to ad requests.</p>
-      <p>According to Google’s documentation for the Google Mobile Ads SDK, the SDK may collect and process data such as IP address, advertising identifiers, device or other identifiers, app interactions, ad interactions, diagnostic information, crash or performance information, and approximate location inferred from IP address. Google may use this data for advertising, ad measurement, analytics, fraud prevention, security, and service operation. You can read Google’s Privacy Policy at <a href="https://policies.google.com/privacy" rel="noopener noreferrer">policies.google.com/privacy</a> and Google’s AdMob privacy documentation at <a href="https://developers.google.com/admob/android/privacy" rel="noopener noreferrer">developers.google.com/admob/android/privacy</a>.</p>
+      <p>FlashLingo uses Google AdMob / Google Mobile Ads SDK to display ads. FlashLingo does not add your name, email, deck content, card answers, imported files or study progress to ad requests.</p>
+      <p>According to Google's documentation, the Google Mobile Ads SDK may collect and process data such as IP address, advertising identifiers, device or other identifiers, app interactions, ad interactions, diagnostic information, crash or performance information and approximate location inferred from IP address. Google may use this data for advertising, ad measurement, analytics, fraud prevention, security and service operation.</p>
+      <p>Google resources: <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://developers.google.com/admob/android/privacy" rel="noopener noreferrer">AdMob privacy documentation</a>.</p>
 
-      <h3>5. Consent, personalized ads, and privacy choices</h3>
-      <p>Where required, including for users in the European Economic Area, the United Kingdom, and Switzerland, FlashLingo uses Google’s User Messaging Platform (UMP) to request or refresh consent before ads are loaded. Ads are requested only when the app is allowed to request ads under the current consent state. If Google Mobile Ads reports that privacy options are required in your region, FlashLingo may show an entry point in the app settings so you can reopen your ad privacy choices.</p>
-      <p>You can also manage advertising choices through your Android or Google account settings, including resetting or limiting the Advertising ID where supported by your device.</p>
+      <h3>5. Consent and privacy choices</h3>
+      <p>Where required, including for users in the European Economic Area, the United Kingdom and Switzerland, FlashLingo uses Google's User Messaging Platform (UMP) to request or refresh consent before ads are loaded. Ads are requested only when the app is allowed to request ads under the current consent state. If Google Mobile Ads reports that privacy options are required in your region, FlashLingo may show an entry point in the app settings so you can reopen your ad privacy choices.</p>
+      <p>You can also manage advertising choices through Android or Google account settings, including resetting or limiting the Advertising ID where supported.</p>
 
       <h3>6. Permissions</h3>
-      <p>FlashLingo only uses permissions needed for its documented features and third-party ads:</p>
       <ul>
-        <li><strong>Internet and network state:</strong> used by Google Mobile Ads and by platform components that require network awareness.</li>
-        <li><strong>Advertising ID and Android AdServices permissions:</strong> used by Google Mobile Ads for advertising, measurement, attribution, and related privacy-sandbox functions where available.</li>
+        <li><strong>Internet and network state:</strong> used by Google Mobile Ads and platform components that require network awareness.</li>
+        <li><strong>Advertising ID and Android AdServices permissions:</strong> used by Google Mobile Ads for advertising, measurement, attribution and related privacy-sandbox functions where available.</li>
         <li><strong>Notifications:</strong> used only for local study reminders if you enable them and grant the Android notification permission where required.</li>
         <li><strong>Receive boot completed:</strong> used to reschedule enabled local study reminders after device restart.</li>
       </ul>
-      <p>FlashLingo does not request camera, microphone, precise GPS location, contacts, calendar, SMS, phone, broad storage, photos, videos, or audio-library permissions.</p>
+      <p>FlashLingo does not request camera, microphone, precise GPS location, contacts, calendar, SMS, phone, broad storage, photos, videos or audio-library permissions.</p>
 
-      <h3>7. User-initiated imports, exports, and sharing</h3>
+      <h3>7. Imports, exports and sharing</h3>
       <p>FlashLingo lets you import official <code>.flashjp</code> deck packages and app-generated <code>.flashjp</code> progress backups through the Android file picker. The app copies selected files to its own temporary or private storage to process them.</p>
-      <p>You may also export statistics as CSV/PDF and export per-deck progress backups as <code>.flashjp</code> files. Exports are created only when you choose the export action and are shared only when you choose a destination through the Android share sheet. Exported files may contain deck text, local media references, review history, sessions, settings, statistics, and study metrics. In version 1, user progress backups are not password-protected or user-encrypted, so anyone who receives the file may be able to inspect or import it.</p>
+      <p>You may export statistics as CSV/PDF and per-deck progress backups as <code>.flashjp</code> files. Exports are created only when you choose the export action and are shared only when you choose a destination through the Android share sheet. Exported files may contain deck text, local media references, review history, sessions, settings, statistics and study metrics. In version 1, user progress backups are not password-protected or user-encrypted.</p>
 
-      <h3>8. Data retention and deletion</h3>
-      <p>Local app data remains on your device until you delete it. You can delete it by uninstalling FlashLingo, clearing app data in Android settings, deleting a deck inside the app, or using any in-app deletion/reset feature made available for the relevant data.</p>
-      <p>When you delete a deck, FlashLingo removes the deck’s cards, settings, logs, sessions, statistics, and orphaned local media according to the app’s deletion behavior. FlashLingo does not provide online accounts and therefore does not offer a server-side account deletion process.</p>
-      <p>For data processed by Google AdMob, please refer to Google’s privacy controls and policies.</p>
+      <h3>8. Retention and deletion</h3>
+      <p>Local app data remains on your device until you delete it by uninstalling FlashLingo, clearing app data in Android settings, deleting a deck inside the app, or using any in-app deletion/reset feature made available for the relevant data. When you delete a deck, FlashLingo removes that deck's cards, settings, logs, sessions, statistics and orphaned local media according to the app's deletion behavior.</p>
+      <p>For data processed by Google AdMob, please refer to Google's privacy controls and policies.</p>
 
       <h3>9. Security</h3>
-      <p>FlashLingo stores app data inside the operating system’s private app storage. Official deck packages are verified and processed by the app before import. Imported card HTML is sanitized before rendering in the study WebView, and remote resources inside imported card HTML are blocked according to the app’s security model.</p>
-      <p>No method of storage or transmission is perfectly secure. You are responsible for keeping your device, exported files, and backups safe.</p>
+      <p>FlashLingo stores app data inside the operating system's private app storage. Official deck packages are verified before import. Imported card HTML is sanitized before rendering in the study WebView, and remote resources inside imported card HTML are blocked according to the app's security model. No method of storage or transmission is perfectly secure; keep your device, exported files and backups safe.</p>
 
       <h3>10. Children</h3>
-      <p>FlashLingo is not directed to children under 13. Because the app uses advertising technologies that may involve advertising identifiers, FlashLingo is intended for users aged 13 or older. If you believe that a child has provided personal data through a third-party service connected to the app, contact us so we can review the situation.</p>
+      <p>FlashLingo is not directed to children under 13. Because the app uses advertising technologies that may involve advertising identifiers, FlashLingo is intended for users aged 13 or older.</p>
 
       <h3>11. Your rights</h3>
-      <p>Depending on your jurisdiction, including the European Union under the GDPR, you may have rights to access, rectification, erasure, restriction, portability, objection, and withdrawal of consent where processing is based on consent. Because FlashLingo does not keep your app study data on its own servers, most rights regarding app data can be exercised directly on your device by deleting decks, clearing app data, uninstalling the app, or changing app settings.</p>
-      <p>For advertising data processed by Google, use Google’s privacy controls and policies. You may contact FlashLingo at <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a> for privacy questions.</p>
+      <p>Depending on your jurisdiction, you may have rights to access, rectification, erasure, restriction, portability, objection and withdrawal of consent where processing is based on consent. Because FlashLingo does not keep your app study data on its own servers, most rights regarding app data can be exercised directly on your device by deleting decks, clearing app data, uninstalling the app or changing app settings.</p>
 
-      <h3>12. Third-party services and external links</h3>
-      <p>The app and website may link to external websites or services, including Google, Google Play, GitHub Pages, GitHub Releases, or other file hosts used for official downloads. These third parties have their own privacy policies and terms. FlashLingo is not responsible for third-party websites or services.</p>
+      <h3>12. Third-party links</h3>
+      <p>The app and website may link to external websites or services, including Google, Google Play, GitHub Pages, GitHub Releases or other file hosts used for official downloads. These third parties have their own privacy policies and terms.</p>
 
-      <h3>13. Changes to this policy</h3>
-      <p>We may update this Privacy Policy from time to time. The current version will be published on this page with the “Last updated” date.</p>
-
-      <h3>14. Contact</h3>
-      <p>For privacy questions, contact: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <h3>13. Changes and contact</h3>
+      <p>We may update this Privacy Policy from time to time. The current version will be published on this page with the last updated date. For privacy questions, contact <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
     </section>
 
     <hr>
 
-    <section id="spanish" class="card">
-      <h2>Política de Privacidad — Español</h2>
+    <section id="spanish" class="legal-card">
+      <h2>Politica de Privacidad - Espa&ntilde;ol</h2>
 
-      <h3>1. Introducción</h3>
-      <p>FlashLingo es una aplicación Android para estudiar vocabulario con flashcards, repetición espaciada, audio, mazos locales, estadísticas y copias manuales de progreso por mazo. Esta política explica qué información se guarda localmente, qué servicios de terceros pueden tratar datos y qué opciones tienes.</p>
+      <h3>1. Introduccion</h3>
+      <p>FlashLingo es una aplicacion Android para estudiar vocabulario con flashcards, repeticion espaciada, audio, mazos locales, estadisticas y copias manuales de progreso por mazo. Esta politica explica que informacion se guarda localmente, que servicios de terceros pueden tratar datos y que opciones tienes.</p>
 
-      <h3>2. Resumen rápido</h3>
+      <h3>2. Resumen rapido</h3>
       <ul>
-        <li>No necesitas una cuenta online. FlashLingo no te pide nombre, correo electrónico, contraseña, foto de perfil, teléfono ni información de pago.</li>
-        <li>FlashLingo no tiene servidor propio para la app, sincronización en la nube, analítica propia ni informes de fallos propios.</li>
-        <li>Tus mazos importados, progreso, ajustes, sesiones, historial de repasos, estadísticas y multimedia local se guardan en el almacenamiento privado de la app en tu dispositivo.</li>
-        <li>La app muestra anuncios mediante Google AdMob / Google Mobile Ads SDK. Google puede tratar ciertos datos de dispositivo, publicidad, diagnóstico, ubicación aproximada e interacción con anuncios según sus propias políticas.</li>
-        <li>El respaldo automático de Android y la transferencia entre dispositivos de los datos de la app están desactivados en la configuración de release. Puedes migrar tu progreso manualmente exportando una copia <code>.flashjp</code> por mazo.</li>
+        <li>No necesitas una cuenta online. FlashLingo no pide nombre, correo electronico, contrasena, foto de perfil, telefono ni informacion de pago.</li>
+        <li>FlashLingo no tiene servidor propio para la app, sincronizacion en la nube, analitica propia ni informes de fallos propios.</li>
+        <li>Tus mazos importados, progreso, ajustes, sesiones, historial de repasos, estadisticas y multimedia local se guardan en el almacenamiento privado de la app en tu dispositivo.</li>
+        <li>La app muestra anuncios mediante Google AdMob / Google Mobile Ads SDK. Google puede tratar datos de dispositivo, publicidad, diagnostico, ubicacion aproximada e interaccion con anuncios segun sus propias politicas.</li>
+        <li>El respaldo automatico de Android y la transferencia entre dispositivos estan desactivados en release. Puedes migrar tu progreso manualmente exportando una copia <code>.flashjp</code> por mazo.</li>
       </ul>
 
-      <h3>3. Datos guardados localmente en tu dispositivo</h3>
-      <p>Los siguientes datos se guardan localmente y no se envían a servidores de FlashLingo, porque FlashLingo no opera un backend propio para la app:</p>
+      <h3>3. Datos guardados localmente</h3>
+      <p>Estos datos se guardan localmente y no se envian a servidores de FlashLingo, porque FlashLingo no opera un backend propio para la app:</p>
       <ul>
-        <li>Mazos importados y su contenido, como palabras, significados, frases de ejemplo, lecturas, formas, traducciones, imágenes, audio e iconos de mazo.</li>
-        <li>Progreso de estudio, incluyendo estado de tarjetas, programación de repetición espaciada, fechas de repaso, respuestas correctas e incorrectas, pasos de aprendizaje, fallos, progreso de sesión y tiempo de estudio.</li>
-        <li>Estadísticas, incluyendo estadísticas diarias, historial de repasos, sesiones recientes, indicadores de tarjetas problemáticas y previsión de repasos.</li>
-        <li>Ajustes de la app y de los mazos, como idioma, tema, onboarding, límites diarios, recordatorios, modo escritura, deshacer y parámetros de repetición espaciada.</li>
+        <li>Mazos importados y su contenido: palabras, significados, frases, lecturas, formas, traducciones, imagenes, audio e iconos.</li>
+        <li>Progreso de estudio: estado de tarjetas, programacion SRS, fechas de repaso, aciertos y fallos, learning steps, lapses, sesion y tiempo de estudio.</li>
+        <li>Estadisticas: datos diarios, historial, sesiones recientes, tarjetas problematicas y forecast.</li>
+        <li>Ajustes de app y mazo: idioma, tema, onboarding, limites diarios, recordatorios, modo escritura, deshacer y parametros SRS.</li>
       </ul>
 
       <h3>4. Publicidad y Google AdMob</h3>
-      <p>FlashLingo usa Google AdMob / Google Mobile Ads SDK para mostrar anuncios. FlashLingo no añade tu nombre, correo, contenido de mazos, respuestas de tarjetas, archivos importados ni progreso de estudio a las solicitudes de anuncios.</p>
-      <p>Según la documentación de Google para Google Mobile Ads SDK, el SDK puede recopilar y tratar datos como dirección IP, identificadores publicitarios, identificadores de dispositivo u otros identificadores, interacciones con la app, interacciones con anuncios, información de diagnóstico, información de fallos o rendimiento y ubicación aproximada inferida desde la dirección IP. Google puede usar estos datos para publicidad, medición de anuncios, analítica, prevención de fraude, seguridad y funcionamiento del servicio. Puedes leer la Política de Privacidad de Google en <a href="https://policies.google.com/privacy" rel="noopener noreferrer">policies.google.com/privacy</a> y la documentación de privacidad de AdMob en <a href="https://developers.google.com/admob/android/privacy" rel="noopener noreferrer">developers.google.com/admob/android/privacy</a>.</p>
+      <p>FlashLingo usa Google AdMob / Google Mobile Ads SDK para mostrar anuncios. FlashLingo no anade tu nombre, correo, contenido de mazos, respuestas, archivos importados ni progreso de estudio a las solicitudes de anuncios.</p>
+      <p>Segun la documentacion de Google, el SDK puede recopilar y tratar direccion IP, identificadores publicitarios, identificadores de dispositivo, interacciones con la app o anuncios, informacion de diagnostico, fallos o rendimiento y ubicacion aproximada inferida desde IP. Google puede usar estos datos para publicidad, medicion, analitica, prevencion de fraude, seguridad y operacion del servicio.</p>
+      <p>Recursos de Google: <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Politica de Privacidad de Google</a> y <a href="https://developers.google.com/admob/android/privacy" rel="noopener noreferrer">documentacion de privacidad de AdMob</a>.</p>
 
-      <h3>5. Consentimiento, anuncios personalizados y opciones de privacidad</h3>
-      <p>Cuando sea necesario, incluyendo para usuarios del Espacio Económico Europeo, Reino Unido y Suiza, FlashLingo usa la plataforma User Messaging Platform (UMP) de Google para pedir o actualizar el consentimiento antes de cargar anuncios. Los anuncios se solicitan solo cuando el estado de consentimiento permite solicitar anuncios. Si Google Mobile Ads indica que en tu región se requiere un punto de entrada a opciones de privacidad, FlashLingo puede mostrar una opción en los ajustes de la app para reabrir tus preferencias de privacidad publicitaria.</p>
-      <p>También puedes gestionar opciones de publicidad desde los ajustes de Android o de tu cuenta de Google, incluyendo restablecer o limitar el Advertising ID cuando tu dispositivo lo permita.</p>
+      <h3>5. Consentimiento y opciones</h3>
+      <p>Cuando sea necesario, incluyendo usuarios del Espacio Economico Europeo, Reino Unido y Suiza, FlashLingo usa Google UMP para pedir o actualizar consentimiento antes de cargar anuncios. Si Google Mobile Ads indica que en tu region se requiere un punto de entrada a opciones de privacidad, FlashLingo puede mostrar una opcion en ajustes para reabrir tus preferencias.</p>
+      <p>Tambien puedes gestionar opciones de publicidad desde Android o tu cuenta de Google, incluyendo restablecer o limitar el Advertising ID cuando tu dispositivo lo permita.</p>
 
       <h3>6. Permisos</h3>
-      <p>FlashLingo usa solo permisos necesarios para sus funciones documentadas y para anuncios de terceros:</p>
       <ul>
-        <li><strong>Internet y estado de red:</strong> usados por Google Mobile Ads y por componentes de plataforma que necesitan conocer el estado de conectividad.</li>
-        <li><strong>Advertising ID y permisos Android AdServices:</strong> usados por Google Mobile Ads para publicidad, medición, atribución y funciones relacionadas con Privacy Sandbox cuando estén disponibles.</li>
-        <li><strong>Notificaciones:</strong> usadas solo para recordatorios locales de estudio si los activas y concedes el permiso de notificaciones de Android cuando sea necesario.</li>
-        <li><strong>Receive boot completed:</strong> usado para reprogramar recordatorios locales activados después de reiniciar el dispositivo.</li>
+        <li><strong>Internet y estado de red:</strong> usados por Google Mobile Ads y componentes que necesitan conocer la conectividad.</li>
+        <li><strong>Advertising ID y Android AdServices:</strong> usados por Google Mobile Ads para publicidad, medicion, atribucion y funciones Privacy Sandbox.</li>
+        <li><strong>Notificaciones:</strong> usadas solo para recordatorios locales si los activas y concedes el permiso cuando sea necesario.</li>
+        <li><strong>Receive boot completed:</strong> usado para reprogramar recordatorios despues de reiniciar el dispositivo.</li>
       </ul>
-      <p>FlashLingo no solicita cámara, micrófono, ubicación GPS precisa, contactos, calendario, SMS, teléfono, almacenamiento amplio, fotos, vídeos ni biblioteca de audio.</p>
+      <p>FlashLingo no solicita camara, microfono, ubicacion GPS precisa, contactos, calendario, SMS, telefono, almacenamiento amplio, fotos, videos ni biblioteca de audio.</p>
 
-      <h3>7. Importaciones, exportaciones y compartición iniciadas por ti</h3>
-      <p>FlashLingo permite importar paquetes oficiales <code>.flashjp</code> y copias de progreso <code>.flashjp</code> generadas por la app mediante el selector de archivos de Android. La app copia los archivos seleccionados a almacenamiento temporal o privado propio para procesarlos.</p>
-      <p>También puedes exportar estadísticas como CSV/PDF y exportar copias de progreso por mazo como archivos <code>.flashjp</code>. Las exportaciones se crean solo cuando eliges la acción de exportar y se comparten solo cuando eliges un destino mediante el menú de compartir de Android. Los archivos exportados pueden contener texto de tarjetas, referencias multimedia locales, historial de repasos, sesiones, ajustes, estadísticas y métricas de estudio. En la versión 1, las copias de progreso de usuario no tienen contraseña ni cifrado de usuario, por lo que quien reciba el archivo podría inspeccionarlo o importarlo.</p>
+      <h3>7. Importaciones, exportaciones y comparticion</h3>
+      <p>FlashLingo permite importar paquetes oficiales <code>.flashjp</code> y backups de progreso <code>.flashjp</code> generados por la app mediante el selector de archivos de Android. Tambien puedes exportar estadisticas CSV/PDF y backups por mazo. Esos archivos pueden contener texto de tarjetas, referencias multimedia, historial, sesiones, ajustes, estadisticas y metricas. En v1, los backups de progreso no tienen contrasena ni cifrado de usuario.</p>
 
-      <h3>8. Conservación y eliminación de datos</h3>
-      <p>Los datos locales permanecen en tu dispositivo hasta que los eliminas. Puedes eliminarlos desinstalando FlashLingo, borrando los datos de la app desde los ajustes de Android, eliminando un mazo dentro de la app o usando cualquier función de eliminación/restablecimiento disponible para esos datos.</p>
-      <p>Al eliminar un mazo, FlashLingo elimina sus tarjetas, ajustes, registros, sesiones, estadísticas y multimedia local huérfana según el comportamiento de eliminación de la app. FlashLingo no ofrece cuentas online y por eso no tiene un proceso de eliminación de cuenta en servidor.</p>
-      <p>Para los datos tratados por Google AdMob, consulta los controles y políticas de privacidad de Google.</p>
+      <h3>8. Conservacion y eliminacion</h3>
+      <p>Los datos locales permanecen en tu dispositivo hasta que los eliminas desinstalando la app, borrando datos en Android, eliminando un mazo dentro de la app o usando una funcion de eliminacion disponible. Al eliminar un mazo, FlashLingo elimina tarjetas, ajustes, logs, sesiones, estadisticas y multimedia local huerfana de ese mazo.</p>
+      <p>Para datos tratados por Google AdMob, consulta los controles y politicas de privacidad de Google.</p>
 
       <h3>9. Seguridad</h3>
-      <p>FlashLingo guarda los datos de la app dentro del almacenamiento privado de la app proporcionado por el sistema operativo. Los paquetes oficiales de mazos se verifican y procesan antes de importarse. El HTML importado de tarjetas se sanea antes de renderizarse en el WebView de estudio, y los recursos remotos dentro del HTML importado se bloquean según el modelo de seguridad de la app.</p>
-      <p>Ningún método de almacenamiento o transmisión es perfectamente seguro. Tú eres responsable de mantener seguro tu dispositivo, archivos exportados y copias de seguridad.</p>
+      <p>FlashLingo guarda datos en el almacenamiento privado de la app. Los paquetes oficiales se verifican antes de importarse. El HTML importado de tarjetas se sanea antes de renderizarse y los recursos remotos se bloquean segun el modelo de seguridad de la app. Mantener seguro tu dispositivo y tus archivos exportados es tu responsabilidad.</p>
 
       <h3>10. Menores</h3>
-      <p>FlashLingo no está dirigida a menores de 13 años. Debido a que la app usa tecnologías publicitarias que pueden implicar identificadores publicitarios, FlashLingo está pensada para usuarios de 13 años o más. Si crees que un menor ha proporcionado datos personales a través de un servicio de terceros conectado con la app, contáctanos para revisar la situación.</p>
+      <p>FlashLingo no esta dirigida a menores de 13 anos. Por el uso de tecnologias publicitarias que pueden implicar identificadores, la app esta pensada para usuarios de 13 anos o mas.</p>
 
-      <h3>11. Tus derechos</h3>
-      <p>Según tu jurisdicción, incluyendo la Unión Europea bajo el RGPD, puedes tener derechos de acceso, rectificación, eliminación, restricción, portabilidad, oposición y retirada del consentimiento cuando el tratamiento se base en consentimiento. Como FlashLingo no guarda tus datos de estudio en servidores propios, la mayoría de derechos relacionados con los datos de la app se ejercen directamente en tu dispositivo eliminando mazos, borrando datos de la app, desinstalando la app o cambiando ajustes.</p>
-      <p>Para datos publicitarios tratados por Google, usa los controles y políticas de privacidad de Google. Puedes contactar con FlashLingo en <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a> para preguntas de privacidad.</p>
+      <h3>11. Derechos</h3>
+      <p>Segun tu jurisdiccion, puedes tener derechos de acceso, rectificacion, eliminacion, restriccion, portabilidad, oposicion y retirada del consentimiento. Como FlashLingo no guarda tus datos de estudio en servidores propios, la mayoria de derechos sobre datos de la app se ejercen directamente en tu dispositivo.</p>
 
-      <h3>12. Servicios de terceros y enlaces externos</h3>
-      <p>La app y el sitio web pueden enlazar a sitios o servicios externos, incluyendo Google, Google Play, GitHub Pages, GitHub Releases u otros alojamientos usados para descargas oficiales. Estos terceros tienen sus propias políticas de privacidad y términos. FlashLingo no se responsabiliza por sitios o servicios de terceros.</p>
+      <h3>12. Enlaces de terceros</h3>
+      <p>La app y el sitio pueden enlazar a Google, Google Play, GitHub Pages, GitHub Releases u otros alojamientos de descargas oficiales. Esos terceros tienen sus propias politicas y terminos.</p>
 
-      <h3>13. Cambios en esta política</h3>
-      <p>Podemos actualizar esta Política de Privacidad ocasionalmente. La versión vigente se publicará en esta página con la fecha de “Última actualización”.</p>
-
-      <h3>14. Contacto</h3>
-      <p>Para preguntas de privacidad, contacta: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <h3>13. Cambios y contacto</h3>
+      <p>Podemos actualizar esta Politica de Privacidad. La version vigente se publicara en esta pagina con su fecha. Para preguntas de privacidad, contacta <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
     </section>
-
   </main>
-  <footer class="footer">
-    <p>© 2026 FlashLingo. Website: <a href="https://flashlingo.github.io/">flashlingo.github.io</a>. Contact: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. Website: <a href="https://flashlingo.github.io/">flashlingo.github.io</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="legal.html">Legal Notice</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

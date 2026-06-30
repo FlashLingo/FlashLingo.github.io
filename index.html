@@ -1,26 +1,362 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FlashLingo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlashLingo - Aprende vocabulario con flashcards locales</title>
+  <meta name="description" content="FlashLingo es una app de flashcards para estudiar vocabulario con mazos .flashjp, repeticion espaciada, audio, modo escritura, estadisticas y progreso local-first.">
+  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
+  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>FlashLingo</h1>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="FlashLingo">
+        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir navegacion" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Navegacion principal" data-site-nav>
+        <a href="#inicio">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Terminos</a>
+        <a href="legal.html">Legal</a>
+        <a href="contact.html">Soporte</a>
+      </nav>
+    </div>
+  </header>
 
-  <p>
-    FlashLingo is a language learning app based on flashcards,
-    spaced repetition, audio, and progressive study decks.
-  </p>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
 
-  <h2>Download decks</h2>
-  <p>
-    Free language decks will be available here soon. very soon.
-  </p>
+  <main>
+    <section id="inicio" class="hero-home">
+      <img class="hero-bg" src="Images/dashboard_ESP.jpg" alt="Pantalla principal de FlashLingo con mazos de idiomas" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-logo-row">
+          <img src="ICO/ICO_2.png" alt="" width="58" height="58">
+          <span>Flashcards local-first</span>
+        </div>
+        <h1>
+          <span class="hero-title-kicker">Adquiere, aprende y estudia vocabulario con</span>
+          <span class="hero-title-brand"><span>Flash</span>Lingo.</span>
+        </h1>
+        <p class="hero-lead">FlashLingo es una app de flashcards para estudiantes de idiomas que quieren aprender y adquirir vocabulario de forma rapida y eficiente, tener control sobre sus mazos, su progreso, su ritmo de estudio y sus datos de aprendizaje.</p>
+        <p class="hero-lead hero-lead-secondary">Importa mazos <code>.flashjp</code>, estudia tarjetas de reconocimiento y produccion, practica con audio y modo escritura, y analiza tu progreso con estadisticas detalladas, sin necesidad de crear una cuenta.</p>
+        <div class="download-actions hero-downloads">
+          <a class="download-button" href="download.html">
+            <img src="assets/icons/google-play.svg" alt="" width="24" height="24">
+            <span>Descargar en Google Play</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="assets/icons/app-store.svg" alt="" width="24" height="24">
+            <span>Descargar en App Store</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="assets/icons/windows.svg" alt="" width="24" height="24">
+            <span>Descargar para Windows</span>
+          </a>
+          <a class="button secondary" href="decks.html">Descargar mazos oficiales</a>
+        </div>
+        <p class="hero-note">Estudio local. Sin cuenta ni necesidad de registrarse. Tu progreso se queda en tu dispositivo.</p>
+      </div>
+    </section>
 
-  <h2>Contact</h2>
-  <p>
-    Developer: FlashLingo
-  </p>
+    <section class="trust-band" aria-label="Caracteristicas rapidas">
+      <div class="trust-track" data-trust-track>
+        <span>App para Android</span>
+        <span>Progreso local-first</span>
+        <span>Importacion de mazos .flashjp</span>
+        <span>Repeticion espaciada</span>
+        <span>Audio e imagenes</span>
+        <span>Modo escritura</span>
+        <span>Exportaciones CSV/PDF</span>
+        <span>Backup manual por mazo</span>
+      </div>
+    </section>
+
+    <section id="metodo" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Nuestro Metodo</span>
+          <h2>Una app de flashcards con un metodo innovador para estudiantes que quieren mas control.</h2>
+          <p class="lead">Muchas apps de idiomas utilizan metodos anticuados, no tienen un progreso rapido, te obligan a crear una cuenta, ocultan como funciona el sistema de estudio o limitan cuanto puedes estudiar o personalizar tu aprendizaje. FlashLingo propone un enfoque diferente.</p>
+          <p>Tu importas tus propios mazos, estudias localmente en tu dispositivo, ajustas cada mazo a tu ritmo y mantienes tu progreso bajo tu control.</p>
+          <p>Nuestro metodo de aprendizaje y nuestro algoritmo te permiten adquirir y aprender vocabulario rapido y de forma eficiente, bajo tu propio ritmo.</p>
+        </div>
+        <div class="method-stack reveal">
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Aprendizaje local</h3>
+            <p>Tus mazos, progreso, configuracion, sesiones y estadisticas se guardan localmente en tu dispositivo. No necesitas crear una cuenta para empezar a estudiar.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Pensada para estudiar vocabulario en serio</h3>
+            <p>Estudia tarjetas de reconocimiento y produccion, usa audio y frases de ejemplo, activa el modo escritura y deja que la repeticion espaciada programe tus repasos.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Exporta lo importante</h3>
+            <p>Revisa tu rendimiento con estadisticas, exporta reportes en CSV o PDF y crea backups manuales <code>.flashjp</code> del progreso de tus mazos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Como funciona</span>
+          <h2>Como funciona FlashLingo</h2>
+        </div>
+        <div class="timeline" data-timeline>
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>Importa un mazo</h3>
+            <p>Elige un mazo oficial <code>.flashjp</code> o restaura un backup de progreso del usuario. FlashLingo verifica el paquete, lee su manifiesto, importa la base de datos y prepara el mazo para que puedas estudiar y empezar a adquirir vocabulario.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>Estudia tus tarjetas</h3>
+            <p>Practica tarjetas de reconocimiento para comprender palabras y tarjetas de produccion para recordarlas activamente. Las tarjetas incluyen definiciones, ejemplos, traducciones, lecturas, audio, imagenes y formas adicionales.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>Repasa con repeticion espaciada</h3>
+            <p>FlashLingo programa tus repasos segun tu rendimiento gracias a nuestro algoritmo. Las tarjetas nuevas, en aprendizaje, en repaso y en reaprendizaje se organizan dentro de una cola diaria de estudio.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>Analiza y mejora</h3>
+            <p>Usa las estadisticas del mazo para revisar tu precision, tiempo de estudio, tarjetas dificiles, historial de repasos y carga futura. Exporta tus datos cuando lo necesites.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Funciones principales</span>
+          <h2>Todo lo que necesitas para estudiar vocabulario con concentracion.</h2>
+        </div>
+        <div class="grid four feature-grid">
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Paquetes de mazos .flashjp</h3><p>Importa paquetes de FlashLingo que pueden contener una base SQLite, metadatos, audio, imagenes y configuracion recomendada del mazo.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Reconocimiento y produccion</h3><p>Cada palabra puede generar dos direcciones de estudio: reconocer la palabra en el idioma objetivo y producirla a partir de su significado.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Modo escritura</h3><p>En tarjetas de produccion, el modo escritura te permite escribir tu respuesta, compararla con la palabra objetivo y desbloquear Good solo cuando alcanzas el porcentaje minimo configurado.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Configuracion avanzada</h3><p>Cada mazo puede tener sus propios limites diarios, pasos de aprendizaje, comportamiento ante fallos, parametros del algoritmo, mezcla, recordatorios, modo escritura y deshacer.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Estadisticas detalladas</h3><p>Consulta precision, tiempo de estudio, prevision de repasos, actividad diaria, tarjetas dificiles e historial de sesiones mediante graficos y resumenes claros.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>CSV, PDF y backups</h3><p>Exporta estadisticas de estudio en CSV o PDF, y crea backups manuales <code>.flashjp</code> del progreso de cada mazo cuando quieras conservar o mover tus datos.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Recordatorios locales</h3><p>Activa recordatorios opcionales por mazo. FlashLingo usa notificaciones locales para avisarte cuando hay tarjetas esperando repaso.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Interfaz multilingue</h3><p>FlashLingo soporta interfaz en ingles, espanol, rumano, aleman, frances, japones y chino.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section privacy-band">
+      <div class="page privacy-layout">
+        <div class="section-header reveal">
+          <span class="eyebrow">Privacidad / Local-first</span>
+          <h2>Tu progreso de estudio te pertenece.</h2>
+          <p class="lead">FlashLingo esta disenada como una app local-first. No necesitas crear una cuenta, y FlashLingo no usa un servidor propio para guardar tus mazos o tu progreso.</p>
+          <p>Tus mazos importados, archivos multimedia, historial de estudio, configuracion de mazos, sesiones y estadisticas se guardan en el almacenamiento local de la app dentro de tu dispositivo.</p>
+          <a class="button surface" href="privacy.html">Leer Politica de Privacidad</a>
+        </div>
+        <ul class="privacy-list reveal">
+          <li>No necesitas crear una cuenta.</li>
+          <li>No hay analitica propia ni servidor propio de reportes de fallos.</li>
+          <li>El progreso de estudio se guarda localmente.</li>
+          <li>Los backups de mazos se crean solo cuando tu decides exportarlos.</li>
+          <li>Los anuncios son proporcionados por Google AdMob en builds moviles compatibles.</li>
+          <li>Las opciones de privacidad de anuncios se gestionan mediante el flujo de consentimiento de Google cuando es necesario.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="descargar" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Descargar</span>
+          <h2>Elige tu plataforma.</h2>
+          <p class="lead">Los botones quedan preparados para enlazar a las tiendas y builds oficiales cuando esten publicados.</p>
+        </div>
+        <div class="download-grid">
+          <a class="download-card reveal" href="download.html">
+            <img src="assets/icons/google-play.svg" alt="" width="34" height="34">
+            <strong>Descargar en Google Play</strong>
+            <span>Android</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="assets/icons/app-store.svg" alt="" width="34" height="34">
+            <strong>Descargar en App Store</strong>
+            <span>iOS</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="assets/icons/windows.svg" alt="" width="34" height="34">
+            <strong>Descargar para Windows</strong>
+            <span>Desktop</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mazos" class="section privacy-band">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Mazos oficiales</span>
+          <h2>Mazos gratuitos para FlashLingo</h2>
+          <p class="lead">Los mazos de FlashLingo usan el formato <code>.flashjp</code>. Los mazos oficiales incluyen vocabulario, frases de ejemplo, traducciones, lecturas, audio, imagenes, iconos de mazo y configuracion recomendada de estudio.</p>
+          <p>Descarga un mazo, importalo en la app y empieza a estudiar localmente.</p>
+          <div class="section-actions">
+            <a class="button surface" href="decks.html">Descargar mazos</a>
+          </div>
+          <div class="notice warning">
+            <strong>Nota importante:</strong> los mazos se ofrecen con fines educativos. El contenido puede contener errores. Si encuentras un problema, reportalo mediante el contacto de soporte.
+          </div>
+        </div>
+        <figure class="phone-shot deck-preview-shot reveal">
+          <div class="phone-frame"><img src="Images/Menu_ESP.jpg" alt="Menu de un mazo en FlashLingo" loading="lazy"></div>
+          <figcaption>Mazos con acciones de configuracion, exploracion, estadisticas y exportacion.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crear-mazos" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Para creadores de mazos</span>
+          <h2>Crea tus propios mazos para FlashLingo.</h2>
+          <p class="lead">FlashLingo esta construida alrededor de paquetes de mazos portables. Un paquete <code>.flashjp</code> puede contener una base de datos, un manifiesto, archivos de audio, imagenes, iconos de mazo y valores de configuracion.</p>
+          <p>Esto permite crear mazos de vocabulario mas ricos, con ejemplos, traducciones, lecturas, multimedia y configuracion personalizada de estudio.</p>
+          <p>Pero no solo eso: puedes crear mazos para cualquier tema o proposito, ya que el formato <code>.flashjp</code> es muy flexible.</p>
+          <div class="section-actions">
+            <a class="button surface" href="make_decks.html">Aprende como crear tus mazos</a>
+            <a class="button surface" href="Documentacion/flashjp-format.md">Leer documentacion del formato</a>
+          </div>
+        </div>
+        <div class="panel creator-table reveal">
+          <div class="creator-row"><strong>SQLite</strong><span>Contenido de flashcards basado en base de datos local.</span></div>
+          <div class="creator-row"><strong>manifest.json</strong><span>Metadatos y configuracion recomendada del mazo.</span></div>
+          <div class="creator-row"><strong>Media</strong><span>Referencias a audio, imagenes e iconos de mazo.</span></div>
+          <div class="creator-row"><strong>Dos direcciones</strong><span>Generacion de tarjetas de reconocimiento y produccion.</span></div>
+          <div class="creator-row"><strong>Actualizaciones</strong><span>Actualizaciones de mazo sin perder progreso.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capturas" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Vista previa visual</span>
+          <h2>Disenada para sesiones largas de estudio.</h2>
+          <p class="lead">FlashLingo combina una interfaz limpia con herramientas avanzadas para estudiar, revisar y analizar tu progreso sin perder concentracion.</p>
+        </div>
+        <div class="preview-tabs compact-preview reveal" data-preview-tabs>
+          <div class="preview-controls" role="tablist" aria-label="Capturas de FlashLingo">
+            <button type="button" role="tab" aria-selected="true" data-preview-target="screen-home">Inicio</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-study">Estudio</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-write">Modo escritura</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-stats">Estadisticas</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-import">Importacion</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-panel is-active" id="screen-home">
+              <div class="phone-frame"><img src="Images/dashboard_ESP.jpg" alt="Inicio de mazos de FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Inicio de mazos.</strong> Consulta de un vistazo tarjetas nuevas, aprendizaje, repasos, atrasadas y precision reciente.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-study">
+              <div class="phone-frame"><img src="Images/Japones2_ESP.jpg" alt="Sesion de estudio en FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Sesion de estudio.</strong> Estudia tarjetas limpias con ejemplos, audio, imagenes, lecturas y acciones claras de Good/Bad.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-write">
+              <div class="phone-frame"><img src="Images/Aleman2_ESP.jpg" alt="Tarjeta de produccion en FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Modo escritura.</strong> Escribe tu respuesta y comparala con la palabra objetivo antes de calificar la tarjeta.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-stats">
+              <div class="phone-frame"><img src="Images/Estadisticas7_ESP.jpg" alt="Estadisticas y forecast de FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Estadisticas.</strong> Analiza tu progreso con graficos, previsiones, actividad diaria y tarjetas dificiles.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-import">
+              <div class="phone-frame"><img src="Images/Config1_ESP.jpg" alt="Configuracion de mazo en FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Importacion de mazos.</strong> Previsualiza e importa mazos <code>.flashjp</code> con progreso claro, diagnosticos y manejo de conflictos.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section privacy-band">
+      <div class="page grid two">
+        <div class="section-header reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <div class="faq-list reveal" data-faq>
+          <details open><summary>Necesito crear una cuenta?</summary><p>No. FlashLingo no requiere una cuenta para estudiar. Tus mazos y tu progreso se guardan localmente en tu dispositivo.</p></details>
+          <details><summary>FlashLingo sincroniza mi progreso con la nube?</summary><p>No. La version actual no incluye sincronizacion en la nube. Puedes exportar manualmente el progreso de un mazo como backup <code>.flashjp</code>.</p></details>
+          <details><summary>Que es un archivo .flashjp?</summary><p>Un archivo <code>.flashjp</code> es un paquete de FlashLingo usado para importar mazos oficiales o restaurar backups de progreso del usuario.</p></details>
+          <details><summary>Puedo estudiar sin conexion?</summary><p>Puedes estudiar localmente los mazos que ya importaste. Algunas funciones, como los anuncios o la apertura de enlaces externos, pueden requerir conexion a internet.</p></details>
+          <details><summary>La app contiene anuncios?</summary><p>Si, pero no son invasivos y no afectan el estudio. FlashLingo puede mostrar anuncios mediante Google AdMob en builds moviles compatibles.</p></details>
+          <details><summary>Puedo exportar mi progreso?</summary><p>Si. Puedes exportar estadisticas en CSV/PDF y crear un backup manual <code>.flashjp</code> para cada mazo.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="page cta-band reveal">
+        <span class="eyebrow">Empieza ahora</span>
+        <h2>Empieza a construir tu vocabulario de forma rapida y eficiente.</h2>
+        <p>Importa tus mazos, estudia con repeticion espaciada, revisa tus estadisticas y manten tu progreso de aprendizaje en tu dispositivo.</p>
+        <div class="download-actions">
+          <a class="download-button" href="download.html"><img src="assets/icons/google-play.svg" alt="" width="24" height="24"><span>Descargar en Google Play</span></a>
+          <a class="download-button" href="download.html"><img src="assets/icons/app-store.svg" alt="" width="24" height="24"><span>Descargar en App Store</span></a>
+          <a class="download-button" href="download.html"><img src="assets/icons/windows.svg" alt="" width="24" height="24"><span>Descargar para Windows</span></a>
+          <a class="button surface" href="decks.html">Descargar mazos oficiales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="soporte" class="site-footer site-footer-home">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="FlashLingo">
+          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>FlashLingo es una app para estudiar vocabulario con flashcards, repeticion espaciada, mazos locales y estadisticas de progreso.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo / Javier Ponce. Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-link-grid">
+        <div class="footer-link-group">
+          <span>Producto</span>
+          <a href="#inicio">Inicio</a>
+          <a href="download.html">Descargar</a>
+          <a href="metode.html">Nuestro Metodo</a>
+          <a href="decks.html">Mazos Oficiales</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Recursos</span>
+          <a href="make_decks.html">Crear Mazos</a>
+          <a href="contact.html">Soporte</a>
+          <a href="privacy.html">Privacidad</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Legal</span>
+          <a href="terms.html">Terminos</a>
+          <a href="legal.html">Aviso Legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

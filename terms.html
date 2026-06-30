@@ -4,276 +4,41 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlashLingo Terms of Service</title>
-  <meta name="description" content="Terms of Service for FlashLingo Android app and website.">
-  <style>
-
-:root {
-  --primary: #40C0CC;
-  --primary-dark: #278A96;
-  --mint: #8EDFD4;
-  --blue: #8CCBFF;
-  --peach: #FFC19E;
-  --lavender: #CDB7F0;
-  --bg: #F3F4F6;
-  --surface: #FFFFFF;
-  --text: #374151;
-  --muted: #6B7280;
-  --border: #E5E7EB;
-  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.65;
-  background:
-    radial-gradient(circle at top left, rgba(64, 192, 204, 0.18), transparent 30rem),
-    radial-gradient(circle at top right, rgba(205, 183, 240, 0.20), transparent 28rem),
-    var(--bg);
-  color: var(--text);
-}
-
-a { color: var(--primary-dark); font-weight: 650; }
-a:hover { text-decoration-thickness: 2px; }
-
-.site-header {
-  padding: 32px 20px 18px;
-}
-
-.header-inner,
-.page {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.brand-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--primary), var(--lavender));
-  box-shadow: var(--shadow);
-}
-
-.brand-name {
-  font-size: 1.6rem;
-  line-height: 1;
-  font-weight: 850;
-  letter-spacing: -0.04em;
-}
-
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.nav a,
-.lang-switch a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 8px 13px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.76);
-  border: 1px solid var(--border);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.nav a:hover,
-.lang-switch a:hover {
-  border-color: var(--primary);
-  color: var(--primary-dark);
-}
-
-.hero {
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.72));
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 34px;
-  box-shadow: var(--shadow);
-  margin-bottom: 22px;
-}
-
-.eyebrow {
-  color: var(--primary-dark);
-  font-weight: 850;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  font-size: .78rem;
-}
-
-h1 {
-  margin: 8px 0 12px;
-  font-size: clamp(2.1rem, 6vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: -0.06em;
-}
-
-h2 {
-  margin-top: 2.1rem;
-  padding-top: 0.35rem;
-  font-size: 1.55rem;
-  letter-spacing: -0.03em;
-}
-
-h3 {
-  margin-top: 1.6rem;
-  font-size: 1.12rem;
-}
-
-.lead {
-  font-size: 1.12rem;
-  color: var(--muted);
-  max-width: 760px;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 24px;
-  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.05);
-  margin: 18px 0;
-}
-
-.notice {
-  border-left: 5px solid var(--primary);
-  background: rgba(64, 192, 204, 0.10);
-  padding: 16px 18px;
-  border-radius: 18px;
-  margin: 18px 0;
-}
-
-.warning {
-  border-left: 5px solid #FF8A00;
-  background: rgba(255, 193, 158, 0.20);
-  padding: 16px 18px;
-  border-radius: 18px;
-  margin: 18px 0;
-}
-
-.meta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.meta-item {
-  padding: 14px 16px;
-  background: rgba(248,250,252,0.9);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-}
-
-.meta-label {
-  display: block;
-  color: var(--muted);
-  font-size: .82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-ul { padding-left: 1.35rem; }
-li { margin: .35rem 0; }
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  margin: 42px 0;
-}
-
-.lang-switch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0 0;
-}
-
-.footer {
-  max-width: 980px;
-  margin: 34px auto 0;
-  padding: 24px 20px 48px;
-  color: var(--muted);
-  font-size: .95rem;
-}
-
-code {
-  background: rgba(15, 23, 42, 0.06);
-  padding: .12rem .32rem;
-  border-radius: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #4BD3E0;
-    --primary-dark: #6EE4D7;
-    --bg: #0F172A;
-    --surface: #1E293B;
-    --text: #E2E8F0;
-    --muted: #94A3B8;
-    --border: #334155;
-    --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  }
-
-  body {
-    background:
-      radial-gradient(circle at top left, rgba(75, 211, 224, 0.14), transparent 30rem),
-      radial-gradient(circle at top right, rgba(209, 184, 255, 0.16), transparent 28rem),
-      var(--bg);
-  }
-
-  .hero {
-    background: linear-gradient(135deg, rgba(30,41,59,0.96), rgba(22,34,53,0.84));
-  }
-
-  .nav a,
-  .lang-switch a,
-  .meta-item {
-    background: rgba(30,41,59,0.82);
-  }
-
-  code { background: rgba(255,255,255,0.08); }
-}
-
-  </style>
+  <meta name="description" content="Terms of Service for the FlashLingo Android app and website.">
+  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
+  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand" aria-label="FlashLingo">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-name">FlashLingo</div>
-      </div>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="legal.html">Legal Notice</a>
-        <a href="decks.html">Decks</a>
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
+        <a href="index.html">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Terminos</a>
+        <a href="legal.html">Legal</a>
+        <a href="contact.html">Soporte</a>
       </nav>
     </div>
   </header>
-  <main class="page">
 
-    <section class="hero">
-      <span class="eyebrow">Legal · Terms</span>
+  <main class="legal-page">
+    <section class="legal-hero">
+      <span class="eyebrow">Legal &middot; Terms</span>
       <h1>Terms of Service</h1>
-      <p class="lead">These Terms govern your use of FlashLingo, the Android app <strong>com.flashlingo.app</strong>, the FlashLingo website, and official FlashLingo deck downloads.</p>
+      <p class="lead">These Terms govern your use of FlashLingo, the Android app <strong>com.flashlingo.app</strong>, the FlashLingo website and official FlashLingo deck downloads.</p>
       <div class="meta-grid">
         <div class="meta-item"><span class="meta-label">Provider</span>Javier Ponce / FlashLingo</div>
         <div class="meta-item"><span class="meta-label">Contact</span><a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a></div>
@@ -282,151 +47,153 @@ code {
       </div>
       <div class="lang-switch">
         <a href="#english">English</a>
-        <a href="#spanish">Español</a>
+        <a href="#spanish">Espa&ntilde;ol</a>
       </div>
     </section>
 
-    <section id="english" class="card">
-      <h2>Terms of Service — English</h2>
+    <section id="english" class="legal-card">
+      <h2>Terms of Service - English</h2>
 
       <h3>1. Acceptance</h3>
-      <p>By downloading, installing, accessing, or using FlashLingo, you agree to these Terms of Service. If you do not agree, do not use the app or the website.</p>
+      <p>By downloading, installing, accessing or using FlashLingo, you agree to these Terms of Service. If you do not agree, do not use the app or the website.</p>
 
       <h3>2. Service description</h3>
-      <p>FlashLingo is a local-first Android app for studying vocabulary using flashcards, spaced repetition, audio, write mode, local statistics, and importable <code>.flashjp</code> decks. The website provides information, support pages, legal documents, and links to official deck downloads.</p>
+      <p>FlashLingo is a local-first Android app for studying vocabulary using flashcards, spaced repetition, audio, write mode, local statistics and importable <code>.flashjp</code> decks. The website provides information, support pages, legal documents and links to official deck downloads when available.</p>
 
       <h3>3. License to use the app</h3>
-      <p>Subject to these Terms and the rules of the app store where you obtained FlashLingo, you are granted a personal, limited, non-exclusive, non-transferable, revocable license to use the app on devices you own or control.</p>
-      <p>These Terms do not sell or transfer ownership of FlashLingo, its code, brand, design, or official content to you.</p>
+      <p>Subject to these Terms and the rules of the app store where you obtained FlashLingo, you are granted a personal, limited, non-exclusive, non-transferable, revocable license to use the app on devices you own or control. These Terms do not transfer ownership of FlashLingo, its code, brand, design or official content to you.</p>
 
       <h3>4. Accounts and availability</h3>
-      <p>FlashLingo does not require an online account for its core app functionality. The app stores study data locally on your device. Some features, such as ads, official websites, or external download links, may require Internet access or third-party services.</p>
-      <p>We may modify, suspend, or discontinue parts of the app or website at any time, including features, official decks, or download links.</p>
+      <p>FlashLingo does not require an online account for its core app functionality. The app stores study data locally on your device. Some features, such as ads, official websites or external download links, may require Internet access or third-party services.</p>
+      <p>We may modify, suspend or discontinue parts of the app or website at any time, including features, official decks or download links.</p>
 
       <h3>5. Acceptable use</h3>
       <p>You agree to use FlashLingo lawfully. You must not:</p>
       <ul>
-        <li>import, distribute, or use content unless you have the necessary rights or permission;</li>
-        <li>use the app or website to infringe intellectual property, privacy, publicity, or other rights;</li>
-        <li>attempt to bypass, damage, reverse engineer for abusive purposes, overload, or exploit the app, website, official deck packages, ad systems, or third-party services;</li>
-        <li>use automated, deceptive, or fraudulent activity involving ads, downloads, or app behavior;</li>
-        <li>encourage accidental, artificial, or incentivized ad clicks unless explicitly allowed by the ad format and applicable policy.</li>
+        <li>import, distribute or use content unless you have the necessary rights or permission;</li>
+        <li>use the app or website to infringe intellectual property, privacy, publicity or other rights;</li>
+        <li>attempt to bypass, damage, reverse engineer for abusive purposes, overload or exploit the app, website, official deck packages, ad systems or third-party services;</li>
+        <li>use automated, deceptive or fraudulent activity involving ads, downloads or app behavior;</li>
+        <li>encourage accidental, artificial or incentivized ad clicks unless explicitly allowed by the ad format and applicable policy.</li>
       </ul>
 
       <h3>6. User-imported decks and content</h3>
       <p>FlashLingo lets you import decks and media files. You are responsible for the content you import and for having the rights needed to use it. Imported content is processed and stored locally on your device; FlashLingo does not review or host user-imported content on its own servers.</p>
-      <p>If you import content created by others, their own licenses or restrictions continue to apply.</p>
 
       <h3>7. Official FlashLingo decks</h3>
-      <p>Official FlashLingo decks may be provided free of charge through the website, GitHub Releases, or other official download mirrors. Unless a specific deck states a different license, official decks are provided for personal, non-commercial educational use only.</p>
-      <p>You may download and use official decks in FlashLingo. You may not resell, repackage, redistribute, or present official decks as your own unless we give written permission or the deck’s specific license allows it.</p>
+      <p>Official FlashLingo decks may be provided free of charge through the website, GitHub Releases or other official download mirrors. Unless a specific deck states a different license, official decks are provided for personal, non-commercial educational use only. You may not resell, repackage, redistribute or present official decks as your own unless we give written permission or the deck's specific license allows it.</p>
 
       <h3>8. Accuracy of educational content</h3>
-      <p>FlashLingo is an educational tool. We try to provide useful study content and functionality, but we do not guarantee that translations, example sentences, readings, pronunciations, audio, statistics, scheduling predictions, or explanations are complete, error-free, or suitable for a particular goal. You should verify important language or educational information independently.</p>
+      <p>FlashLingo is an educational tool. We try to provide useful study content and functionality, but we do not guarantee that translations, example sentences, readings, pronunciations, audio, statistics, scheduling predictions or explanations are complete, error-free or suitable for a particular goal.</p>
 
       <h3>9. Backups and data loss</h3>
-      <p>Your app data is stored locally. You are responsible for keeping your own backups using FlashLingo’s export features where available. We are not responsible for data loss caused by uninstalling the app, clearing app data, device loss, device failure, operating-system behavior, storage corruption, import errors, app updates, or third-party services.</p>
-      <p>User progress backups in version 1 are not password-protected or user-encrypted. Keep exported files private if they contain study data or deck content you do not want to share.</p>
+      <p>Your app data is stored locally. You are responsible for keeping your own backups using FlashLingo's export features where available. We are not responsible for data loss caused by uninstalling the app, clearing app data, device loss, device failure, operating-system behavior, storage corruption, import errors, app updates or third-party services. User progress backups in version 1 are not password-protected or user-encrypted.</p>
 
       <h3>10. Advertising and third-party services</h3>
-      <p>FlashLingo displays ads through Google AdMob. Ad delivery and related data processing are also governed by Google’s policies. The app or website may also link to third-party services such as Google Play, GitHub Pages, GitHub Releases, or external file hosts. We are not responsible for third-party content, availability, policies, or practices.</p>
+      <p>FlashLingo displays ads through Google AdMob. Ad delivery and related data processing are also governed by Google's policies. The app or website may also link to third-party services such as Google Play, GitHub Pages, GitHub Releases or external file hosts. We are not responsible for third-party content, availability, policies or practices.</p>
 
       <h3>11. Intellectual property</h3>
-      <p>The FlashLingo name, logo, design, website, app code, text, and other materials are owned by the provider or used under license, and are protected by applicable law. Deck content belongs to its respective authors or rights holders.</p>
+      <p>The FlashLingo name, logo, design, website, app code, text and other materials are owned by the provider or used under license, and are protected by applicable law. Deck content belongs to its respective authors or rights holders.</p>
 
       <h3>12. No warranty</h3>
-      <p>FlashLingo is provided “as is” and “as available.” To the maximum extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, availability, accuracy, security, and non-infringement.</p>
+      <p>FlashLingo is provided "as is" and "as available." To the maximum extent permitted by law, we disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, availability, accuracy, security and non-infringement. We do not guarantee that the spaced-repetition algorithm will produce any specific learning outcome.</p>
 
       <h3>13. Limitation of liability</h3>
-      <p>To the maximum extent permitted by law, the provider will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, profit, opportunity, goodwill, or learning outcomes arising from or related to the app, website, official decks, user-imported content, ads, or third-party services.</p>
-      <p>Nothing in these Terms limits rights that cannot legally be limited under mandatory consumer protection law.</p>
+      <p>To the maximum extent permitted by law, the provider will not be liable for indirect, incidental, special, consequential, exemplary or punitive damages, or for loss of data, profit, opportunity, goodwill or learning outcomes arising from or related to the app, website, official decks, user-imported content, ads or third-party services. Nothing in these Terms limits rights that cannot legally be limited under mandatory consumer protection law.</p>
 
       <h3>14. Termination</h3>
       <p>You may stop using FlashLingo at any time and uninstall the app. We may suspend or terminate your license to use the app or access official resources if you breach these Terms or use FlashLingo unlawfully.</p>
 
       <h3>15. Changes to these Terms</h3>
-      <p>We may update these Terms from time to time. The current version will be published on this page with the “Last updated” date. Continued use after changes means you accept the updated Terms.</p>
+      <p>We may update these Terms from time to time. The current version will be published on this page with the last updated date. Continued use after changes means you accept the updated Terms.</p>
 
-      <h3>16. Governing law</h3>
-      <p>These Terms are governed by the laws of Romania, without prejudice to mandatory consumer rights that may apply in your country of residence.</p>
-
-      <h3>17. Contact</h3>
-      <p>For questions about these Terms, contact: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <h3>16. Governing law and contact</h3>
+      <p>These Terms are governed by the laws of Romania, without prejudice to mandatory consumer rights that may apply in your country of residence. For questions, contact <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
     </section>
 
     <hr>
 
-    <section id="spanish" class="card">
-      <h2>Términos de Servicio — Español</h2>
+    <section id="spanish" class="legal-card">
+      <h2>Terminos de Servicio - Espa&ntilde;ol</h2>
 
-      <h3>1. Aceptación</h3>
-      <p>Al descargar, instalar, acceder o usar FlashLingo, aceptas estos Términos de Servicio. Si no estás de acuerdo, no uses la app ni el sitio web.</p>
+      <h3>1. Aceptacion</h3>
+      <p>Al descargar, instalar, acceder o usar FlashLingo, aceptas estos Terminos de Servicio. Si no estas de acuerdo, no uses la app ni el sitio web.</p>
 
-      <h3>2. Descripción del servicio</h3>
-      <p>FlashLingo es una app Android local-first para estudiar vocabulario usando flashcards, repetición espaciada, audio, modo escritura, estadísticas locales y mazos importables <code>.flashjp</code>. El sitio web ofrece información, soporte, documentos legales y enlaces a descargas oficiales de mazos.</p>
+      <h3>2. Descripcion del servicio</h3>
+      <p>FlashLingo es una app Android local-first para estudiar vocabulario usando flashcards, repeticion espaciada, audio, modo escritura, estadisticas locales y mazos importables <code>.flashjp</code>. El sitio web ofrece informacion, soporte, documentos legales y enlaces a descargas oficiales de mazos cuando esten disponibles.</p>
 
-      <h3>3. Licencia de uso de la app</h3>
-      <p>Sujeto a estos Términos y a las reglas de la tienda desde la que obtuviste FlashLingo, se te concede una licencia personal, limitada, no exclusiva, intransferible y revocable para usar la app en dispositivos que poseas o controles.</p>
-      <p>Estos Términos no venden ni transfieren a tu favor la propiedad de FlashLingo, su código, marca, diseño o contenido oficial.</p>
+      <h3>3. Licencia de uso</h3>
+      <p>Sujeto a estos Terminos y a las reglas de la tienda desde la que obtuviste FlashLingo, se te concede una licencia personal, limitada, no exclusiva, intransferible y revocable para usar la app en dispositivos que poseas o controles. Estos Terminos no transfieren la propiedad de FlashLingo, su codigo, marca, diseno o contenido oficial.</p>
 
       <h3>4. Cuentas y disponibilidad</h3>
       <p>FlashLingo no requiere una cuenta online para sus funciones principales. La app guarda los datos de estudio localmente en tu dispositivo. Algunas funciones, como anuncios, sitios oficiales o enlaces externos de descarga, pueden requerir Internet o servicios de terceros.</p>
       <p>Podemos modificar, suspender o discontinuar partes de la app o del sitio web en cualquier momento, incluyendo funciones, mazos oficiales o enlaces de descarga.</p>
 
       <h3>5. Uso aceptable</h3>
-      <p>Te comprometes a usar FlashLingo de forma lícita. No debes:</p>
+      <p>Te comprometes a usar FlashLingo de forma licita. No debes:</p>
       <ul>
         <li>importar, distribuir o usar contenido sin tener los derechos o permisos necesarios;</li>
         <li>usar la app o el sitio para infringir derechos de propiedad intelectual, privacidad, imagen u otros derechos;</li>
-        <li>intentar eludir, dañar, hacer ingeniería inversa con fines abusivos, sobrecargar o explotar la app, el sitio, paquetes oficiales de mazos, sistemas de anuncios o servicios de terceros;</li>
-        <li>usar actividad automática, engañosa o fraudulenta relacionada con anuncios, descargas o comportamiento de la app;</li>
-        <li>fomentar clics accidentales, artificiales o incentivados en anuncios, salvo que el formato publicitario y la política aplicable lo permitan expresamente.</li>
+        <li>intentar eludir, danar, hacer ingenieria inversa con fines abusivos, sobrecargar o explotar la app, el sitio, paquetes oficiales, sistemas de anuncios o servicios de terceros;</li>
+        <li>usar actividad automatica, enganosa o fraudulenta relacionada con anuncios, descargas o comportamiento de la app;</li>
+        <li>fomentar clics accidentales, artificiales o incentivados en anuncios salvo que el formato y la politica aplicable lo permitan expresamente.</li>
       </ul>
 
-      <h3>6. Mazos y contenido importado por el usuario</h3>
-      <p>FlashLingo permite importar mazos y archivos multimedia. Tú eres responsable del contenido que importas y de tener los derechos necesarios para usarlo. El contenido importado se procesa y almacena localmente en tu dispositivo; FlashLingo no revisa ni aloja contenido importado por usuarios en servidores propios.</p>
-      <p>Si importas contenido creado por terceros, sus propias licencias o restricciones siguen aplicándose.</p>
+      <h3>6. Mazos y contenido importado</h3>
+      <p>FlashLingo permite importar mazos y archivos multimedia. Tu eres responsable del contenido que importas y de tener los derechos necesarios para usarlo. El contenido importado se procesa y almacena localmente en tu dispositivo; FlashLingo no revisa ni aloja contenido importado por usuarios en servidores propios.</p>
 
-      <h3>7. Mazos oficiales de FlashLingo</h3>
-      <p>Los mazos oficiales de FlashLingo pueden ofrecerse gratuitamente mediante el sitio web, GitHub Releases u otros mirrors oficiales. Salvo que un mazo específico indique una licencia diferente, los mazos oficiales se ofrecen solo para uso educativo personal y no comercial.</p>
-      <p>Puedes descargar y usar mazos oficiales en FlashLingo. No puedes revender, reempaquetar, redistribuir ni presentar mazos oficiales como propios salvo que demos permiso escrito o la licencia específica del mazo lo permita.</p>
+      <h3>7. Mazos oficiales</h3>
+      <p>Los mazos oficiales de FlashLingo pueden ofrecerse gratuitamente mediante el sitio web, GitHub Releases u otros mirrors oficiales. Salvo que un mazo especifico indique una licencia diferente, se ofrecen solo para uso educativo personal y no comercial. No puedes revenderlos, reempaquetarlos, redistribuirlos ni presentarlos como propios sin permiso escrito o licencia especifica.</p>
 
-      <h3>8. Exactitud del contenido educativo</h3>
-      <p>FlashLingo es una herramienta educativa. Intentamos ofrecer contenido y funciones útiles, pero no garantizamos que traducciones, frases de ejemplo, lecturas, pronunciaciones, audio, estadísticas, predicciones de repaso o explicaciones sean completas, libres de errores o adecuadas para un objetivo específico. Debes verificar de forma independiente la información lingüística o educativa importante.</p>
+      <h3>8. Exactitud educativa</h3>
+      <p>FlashLingo es una herramienta educativa. Intentamos ofrecer contenido y funciones utiles, pero no garantizamos que traducciones, frases de ejemplo, lecturas, pronunciaciones, audio, estadisticas, predicciones o explicaciones sean completas, libres de errores o adecuadas para un objetivo especifico.</p>
 
-      <h3>9. Copias de seguridad y pérdida de datos</h3>
-      <p>Tus datos de la app se guardan localmente. Eres responsable de conservar tus propias copias de seguridad usando las funciones de exportación de FlashLingo cuando estén disponibles. No somos responsables por pérdida de datos causada por desinstalar la app, borrar datos, pérdida o fallo del dispositivo, comportamiento del sistema operativo, corrupción de almacenamiento, errores de importación, actualizaciones o servicios de terceros.</p>
-      <p>Las copias de progreso de usuario de la versión 1 no tienen contraseña ni cifrado de usuario. Mantén privados los archivos exportados si contienen datos de estudio o contenido de mazos que no quieres compartir.</p>
+      <h3>9. Copias de seguridad y perdida de datos</h3>
+      <p>Tus datos se guardan localmente. Eres responsable de conservar tus propias copias de seguridad usando las funciones de exportacion de FlashLingo cuando esten disponibles. No somos responsables por perdida de datos causada por desinstalacion, borrado de datos, perdida o fallo del dispositivo, comportamiento del sistema operativo, corrupcion de almacenamiento, errores de importacion, actualizaciones o terceros. Las copias de progreso v1 no tienen contrasena ni cifrado de usuario.</p>
 
-      <h3>10. Publicidad y servicios de terceros</h3>
-      <p>FlashLingo muestra anuncios mediante Google AdMob. La entrega de anuncios y el tratamiento de datos relacionado también se rigen por las políticas de Google. La app o el sitio web también pueden enlazar a servicios de terceros como Google Play, GitHub Pages, GitHub Releases o alojamientos externos de archivos. No somos responsables del contenido, disponibilidad, políticas o prácticas de terceros.</p>
+      <h3>10. Publicidad y terceros</h3>
+      <p>FlashLingo muestra anuncios mediante Google AdMob. La entrega de anuncios y el tratamiento de datos relacionado tambien se rigen por las politicas de Google. La app o el sitio pueden enlazar a Google Play, GitHub Pages, GitHub Releases u otros servicios. No somos responsables por contenido, disponibilidad, politicas o practicas de terceros.</p>
 
       <h3>11. Propiedad intelectual</h3>
-      <p>El nombre FlashLingo, logotipo, diseño, sitio web, código de la app, textos y otros materiales pertenecen al proveedor o se usan bajo licencia, y están protegidos por la ley aplicable. El contenido de los mazos pertenece a sus respectivos autores o titulares.</p>
+      <p>El nombre FlashLingo, logotipo, diseno, sitio web, codigo de la app, textos y otros materiales pertenecen al proveedor o se usan bajo licencia, y estan protegidos por la ley aplicable. El contenido de los mazos pertenece a sus respectivos autores o titulares.</p>
 
-      <h3>12. Sin garantías</h3>
-      <p>FlashLingo se ofrece “tal cual” y “según disponibilidad”. En la máxima medida permitida por la ley, rechazamos toda garantía expresa o implícita, incluyendo garantías de comerciabilidad, idoneidad para un fin particular, disponibilidad, exactitud, seguridad y no infracción.</p>
+      <h3>12. Sin garantias</h3>
+      <p>FlashLingo se ofrece "tal cual" y "segun disponibilidad". En la maxima medida permitida por la ley, rechazamos toda garantia expresa o implicita, incluyendo comerciabilidad, idoneidad, disponibilidad, exactitud, seguridad y no infraccion. No garantizamos que el algoritmo de repeticion espaciada produzca un resultado de aprendizaje concreto.</p>
 
-      <h3>13. Limitación de responsabilidad</h3>
-      <p>En la máxima medida permitida por la ley, el proveedor no será responsable por daños indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, ni por pérdida de datos, beneficios, oportunidades, reputación o resultados de aprendizaje derivados o relacionados con la app, el sitio web, mazos oficiales, contenido importado por usuarios, anuncios o servicios de terceros.</p>
-      <p>Nada en estos Términos limita derechos que no puedan limitarse legalmente bajo normas imperativas de protección al consumidor.</p>
+      <h3>13. Limitacion de responsabilidad</h3>
+      <p>En la maxima medida permitida por la ley, el proveedor no sera responsable por danos indirectos, incidentales, especiales, consecuentes, ejemplares o punitivos, ni por perdida de datos, beneficios, oportunidades, reputacion o resultados de aprendizaje relacionados con la app, sitio, mazos oficiales, contenido importado, anuncios o terceros. Nada limita derechos que no puedan limitarse legalmente bajo normas imperativas de consumidor.</p>
 
-      <h3>14. Terminación</h3>
-      <p>Puedes dejar de usar FlashLingo en cualquier momento y desinstalar la app. Podemos suspender o terminar tu licencia de uso de la app o acceso a recursos oficiales si incumples estos Términos o usas FlashLingo de forma ilícita.</p>
+      <h3>14. Terminacion</h3>
+      <p>Puedes dejar de usar FlashLingo en cualquier momento y desinstalar la app. Podemos suspender o terminar tu licencia si incumples estos Terminos o usas FlashLingo de forma ilicita.</p>
 
-      <h3>15. Cambios en estos Términos</h3>
-      <p>Podemos actualizar estos Términos ocasionalmente. La versión vigente se publicará en esta página con la fecha de “Última actualización”. El uso continuado después de cambios significa que aceptas los Términos actualizados.</p>
+      <h3>15. Cambios</h3>
+      <p>Podemos actualizar estos Terminos ocasionalmente. La version vigente se publicara en esta pagina con la fecha de actualizacion. El uso continuado despues de cambios significa que aceptas los Terminos actualizados.</p>
 
-      <h3>16. Ley aplicable</h3>
-      <p>Estos Términos se rigen por las leyes de Romania, sin perjuicio de los derechos imperativos del consumidor que puedan aplicarse en tu país de residencia.</p>
-
-      <h3>17. Contacto</h3>
-      <p>Para preguntas sobre estos Términos, contacta: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <h3>16. Ley aplicable y contacto</h3>
+      <p>Estos Terminos se rigen por las leyes de Romania, sin perjuicio de derechos imperativos del consumidor que puedan aplicar en tu pais de residencia. Para preguntas, contacta <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
     </section>
-
   </main>
-  <footer class="footer">
-    <p>© 2026 FlashLingo. Website: <a href="https://flashlingo.github.io/">flashlingo.github.io</a>. Contact: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. Website: <a href="https://flashlingo.github.io/">flashlingo.github.io</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="legal.html">Legal Notice</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

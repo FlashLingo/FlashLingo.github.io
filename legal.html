@@ -4,325 +4,88 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlashLingo Legal Notice</title>
-  <meta name="description" content="Legal Notice for FlashLingo Android app and website.">
-  <style>
-
-:root {
-  --primary: #40C0CC;
-  --primary-dark: #278A96;
-  --mint: #8EDFD4;
-  --blue: #8CCBFF;
-  --peach: #FFC19E;
-  --lavender: #CDB7F0;
-  --bg: #F3F4F6;
-  --surface: #FFFFFF;
-  --text: #374151;
-  --muted: #6B7280;
-  --border: #E5E7EB;
-  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height: 1.65;
-  background:
-    radial-gradient(circle at top left, rgba(64, 192, 204, 0.18), transparent 30rem),
-    radial-gradient(circle at top right, rgba(205, 183, 240, 0.20), transparent 28rem),
-    var(--bg);
-  color: var(--text);
-}
-
-a { color: var(--primary-dark); font-weight: 650; }
-a:hover { text-decoration-thickness: 2px; }
-
-.site-header {
-  padding: 32px 20px 18px;
-}
-
-.header-inner,
-.page {
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
-}
-
-.brand-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, var(--primary), var(--lavender));
-  box-shadow: var(--shadow);
-}
-
-.brand-name {
-  font-size: 1.6rem;
-  line-height: 1;
-  font-weight: 850;
-  letter-spacing: -0.04em;
-}
-
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.nav a,
-.lang-switch a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  padding: 8px 13px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.76);
-  border: 1px solid var(--border);
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 700;
-}
-
-.nav a:hover,
-.lang-switch a:hover {
-  border-color: var(--primary);
-  color: var(--primary-dark);
-}
-
-.hero {
-  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(255,255,255,0.72));
-  border: 1px solid var(--border);
-  border-radius: 28px;
-  padding: 34px;
-  box-shadow: var(--shadow);
-  margin-bottom: 22px;
-}
-
-.eyebrow {
-  color: var(--primary-dark);
-  font-weight: 850;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  font-size: .78rem;
-}
-
-h1 {
-  margin: 8px 0 12px;
-  font-size: clamp(2.1rem, 6vw, 4rem);
-  line-height: 1.05;
-  letter-spacing: -0.06em;
-}
-
-h2 {
-  margin-top: 2.1rem;
-  padding-top: 0.35rem;
-  font-size: 1.55rem;
-  letter-spacing: -0.03em;
-}
-
-h3 {
-  margin-top: 1.6rem;
-  font-size: 1.12rem;
-}
-
-.lead {
-  font-size: 1.12rem;
-  color: var(--muted);
-  max-width: 760px;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  padding: 24px;
-  box-shadow: 0 8px 26px rgba(15, 23, 42, 0.05);
-  margin: 18px 0;
-}
-
-.notice {
-  border-left: 5px solid var(--primary);
-  background: rgba(64, 192, 204, 0.10);
-  padding: 16px 18px;
-  border-radius: 18px;
-  margin: 18px 0;
-}
-
-.warning {
-  border-left: 5px solid #FF8A00;
-  background: rgba(255, 193, 158, 0.20);
-  padding: 16px 18px;
-  border-radius: 18px;
-  margin: 18px 0;
-}
-
-.meta-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.meta-item {
-  padding: 14px 16px;
-  background: rgba(248,250,252,0.9);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-}
-
-.meta-label {
-  display: block;
-  color: var(--muted);
-  font-size: .82rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-}
-
-ul { padding-left: 1.35rem; }
-li { margin: .35rem 0; }
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--border);
-  margin: 42px 0;
-}
-
-.lang-switch {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0 0;
-}
-
-.footer {
-  max-width: 980px;
-  margin: 34px auto 0;
-  padding: 24px 20px 48px;
-  color: var(--muted);
-  font-size: .95rem;
-}
-
-code {
-  background: rgba(15, 23, 42, 0.06);
-  padding: .12rem .32rem;
-  border-radius: 8px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #4BD3E0;
-    --primary-dark: #6EE4D7;
-    --bg: #0F172A;
-    --surface: #1E293B;
-    --text: #E2E8F0;
-    --muted: #94A3B8;
-    --border: #334155;
-    --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
-  }
-
-  body {
-    background:
-      radial-gradient(circle at top left, rgba(75, 211, 224, 0.14), transparent 30rem),
-      radial-gradient(circle at top right, rgba(209, 184, 255, 0.16), transparent 28rem),
-      var(--bg);
-  }
-
-  .hero {
-    background: linear-gradient(135deg, rgba(30,41,59,0.96), rgba(22,34,53,0.84));
-  }
-
-  .nav a,
-  .lang-switch a,
-  .meta-item {
-    background: rgba(30,41,59,0.82);
-  }
-
-  code { background: rgba(255,255,255,0.08); }
-}
-
-  </style>
+  <meta name="description" content="Legal Notice for the FlashLingo Android app and website.">
+  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
+  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand" aria-label="FlashLingo">
-        <div class="brand-mark" aria-hidden="true"></div>
-        <div class="brand-name">FlashLingo</div>
-      </div>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-        <a href="legal.html">Legal Notice</a>
-        <a href="decks.html">Decks</a>
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
+        <a href="index.html">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Terminos</a>
+        <a href="legal.html">Legal</a>
+        <a href="contact.html">Soporte</a>
       </nav>
     </div>
   </header>
-  <main class="page">
 
-    <section class="hero">
-      <span class="eyebrow">Legal · Notice</span>
+  <main class="legal-page">
+    <section class="legal-hero">
+      <span class="eyebrow">Legal &middot; Notice</span>
       <h1>Legal Notice</h1>
-      <p class="lead">This page identifies the provider of FlashLingo and gives legal and contact information for the app, website, and official FlashLingo resources.</p>
+      <p class="lead">This page identifies the provider of FlashLingo and gives legal and contact information for the app, website and official FlashLingo resources.</p>
       <div class="meta-grid">
         <div class="meta-item"><span class="meta-label">Owner / Provider</span>Javier Ponce / FlashLingo</div>
-        <div class="meta-item"><span class="meta-label">App package</span>com.flashlingo.app</div>
-        <div class="meta-item"><span class="meta-label">Website</span><a href="https://flashlingo.github.io/">flashlingo.github.io/</a></div>
+        <div class="meta-item"><span class="meta-label">App package</span><code>com.flashlingo.app</code></div>
+        <div class="meta-item"><span class="meta-label">Website</span><a href="https://flashlingo.github.io/">flashlingo.github.io</a></div>
         <div class="meta-item"><span class="meta-label">Contact</span><a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a></div>
+        <div class="meta-item"><span class="meta-label">Postal address</span>Bucure&#537;ti, 060029</div>
         <div class="meta-item"><span class="meta-label">Country / jurisdiction</span>Romania</div>
         <div class="meta-item"><span class="meta-label">Last updated</span>2026-06-28</div>
       </div>
-      <div class="warning">
-        <strong>Postal address / tax information:</strong> if a complete public business address, VAT number, or tax identifier becomes legally required for your final publishing setup, add it here before publication. Do not publish a private home address unless you are comfortable and legally advised to do so.
-      </div>
       <div class="lang-switch">
         <a href="#english">English</a>
-        <a href="#spanish">Español</a>
+        <a href="#spanish">Espa&ntilde;ol</a>
       </div>
     </section>
 
-    <section id="english" class="card">
-      <h2>Legal Notice — English</h2>
+    <section id="english" class="legal-card">
+      <h2>Legal Notice - English</h2>
 
       <h3>1. Owner identification</h3>
-      <p>This website, <a href="https://flashlingo.github.io/">https://flashlingo.github.io/</a>, and the Android app FlashLingo (<code>com.flashlingo.app</code>) are operated by Javier Ponce, trading under or presenting the project name “FlashLingo”.</p>
+      <p>This website, <a href="https://flashlingo.github.io/">https://flashlingo.github.io/</a>, and the Android app FlashLingo (<code>com.flashlingo.app</code>) are operated by Javier Ponce, trading under or presenting the project name "FlashLingo".</p>
       <p>Contact email: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <p>Postal address: Bucure&#537;ti, 060029.</p>
 
       <h3>2. Purpose of the website</h3>
-      <p>The FlashLingo website provides information about the app, legal documents, support information, and links to official FlashLingo deck downloads or third-party platforms where official downloads may be hosted.</p>
+      <p>The FlashLingo website provides information about the app, legal documents, support information and links to official FlashLingo deck downloads or third-party platforms where official downloads may be hosted.</p>
 
       <h3>3. Purpose of the app</h3>
-      <p>FlashLingo is a local-first Android app for studying vocabulary with flashcards, spaced repetition, audio, imported <code>.flashjp</code> decks, local statistics, and manual per-deck progress backups.</p>
+      <p>FlashLingo is a local-first Android app for studying vocabulary with flashcards, spaced repetition, audio, imported <code>.flashjp</code> decks, local statistics and manual per-deck progress backups.</p>
 
       <h3>4. Intellectual and industrial property</h3>
-      <p>The FlashLingo name, logo, website, app design, source code, texts, graphics, and other materials are owned by the provider or used under license, unless otherwise stated. They are protected by applicable intellectual property laws.</p>
-      <p>No rights are granted except those expressly stated in the Terms of Service, app-store license terms, or a specific license attached to a particular deck or resource.</p>
+      <p>The FlashLingo name, logo, website, app design, source code, texts, graphics and other materials are owned by the provider or used under license, unless otherwise stated. They are protected by applicable intellectual property laws.</p>
+      <p>No rights are granted except those expressly stated in the Terms of Service, app-store license terms or a specific license attached to a particular deck or resource.</p>
 
       <h3>5. Deck content and third-party rights</h3>
-      <p>Official FlashLingo decks may contain vocabulary, example sentences, audio, images, metadata, and educational content. Unless a specific deck states a different license, official decks are provided for personal, non-commercial educational use.</p>
-      <p>User-imported decks or third-party deck content remain the responsibility of the person who imports or distributes them. FlashLingo is not responsible for user-imported content or third-party content.</p>
+      <p>Official FlashLingo decks may contain vocabulary, example sentences, audio, images, metadata and educational content. Unless a specific deck states a different license, official decks are provided for personal, non-commercial educational use. User-imported decks or third-party deck content remain the responsibility of the person who imports or distributes them.</p>
 
       <h3>6. About <code>.flashjp</code> package protection</h3>
       <p>Official FlashLingo <code>.flashjp</code> packages may use signature verification and encrypted container formats to help verify authenticity and protect the package format. This technical protection should not be understood as a guarantee that deck content is confidential against reverse engineering of the client. The app must contain the data needed to import official packages offline.</p>
 
       <h3>7. Advertising and third-party services</h3>
-      <p>The app integrates Google AdMob to display ads. The website and app may link to third-party services such as Google Play, Google, GitHub Pages, GitHub Releases, or file hosting services. Third-party services are governed by their own terms and privacy policies.</p>
+      <p>The app integrates Google AdMob to display ads. The website and app may link to third-party services such as Google Play, Google, GitHub Pages, GitHub Releases or file hosting services. Third-party services are governed by their own terms and privacy policies.</p>
 
       <h3>8. Liability</h3>
-      <p>The website, app, and materials are provided for information and educational purposes. We do not guarantee uninterrupted availability, error-free operation, perfect language accuracy, or that any particular learning result will be achieved. Use of FlashLingo is governed by the Terms of Service and Privacy Policy.</p>
+      <p>The website, app and materials are provided for information and educational purposes. We do not guarantee uninterrupted availability, error-free operation, perfect language accuracy or that any particular learning result will be achieved. Use of FlashLingo is governed by the Terms of Service and Privacy Policy.</p>
 
       <h3>9. Reports and support</h3>
-      <p>For support, legal questions, privacy questions, intellectual-property concerns, or reports about official FlashLingo content, contact: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <p>For support, legal questions, privacy questions, intellectual-property concerns or reports about official FlashLingo content, contact <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
 
       <h3>10. Governing law</h3>
       <p>This Legal Notice is governed by the laws of Romania, without prejudice to mandatory rights that may apply to consumers in their country of residence.</p>
@@ -330,46 +93,64 @@ code {
 
     <hr>
 
-    <section id="spanish" class="card">
-      <h2>Aviso Legal — Español</h2>
+    <section id="spanish" class="legal-card">
+      <h2>Aviso Legal - Espa&ntilde;ol</h2>
 
-      <h3>1. Identificación del titular</h3>
-      <p>Este sitio web, <a href="https://flashlingo.github.io/">https://flashlingo.github.io/</a>, y la aplicación Android FlashLingo (<code>com.flashlingo.app</code>) son operados por Javier Ponce, bajo o presentando el nombre del proyecto “FlashLingo”.</p>
+      <h3>1. Identificacion del titular</h3>
+      <p>Este sitio web, <a href="https://flashlingo.github.io/">https://flashlingo.github.io/</a>, y la aplicacion Android FlashLingo (<code>com.flashlingo.app</code>) son operados por Javier Ponce, bajo o presentando el nombre del proyecto "FlashLingo".</p>
       <p>Email de contacto: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <p>Direccion postal: Bucure&#537;ti, 060029.</p>
 
       <h3>2. Objeto del sitio web</h3>
-      <p>El sitio web de FlashLingo ofrece información sobre la app, documentos legales, información de soporte y enlaces a descargas oficiales de mazos FlashLingo o a plataformas de terceros donde puedan alojarse descargas oficiales.</p>
+      <p>El sitio web de FlashLingo ofrece informacion sobre la app, documentos legales, informacion de soporte y enlaces a descargas oficiales de mazos FlashLingo o a plataformas de terceros donde puedan alojarse descargas oficiales.</p>
 
       <h3>3. Objeto de la app</h3>
-      <p>FlashLingo es una app Android local-first para estudiar vocabulario con flashcards, repetición espaciada, audio, mazos importados <code>.flashjp</code>, estadísticas locales y copias manuales de progreso por mazo.</p>
+      <p>FlashLingo es una app Android local-first para estudiar vocabulario con flashcards, repeticion espaciada, audio, mazos importados <code>.flashjp</code>, estadisticas locales y copias manuales de progreso por mazo.</p>
 
       <h3>4. Propiedad intelectual e industrial</h3>
-      <p>El nombre FlashLingo, logotipo, sitio web, diseño de la app, código fuente, textos, gráficos y otros materiales pertenecen al proveedor o se usan bajo licencia, salvo que se indique otra cosa. Están protegidos por las leyes aplicables de propiedad intelectual.</p>
-      <p>No se concede ningún derecho salvo los expresamente indicados en los Términos de Servicio, condiciones de licencia de la tienda de aplicaciones o una licencia específica adjunta a un mazo o recurso concreto.</p>
+      <p>El nombre FlashLingo, logotipo, sitio web, diseno de la app, codigo fuente, textos, graficos y otros materiales pertenecen al proveedor o se usan bajo licencia, salvo que se indique otra cosa. Estan protegidos por las leyes aplicables de propiedad intelectual.</p>
+      <p>No se concede ningun derecho salvo los expresamente indicados en los Terminos de Servicio, condiciones de licencia de la tienda de aplicaciones o una licencia especifica adjunta a un mazo o recurso concreto.</p>
 
       <h3>5. Contenido de mazos y derechos de terceros</h3>
-      <p>Los mazos oficiales de FlashLingo pueden contener vocabulario, frases de ejemplo, audio, imágenes, metadatos y contenido educativo. Salvo que un mazo específico indique una licencia diferente, los mazos oficiales se ofrecen para uso educativo personal y no comercial.</p>
-      <p>Los mazos importados por usuarios o contenidos de terceros siguen siendo responsabilidad de quien los importa o distribuye. FlashLingo no se responsabiliza por contenido importado por usuarios o contenido de terceros.</p>
+      <p>Los mazos oficiales de FlashLingo pueden contener vocabulario, frases de ejemplo, audio, imagenes, metadatos y contenido educativo. Salvo que un mazo especifico indique una licencia diferente, los mazos oficiales se ofrecen para uso educativo personal y no comercial. Los mazos importados por usuarios o contenidos de terceros son responsabilidad de quien los importa o distribuye.</p>
 
-      <h3>6. Sobre la protección de paquetes <code>.flashjp</code></h3>
-      <p>Los paquetes oficiales <code>.flashjp</code> de FlashLingo pueden usar verificación de firma y formatos de contenedor cifrado para ayudar a verificar autenticidad y proteger el formato del paquete. Esta protección técnica no debe entenderse como una garantía de que el contenido del mazo sea confidencial frente a ingeniería inversa del cliente. La app debe contener los datos necesarios para importar paquetes oficiales sin conexión.</p>
+      <h3>6. Sobre la proteccion de paquetes <code>.flashjp</code></h3>
+      <p>Los paquetes oficiales <code>.flashjp</code> pueden usar verificacion de firma y formatos de contenedor cifrado para ayudar a verificar autenticidad y proteger el formato del paquete. Esta proteccion tecnica no debe entenderse como una garantia de que el contenido del mazo sea confidencial frente a ingenieria inversa del cliente. La app debe contener los datos necesarios para importar paquetes oficiales sin conexion.</p>
 
       <h3>7. Publicidad y servicios de terceros</h3>
-      <p>La app integra Google AdMob para mostrar anuncios. El sitio web y la app pueden enlazar a servicios de terceros como Google Play, Google, GitHub Pages, GitHub Releases o servicios de alojamiento de archivos. Los servicios de terceros se rigen por sus propios términos y políticas de privacidad.</p>
+      <p>La app integra Google AdMob para mostrar anuncios. El sitio web y la app pueden enlazar a servicios de terceros como Google Play, Google, GitHub Pages, GitHub Releases o servicios de alojamiento de archivos. Los servicios de terceros se rigen por sus propios terminos y politicas de privacidad.</p>
 
       <h3>8. Responsabilidad</h3>
-      <p>El sitio web, la app y los materiales se ofrecen con fines informativos y educativos. No garantizamos disponibilidad ininterrumpida, funcionamiento libre de errores, exactitud lingüística perfecta ni que se alcance un resultado de aprendizaje concreto. El uso de FlashLingo se rige por los Términos de Servicio y la Política de Privacidad.</p>
+      <p>El sitio web, la app y los materiales se ofrecen con fines informativos y educativos. No garantizamos disponibilidad ininterrumpida, funcionamiento libre de errores, exactitud linguistica perfecta ni que se alcance un resultado de aprendizaje concreto. El uso de FlashLingo se rige por los Terminos de Servicio y la Politica de Privacidad.</p>
 
       <h3>9. Reportes y soporte</h3>
-      <p>Para soporte, preguntas legales, preguntas de privacidad, cuestiones de propiedad intelectual o reportes sobre contenido oficial de FlashLingo, contacta: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+      <p>Para soporte, preguntas legales, preguntas de privacidad, cuestiones de propiedad intelectual o reportes sobre contenido oficial de FlashLingo, contacta <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
 
       <h3>10. Ley aplicable</h3>
-      <p>Este Aviso Legal se rige por las leyes de Romania, sin perjuicio de los derechos imperativos que puedan corresponder a consumidores en su país de residencia.</p>
+      <p>Este Aviso Legal se rige por las leyes de Romania, sin perjuicio de los derechos imperativos que puedan corresponder a consumidores en su pais de residencia.</p>
     </section>
-
   </main>
-  <footer class="footer">
-    <p>© 2026 FlashLingo. Website: <a href="https://flashlingo.github.io/">flashlingo.github.io</a>. Contact: <a href="mailto:flashlingo.lenguageapp@gmail.com">flashlingo.lenguageapp@gmail.com</a>.</p>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. Website: <a href="https://flashlingo.github.io/">flashlingo.github.io</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="download.html">Descargar</a>
+        <a href="metode.html">Nuestro Metodo</a>
+        <a href="decks.html">Mazos Oficiales</a>
+        <a href="make_decks.html">Crear Mazos</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
