@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>FlashLingo - Învață vocabular cu flashcards locale</title>
+  <meta name="description" content="FlashLingo este o aplicație de flashcards pentru a studia vocabular cu pachete .flashjp, repetiție spațiată, audio, mod scriere, statistici și progres local-first.">
+  <link rel="canonical" href="https://flashlingo.github.io/ro/">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="FlashLingo - Învață vocabular cu flashcards locale">
+  <meta property="og:description" content="FlashLingo este o aplicație de flashcards pentru a studia vocabular cu pachete .flashjp, repetiție spațiată, audio, mod scriere, statistici și progres local-first.">
+  <meta property="og:url" content="https://flashlingo.github.io/ro/">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ro.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - Invata vocabular cu flashcards">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlashLingo - Învață vocabular cu flashcards locale">
+  <meta name="twitter:description" content="FlashLingo este o aplicație de flashcards pentru a studia vocabular cu pachete .flashjp, repetiție spațiată, audio, mod scriere, statistici și progres local-first.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ro.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://flashlingo.github.io/ro/#website", "url": "https://flashlingo.github.io/ro/", "name": "FlashLingo", "inLanguage": "ro", "publisher": { "@id": "https://flashlingo.github.io/#org" } },
+      { "@type": "Organization", "@id": "https://flashlingo.github.io/#org", "name": "FlashLingo", "url": "https://flashlingo.github.io/", "logo": "https://flashlingo.github.io/assets/logo-192.png", "email": "flashlingo.lenguageapp@gmail.com", "founder": "Javier Ponce" },
+      { "@type": "SoftwareApplication", "@id": "https://flashlingo.github.io/#app", "name": "FlashLingo", "operatingSystem": "Android", "applicationCategory": "EducationalApplication", "description": "Aplicatie de flashcards pentru a studia vocabular cu pachete .flashjp, repetitie spatiata, audio, mod scriere, statistici si progres local-first.", "url": "https://flashlingo.github.io/", "image": "https://flashlingo.github.io/assets/og-image-ro.png", "inLanguage": ["es", "en", "ro", "de", "fr", "ja", "zh"], "author": { "@id": "https://flashlingo.github.io/#org" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
+        <a href="/" data-lang-switch="es">ES</a>
+        <a href="/en/" data-lang-switch="en">EN</a>
+        <a href="/ro/" data-lang-switch="ro" aria-current="page">RO</a>
+        <a href="/de/" data-lang-switch="de">DE</a>
+        <a href="/fr/" data-lang-switch="fr">FR</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Deschide navigarea" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Navigare principala" data-site-nav>
+        <a href="#inicio">Acas&#259;</a>
+        <a href="download.html">Descarc&#259;</a>
+        <a href="metode.html">Metoda noastr&#259;</a>
+        <a href="decks.html">Pachete oficiale</a>
+        <a href="make_decks.html">Creeaz&#259; pachete</a>
+        <a href="privacy.html">Confiden&#539;ialitate</a>
+        <a href="terms.html">Termeni</a>
+        <a href="legal.html">Legal</a>
+        <a href="contact.html">Asisten&#539;&#259;</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <main>
+    <section id="inicio" class="hero-home">
+      <img class="hero-bg" src="/Images/dashboard_RON.jpg" alt="Ecranul principal FlashLingo cu pachete de limbi" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-logo-row">
+          <img src="/assets/logo-192.png" alt="" width="58" height="58">
+          <span>Flashcards local-first</span>
+        </div>
+        <h1>
+          <span class="hero-title-kicker">Achiziționează, învață și studiază vocabular cu</span>
+          <span class="hero-title-brand"><span>Flash</span>Lingo.</span>
+        </h1>
+        <p class="hero-lead">FlashLingo este o aplicație de flashcards pentru cei care învață limbi străine și vor să învețe și să achiziționeze vocabular rapid și eficient, cu control asupra pachetelor, progresului, ritmului de studiu și datelor de învățare.</p>
+        <p class="hero-lead hero-lead-secondary">Importă pachete <code>.flashjp</code>, studiază cartonașe de recunoaștere și de producere, exersează cu audio și modul scriere și analizează-ți progresul cu statistici detaliate, fără a fi nevoie de cont.</p>
+        <div class="download-actions hero-downloads">
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="24" height="24">
+            <span>Descarcă din Google Play</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="24" height="24">
+            <span>Descarcă din App Store</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="24" height="24">
+            <span>Descarcă pentru Windows</span>
+          </a>
+          <a class="button secondary" href="decks.html">Descarcă pachete oficiale</a>
+        </div>
+        <p class="hero-note">Studiu local. Fără cont și fără înregistrare. Progresul tău rămâne pe dispozitivul tău.</p>
+      </div>
+    </section>
+
+    <section class="trust-band" aria-label="Funcții rapide">
+      <div class="trust-track" data-trust-track>
+        <span>Aplicație Android</span>
+        <span>Progres local-first</span>
+        <span>Import de pachete .flashjp</span>
+        <span>Repetiție spațiată</span>
+        <span>Audio și imagini</span>
+        <span>Modul scriere</span>
+        <span>Exporturi CSV/PDF</span>
+        <span>Backup manual per pachet</span>
+      </div>
+    </section>
+
+    <section id="metodo" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Metoda noastră</span>
+          <h2>O aplicație de flashcards cu o metodă inovatoare pentru cei care vor mai mult control.</h2>
+          <p class="lead">Multe aplicații de limbi folosesc metode învechite, nu oferă progres rapid, te obligă să îți creezi un cont, ascund cum funcționează sistemul de studiu sau limitează cât poți studia ori personaliza învățarea. FlashLingo propune o abordare diferită.</p>
+          <p>Îți imporți propriile pachete, studiezi local pe dispozitivul tău, ajustezi fiecare pachet la ritmul tău și îți păstrezi progresul sub control.</p>
+          <p>Metoda noastră de învățare și algoritmul îți permit să achiziționezi și să înveți vocabular rapid și eficient, în ritmul tău.</p>
+        </div>
+        <div class="method-stack reveal">
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Învățare locală</h3>
+            <p>Pachetele, progresul, setările, sesiunile și statisticile tale sunt salvate local pe dispozitiv. Nu ai nevoie de cont pentru a începe să studiezi.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Gândită pentru a studia vocabular în serios</h3>
+            <p>Studiază cartonașe de recunoaștere și de producere, folosește audio și propoziții-exemplu, activează modul scriere și lasă repetiția spațiată să îți programeze recapitulările.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Exportă ce contează</h3>
+            <p>Analizează-ți performanța cu statistici, exportă rapoarte în CSV sau PDF și creează backupuri manuale <code>.flashjp</code> ale progresului pachetelor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Cum funcționează</span>
+          <h2>Cum funcționează FlashLingo</h2>
+        </div>
+        <div class="timeline" data-timeline>
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>Importă un pachet</h3>
+            <p>Alege un pachet oficial <code>.flashjp</code> sau restaurează un backup de progres. FlashLingo verifică pachetul, citește manifestul, importă baza de date și pregătește pachetul ca să poți începe să studiezi și să construiești vocabular.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>Studiază cartonașele</h3>
+            <p>Exersează cartonașe de recunoaștere pentru a înțelege cuvintele și cartonașe de producere pentru a le reaminti activ. Cartonașele pot include definiții, exemple, traduceri, citiri, audio, imagini și forme suplimentare.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>Recapitulează cu repetiție spațiată</h3>
+            <p>FlashLingo îți programează recapitulările în funcție de performanță, datorită algoritmului nostru. Cartonașele noi, în învățare, în recapitulare și în reînvățare sunt organizate într-o coadă zilnică de studiu.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>Analizează și îmbunătățește</h3>
+            <p>Folosește statisticile pachetului pentru a analiza precizia, timpul de studiu, cartonașele dificile, istoricul recapitulărilor și încărcarea viitoare. Exportă-ți datele oricând ai nevoie.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Funcții principale</span>
+          <h2>Tot ce ai nevoie pentru a studia vocabular concentrat.</h2>
+        </div>
+        <div class="grid four feature-grid">
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Pachete .flashjp</h3><p>Importă pachete FlashLingo care pot conține o bază de date SQLite, metadate, audio, imagini și setări recomandate ale pachetului.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Recunoaștere și producere</h3><p>Fiecare cuvânt poate genera două direcții de studiu: recunoașterea cuvântului în limba țintă și producerea lui pornind de la sens.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Modul scriere</h3><p>La cartonașele de producere, modul scriere îți permite să îți scrii răspunsul, să îl compari cu cuvântul țintă și să deblochezi Good doar când atingi procentul minim configurat.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Setări avansate</h3><p>Fiecare pachet poate avea propriile limite zilnice, pași de învățare, comportament la greșeli, parametri de algoritm, amestecare, memento-uri, mod scriere și anulare.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Statistici detaliate</h3><p>Verifică precizia, timpul de studiu, prognoza recapitulărilor, activitatea zilnică, cartonașele dificile și istoricul sesiunilor prin grafice și rezumate clare.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>CSV, PDF și backupuri</h3><p>Exportă statisticile de studiu în CSV sau PDF și creează backupuri manuale <code>.flashjp</code> ale progresului fiecărui pachet oricând vrei să păstrezi sau să muți datele.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Memento-uri locale</h3><p>Activează memento-uri opționale per pachet. FlashLingo folosește notificări locale ca să te anunțe când există cartonașe care așteaptă recapitularea.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Interfață multilingvă</h3><p>FlashLingo oferă interfață în engleză, spaniolă, română, germană, franceză, japoneză și chineză.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section privacy-band">
+      <div class="page privacy-layout">
+        <div class="section-header reveal">
+          <span class="eyebrow">Confidențialitate / Local-first</span>
+          <h2>Progresul tău de studiu îți aparține.</h2>
+          <p class="lead">FlashLingo este concepută ca o aplicație local-first. Nu ai nevoie de cont, iar FlashLingo nu folosește un server propriu pentru a-ți stoca pachetele sau progresul.</p>
+          <p>Pachetele importate, fișierele media, istoricul de studiu, setările pachetelor, sesiunile și statisticile tale sunt salvate în stocarea locală a aplicației pe dispozitivul tău.</p>
+          <a class="button surface" href="privacy.html">Citește Politica de Confidențialitate</a>
+        </div>
+        <ul class="privacy-list reveal">
+          <li>Nu ai nevoie de cont.</li>
+          <li>Fără analiză proprie și fără server propriu de raportare a erorilor.</li>
+          <li>Progresul de studiu este salvat local.</li>
+          <li>Backupurile pachetelor se creează doar când alegi să le exporți.</li>
+          <li>Reclamele sunt furnizate de Google AdMob pe versiunile mobile compatibile.</li>
+          <li>Opțiunile de confidențialitate pentru reclame sunt gestionate prin fluxul de consimțământ Google când este necesar.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="descargar" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Descarcă</span>
+          <h2>Alege-ți platforma.</h2>
+          <p class="lead">Butoanele sunt pregătite să facă legătura către magazinele și versiunile oficiale odată ce sunt publicate.</p>
+        </div>
+        <div class="download-grid">
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="34" height="34">
+            <strong>Descarcă din Google Play</strong>
+            <span>Android</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="34" height="34">
+            <strong>Descarcă din App Store</strong>
+            <span>iOS</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="34" height="34">
+            <strong>Descarcă pentru Windows</strong>
+            <span>Desktop</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mazos" class="section privacy-band">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Pachete oficiale</span>
+          <h2>Pachete gratuite pentru FlashLingo</h2>
+          <p class="lead">Pachetele FlashLingo folosesc formatul <code>.flashjp</code>. Pachetele oficiale includ vocabular, propoziții-exemplu, traduceri, citiri, audio, imagini, pictograme de pachet și setări de studiu recomandate.</p>
+          <p>Descarcă un pachet, importă-l în aplicație și începe să studiezi local.</p>
+          <div class="section-actions">
+            <a class="button surface" href="decks.html">Descarcă pachete</a>
+          </div>
+          <div class="notice warning">
+            <strong>Notă importantă:</strong> pachetele sunt oferite în scop educativ. Conținutul poate conține erori. Dacă găsești o problemă, raporteaz-o prin asistență.
+          </div>
+        </div>
+        <figure class="phone-shot deck-preview-shot reveal">
+          <div class="phone-frame"><img src="/Images/Menu_RON.jpg" alt="Meniul unui pachet în FlashLingo" loading="lazy"></div>
+          <figcaption>Pachete cu acțiuni de setări, explorare, statistici și export.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crear-mazos" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Pentru creatorii de pachete</span>
+          <h2>Creează-ți propriile pachete pentru FlashLingo.</h2>
+          <p class="lead">FlashLingo este construită în jurul pachetelor portabile. Un pachet <code>.flashjp</code> poate conține o bază de date, un manifest, fișiere audio, imagini, pictograme de pachet și valori de setări.</p>
+          <p>Astfel poți crea pachete de vocabular mai bogate, cu exemple, traduceri, citiri, multimedia și setări de studiu personalizate.</p>
+          <p>Și nu doar atât: poți crea pachete pentru orice temă sau scop, deoarece formatul <code>.flashjp</code> este foarte flexibil.</p>
+          <div class="section-actions">
+            <a class="button surface" href="make_decks.html">Învață cum să îți creezi pachetele</a>
+            <a class="button surface" href="flashjp-format.html">Citește documentația formatului</a>
+          </div>
+        </div>
+        <div class="panel creator-table reveal">
+          <div class="creator-row"><strong>SQLite</strong><span>Conținut de flashcards bazat pe bază de date locală.</span></div>
+          <div class="creator-row"><strong>manifest.json</strong><span>Metadate și setări recomandate ale pachetului.</span></div>
+          <div class="creator-row"><strong>Media</strong><span>Referințe la audio, imagini și pictograme de pachet.</span></div>
+          <div class="creator-row"><strong>Două direcții</strong><span>Generarea cartonașelor de recunoaștere și de producere.</span></div>
+          <div class="creator-row"><strong>Actualizări</strong><span>Actualizări de pachet fără pierderea progresului.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capturas" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Previzualizare vizuală</span>
+          <h2>Concepută pentru sesiuni lungi de studiu.</h2>
+          <p class="lead">FlashLingo combină o interfață curată cu instrumente avansate pentru a studia, recapitula și analiza progresul fără a-ți pierde concentrarea.</p>
+        </div>
+        <div class="preview-tabs compact-preview reveal" data-preview-tabs>
+          <div class="preview-controls" role="tablist" aria-label="Capturi FlashLingo">
+            <button type="button" role="tab" aria-selected="true" data-preview-target="screen-home">Acasă</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-study">Studiu</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-write">Modul scriere</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-stats">Statistici</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-import">Import</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-panel is-active" id="screen-home">
+              <div class="phone-frame"><img src="/Images/dashboard_RON.jpg" alt="Acasă pachete FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Acasă pachete.</strong> Vezi dintr-o privire cartonașele noi, în învățare, de recapitulat, restante și precizia recentă.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-study">
+              <div class="phone-frame"><img src="/Images/Japones2_RON.jpg" alt="Sesiune de studiu în FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Sesiune de studiu.</strong> Studiază cartonașe curate cu exemple, audio, imagini, citiri și acțiuni clare Good/Bad.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-write">
+              <div class="phone-frame"><img src="/Images/Aleman2_RON.jpg" alt="Cartonaș de producere în FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Modul scriere.</strong> Scrie-ți răspunsul și compară-l cu cuvântul țintă înainte de a evalua cartonașul.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-stats">
+              <div class="phone-frame"><img src="/Images/Estadisticas7_RON.jpg" alt="Statistici și prognoză în FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Statistici.</strong> Analizează-ți progresul cu grafice, prognoze, activitate zilnică și cartonașe dificile.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-import">
+              <div class="phone-frame"><img src="/Images/Config1_RON.jpg" alt="Setări de pachet în FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Import de pachete.</strong> Previzualizează și importă pachete <code>.flashjp</code> cu progres clar, diagnostice și gestionarea conflictelor.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section privacy-band">
+      <div class="page grid two">
+        <div class="section-header reveal">
+          <span class="eyebrow">Întrebări frecvente</span>
+          <h2>Întrebări frecvente</h2>
+        </div>
+        <div class="faq-list reveal" data-faq>
+          <details open><summary>Am nevoie de cont?</summary><p>Nu. FlashLingo nu necesită cont pentru a studia. Pachetele și progresul tău sunt salvate local pe dispozitiv.</p></details>
+          <details><summary>FlashLingo îmi sincronizează progresul în cloud?</summary><p>Nu. Versiunea actuală nu include sincronizare în cloud. Poți exporta manual progresul unui pachet ca backup <code>.flashjp</code>.</p></details>
+          <details><summary>Ce este un fișier .flashjp?</summary><p>Un fișier <code>.flashjp</code> este un pachet FlashLingo folosit pentru a importa pachete oficiale sau a restaura backupuri de progres.</p></details>
+          <details><summary>Pot studia offline?</summary><p>Poți studia local pachetele deja importate. Unele funcții, precum reclamele sau deschiderea linkurilor externe, pot necesita conexiune la internet.</p></details>
+          <details><summary>Aplicația conține reclame?</summary><p>Da, dar nu sunt intruzive și nu afectează studiul. FlashLingo poate afișa reclame prin Google AdMob pe versiunile mobile compatibile.</p></details>
+          <details><summary>Îmi pot exporta progresul?</summary><p>Da. Poți exporta statistici în CSV/PDF și crea un backup manual <code>.flashjp</code> pentru fiecare pachet.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="page cta-band reveal">
+        <span class="eyebrow">Începe acum</span>
+        <h2>Începe să îți construiești vocabularul rapid și eficient.</h2>
+        <p>Importă-ți pachetele, studiază cu repetiție spațiată, analizează-ți statisticile și păstrează-ți progresul de învățare pe dispozitiv.</p>
+        <div class="download-actions">
+          <a class="download-button" href="download.html"><img src="/assets/icons/google-play.svg" alt="" width="24" height="24"><span>Descarcă din Google Play</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/app-store.svg" alt="" width="24" height="24"><span>Descarcă din App Store</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/windows.svg" alt="" width="24" height="24"><span>Descarcă pentru Windows</span></a>
+          <a class="button surface" href="decks.html">Descarcă pachete oficiale</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="soporte" class="site-footer site-footer-home">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>FlashLingo este o aplica&#539;ie pentru a studia vocabular cu flashcards, repeti&#539;ie spa&#539;iat&#259;, pachete locale &#537;i statistici de progres.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo / Javier Ponce. Toate drepturile rezervate.</p>
+      </div>
+      <div class="footer-link-grid">
+        <div class="footer-link-group">
+          <span>Produs</span>
+          <a href="#inicio">Acas&#259;</a>
+          <a href="download.html">Descarc&#259;</a>
+          <a href="metode.html">Metoda noastr&#259;</a>
+          <a href="decks.html">Pachete oficiale</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Resurse</span>
+          <a href="make_decks.html">Creeaz&#259; pachete</a>
+          <a href="contact.html">Asisten&#539;&#259;</a>
+          <a href="privacy.html">Confiden&#539;ialitate</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Legal</span>
+          <a href="terms.html">Termeni</a>
+          <a href="legal.html">Aviz legal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

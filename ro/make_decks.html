@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
   (function(){var S=['es','en','ro','de','fr'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
   </script>
-  <title>Create Decks - FlashLingo</title>
-  <meta name="description" content="Guide to create .flashjp decks for FlashLingo with SQLite, manifest, multimedia and study settings.">
-  <link rel="canonical" href="https://flashlingo.github.io/en/make_decks.html">
+  <title>Creează pachete - FlashLingo</title>
+  <meta name="description" content="Ghid pentru a crea pachete .flashjp pentru FlashLingo cu SQLite, manifest, multimedia și setări de studiu.">
+  <link rel="canonical" href="https://flashlingo.github.io/ro/make_decks.html">
   <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/make_decks.html">
   <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/make_decks.html">
   <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html">
@@ -17,19 +17,20 @@
   <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="FlashLingo">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="ro_RO">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta property="og:title" content="Create Decks - FlashLingo">
-  <meta property="og:description" content="Guide to create .flashjp decks for FlashLingo with SQLite, manifest, multimedia and study settings.">
-  <meta property="og:url" content="https://flashlingo.github.io/en/make_decks.html">
-  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Creează pachete - FlashLingo">
+  <meta property="og:description" content="Ghid pentru a crea pachete .flashjp pentru FlashLingo cu SQLite, manifest, multimedia și setări de studiu.">
+  <meta property="og:url" content="https://flashlingo.github.io/ro/make_decks.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ro.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="FlashLingo - Learn vocabulary with flashcards">
+  <meta property="og:image:alt" content="FlashLingo - Invata vocabular cu flashcards">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Create Decks - FlashLingo">
-  <meta name="twitter:description" content="Guide to create .flashjp decks for FlashLingo with SQLite, manifest, multimedia and study settings.">
-  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta name="twitter:title" content="Creează pachete - FlashLingo">
+  <meta name="twitter:description" content="Ghid pentru a crea pachete .flashjp pentru FlashLingo cu SQLite, manifest, multimedia și setări de studiu.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ro.png">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -46,36 +47,36 @@
       </a>
       <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
         <a href="/make_decks.html" data-lang-switch="es">ES</a>
-        <a href="/en/make_decks.html" data-lang-switch="en" aria-current="page">EN</a>
-        <a href="/ro/make_decks.html" data-lang-switch="ro">RO</a>
+        <a href="/en/make_decks.html" data-lang-switch="en">EN</a>
+        <a href="/ro/make_decks.html" data-lang-switch="ro" aria-current="page">RO</a>
         <a href="/de/make_decks.html" data-lang-switch="de">DE</a>
         <a href="/fr/make_decks.html" data-lang-switch="fr">FR</a>
       </div>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="Deschide navigarea" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
-      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="metode.html">Our Method</a>
-        <a href="decks.html">Official Decks</a>
-        <a href="make_decks.html">Create Decks</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+      <nav class="site-nav" aria-label="Navigare principala" data-site-nav>
+        <a href="index.html">Acas&#259;</a>
+        <a href="download.html">Descarc&#259;</a>
+        <a href="metode.html">Metoda noastr&#259;</a>
+        <a href="decks.html">Pachete oficiale</a>
+        <a href="make_decks.html">Creeaz&#259; pachete</a>
+        <a href="privacy.html">Confiden&#539;ialitate</a>
+        <a href="terms.html">Termeni</a>
         <a href="legal.html">Legal</a>
-        <a href="contact.html">Support</a>
+        <a href="contact.html">Asisten&#539;&#259;</a>
       </nav>
     </div>
   </header>
 
   <main class="page">
     <section class="legal-hero coming-soon-page">
-      <span class="eyebrow">Create Decks</span>
-      <h1>Coming soon!</h1>
-      <p class="lead">The deck creation tool isn't available yet. We're preparing a clear way to build FlashLingo-compatible packages and we'll publish the information here when it's ready.</p>
+      <span class="eyebrow">Creează pachete</span>
+      <h1>În curând!</h1>
+      <p class="lead">Instrumentul pentru crearea pachetelor nu este încă disponibil. Pregătim o modalitate clară de a construi pachete compatibile cu FlashLingo și vom publica informațiile aici când vor fi gata.</p>
       <div class="section-actions">
-        <a class="button surface" href="decks.html">View official decks</a>
-        <a class="button surface" href="contact.html">Contact support</a>
+        <a class="button surface" href="decks.html">Vezi pachete oficiale</a>
+        <a class="button surface" href="contact.html">Contactează asistența</a>
       </div>
     </section>
   </main>
@@ -87,17 +88,17 @@
           <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
           <span class="brand-name"><span>Flash</span>Lingo</span>
         </a>
-        <p>&copy; <span data-year>2026</span> FlashLingo. Resources to create decks.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo. Resurse pentru a crea pachete.</p>
       </div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="metode.html">Our Method</a>
-        <a href="decks.html">Official Decks</a>
-        <a href="make_decks.html">Create Decks</a>
-        <a href="contact.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="index.html">Acas&#259;</a>
+        <a href="download.html">Descarc&#259;</a>
+        <a href="metode.html">Metoda noastr&#259;</a>
+        <a href="decks.html">Pachete oficiale</a>
+        <a href="make_decks.html">Creeaz&#259; pachete</a>
+        <a href="contact.html">Asisten&#539;&#259;</a>
+        <a href="privacy.html">Confiden&#539;ialitate</a>
+        <a href="terms.html">Termeni</a>
       </div>
     </div>
   </footer>

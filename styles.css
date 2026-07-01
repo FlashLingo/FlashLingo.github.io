@@ -247,7 +247,7 @@ textarea {
   margin-left: auto;
   display: inline-flex;
   align-items: center;
-  gap: 3px;
+  gap: 2px;
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 3px;
@@ -259,11 +259,11 @@ textarea {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  padding: 4px 11px;
+  padding: 4px 9px;
   color: var(--muted);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 850;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   text-decoration: none;
 }
 
@@ -1509,11 +1509,18 @@ hr {
 
 @media (max-width: 640px) {
   .header-inner {
-    gap: 12px;
+    gap: 8px;
+  }
+
+  .lang-switch-nav {
+    gap: 1px;
+    padding: 2px;
   }
 
   .lang-switch-nav a {
-    padding: 4px 9px;
+    min-height: 30px;
+    padding: 3px 6px;
+    font-size: 0.74rem;
   }
 
   .brand-name {
@@ -1612,5 +1619,32 @@ hr {
 
   .footer-inner {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-inner {
+    gap: 6px;
+  }
+
+  .brand-name {
+    font-size: 1.02rem;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+  }
+
+  .lang-switch-nav {
+    gap: 1px;
+    padding: 2px;
+  }
+
+  .lang-switch-nav a {
+    min-height: 28px;
+    padding: 2px 5px;
+    font-size: 0.7rem;
   }
 }

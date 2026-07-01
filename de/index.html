@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>FlashLingo - Vokabeln lernen mit lokalen Karteikarten</title>
+  <meta name="description" content="FlashLingo ist eine Karteikarten-App zum Vokabellernen mit .flashjp-Paketen, verteilter Wiederholung, Audio, Schreibmodus, Statistiken und Local-first-Fortschritt.">
+  <link rel="canonical" href="https://flashlingo.github.io/de/">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:title" content="FlashLingo - Vokabeln lernen mit lokalen Karteikarten">
+  <meta property="og:description" content="FlashLingo ist eine Karteikarten-App zum Vokabellernen mit .flashjp-Paketen, verteilter Wiederholung, Audio, Schreibmodus, Statistiken und Local-first-Fortschritt.">
+  <meta property="og:url" content="https://flashlingo.github.io/de/">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-de.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - Vokabeln lernen mit Karteikarten">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlashLingo - Vokabeln lernen mit lokalen Karteikarten">
+  <meta name="twitter:description" content="FlashLingo ist eine Karteikarten-App zum Vokabellernen mit .flashjp-Paketen, verteilter Wiederholung, Audio, Schreibmodus, Statistiken und Local-first-Fortschritt.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-de.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://flashlingo.github.io/de/#website", "url": "https://flashlingo.github.io/de/", "name": "FlashLingo", "inLanguage": "de", "publisher": { "@id": "https://flashlingo.github.io/#org" } },
+      { "@type": "Organization", "@id": "https://flashlingo.github.io/#org", "name": "FlashLingo", "url": "https://flashlingo.github.io/", "logo": "https://flashlingo.github.io/assets/logo-192.png", "email": "flashlingo.lenguageapp@gmail.com", "founder": "Javier Ponce" },
+      { "@type": "SoftwareApplication", "@id": "https://flashlingo.github.io/#app", "name": "FlashLingo", "operatingSystem": "Android", "applicationCategory": "EducationalApplication", "description": "Karteikarten-App zum Vokabellernen mit .flashjp-Paketen, verteilter Wiederholung, Audio, Schreibmodus, Statistiken und Local-first-Fortschritt.", "url": "https://flashlingo.github.io/", "image": "https://flashlingo.github.io/assets/og-image-de.png", "inLanguage": ["es", "en", "ro", "de", "fr", "ja", "zh"], "author": { "@id": "https://flashlingo.github.io/#org" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
+        <a href="/" data-lang-switch="es">ES</a>
+        <a href="/en/" data-lang-switch="en">EN</a>
+        <a href="/ro/" data-lang-switch="ro">RO</a>
+        <a href="/de/" data-lang-switch="de" aria-current="page">DE</a>
+        <a href="/fr/" data-lang-switch="fr">FR</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Hauptnavigation" data-site-nav>
+        <a href="#inicio">Startseite</a>
+        <a href="download.html">Download</a>
+        <a href="metode.html">Unsere Methode</a>
+        <a href="decks.html">Offizielle Pakete</a>
+        <a href="make_decks.html">Pakete erstellen</a>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="terms.html">Nutzungsbedingungen</a>
+        <a href="legal.html">Impressum</a>
+        <a href="contact.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <main>
+    <section id="inicio" class="hero-home">
+      <img class="hero-bg" src="/Images/dashboard_GER.jpg" alt="FlashLingo-Hauptbildschirm mit Sprachpaketen" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-logo-row">
+          <img src="/assets/logo-192.png" alt="" width="58" height="58">
+          <span>Local-first-Karteikarten</span>
+        </div>
+        <h1>
+          <span class="hero-title-kicker">Erwirb, lerne und studiere Vokabeln mit</span>
+          <span class="hero-title-brand"><span>Flash</span>Lingo.</span>
+        </h1>
+        <p class="hero-lead">FlashLingo ist eine Karteikarten-App für Sprachlernende, die schnell und effizient Vokabeln lernen und erwerben möchten, mit Kontrolle über ihre Pakete, ihren Fortschritt, ihr Lerntempo und ihre Lerndaten.</p>
+        <p class="hero-lead hero-lead-secondary">Importiere <code>.flashjp</code>-Pakete, lerne Erkennungs- und Produktionskarten, übe mit Audio und dem Schreibmodus und analysiere deinen Fortschritt mit detaillierten Statistiken – ganz ohne Konto.</p>
+        <div class="download-actions hero-downloads">
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="24" height="24">
+            <span>Bei Google Play herunterladen</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="24" height="24">
+            <span>Im App Store laden</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="24" height="24">
+            <span>Für Windows herunterladen</span>
+          </a>
+          <a class="button secondary" href="decks.html">Offizielle Pakete herunterladen</a>
+        </div>
+        <p class="hero-note">Lokales Lernen. Kein Konto und keine Anmeldung nötig. Dein Fortschritt bleibt auf deinem Gerät.</p>
+      </div>
+    </section>
+
+    <section class="trust-band" aria-label="Schnelle Funktionen">
+      <div class="trust-track" data-trust-track>
+        <span>Android-App</span>
+        <span>Local-first-Fortschritt</span>
+        <span>.flashjp-Paketimport</span>
+        <span>Verteilte Wiederholung</span>
+        <span>Audio und Bilder</span>
+        <span>Schreibmodus</span>
+        <span>CSV/PDF-Exporte</span>
+        <span>Manuelles Backup pro Paket</span>
+      </div>
+    </section>
+
+    <section id="metodo" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Unsere Methode</span>
+          <h2>Eine Karteikarten-App mit einer innovativen Methode für alle, die mehr Kontrolle wollen.</h2>
+          <p class="lead">Viele Sprach-Apps verwenden veraltete Methoden, bieten keinen schnellen Fortschritt, zwingen dich zur Kontoerstellung, verbergen, wie das Lernsystem funktioniert, oder begrenzen, wie viel du lernen oder anpassen kannst. FlashLingo verfolgt einen anderen Ansatz.</p>
+          <p>Du importierst deine eigenen Pakete, lernst lokal auf deinem Gerät, passt jedes Paket an dein Tempo an und behältst deinen Fortschritt unter Kontrolle.</p>
+          <p>Unsere Lernmethode und unser Algorithmus ermöglichen es dir, Vokabeln schnell und effizient in deinem eigenen Tempo zu erwerben und zu lernen.</p>
+        </div>
+        <div class="method-stack reveal">
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Lokales Lernen</h3>
+            <p>Deine Pakete, dein Fortschritt, deine Einstellungen, Sitzungen und Statistiken werden lokal auf deinem Gerät gespeichert. Du brauchst kein Konto, um mit dem Lernen zu beginnen.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Für ernsthaftes Vokabellernen gemacht</h3>
+            <p>Lerne Erkennungs- und Produktionskarten, nutze Audio und Beispielsätze, aktiviere den Schreibmodus und lass die verteilte Wiederholung deine Wiederholungen planen.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Exportiere, was zählt</h3>
+            <p>Überprüfe deine Leistung mit Statistiken, exportiere Berichte als CSV oder PDF und erstelle manuelle <code>.flashjp</code>-Backups deines Paketfortschritts.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Wie es funktioniert</span>
+          <h2>Wie FlashLingo funktioniert</h2>
+        </div>
+        <div class="timeline" data-timeline>
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>Importiere ein Paket</h3>
+            <p>Wähle ein offizielles <code>.flashjp</code>-Paket oder stelle ein Fortschritts-Backup wieder her. FlashLingo prüft das Paket, liest das Manifest, importiert die Datenbank und bereitet das Paket vor, damit du mit dem Lernen und dem Aufbau deines Wortschatzes beginnen kannst.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>Lerne deine Karten</h3>
+            <p>Übe Erkennungskarten, um Wörter zu verstehen, und Produktionskarten, um sie aktiv abzurufen. Karten können Definitionen, Beispiele, Übersetzungen, Lesungen, Audio, Bilder und zusätzliche Formen enthalten.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>Wiederhole mit verteilter Wiederholung</h3>
+            <p>FlashLingo plant deine Wiederholungen anhand deiner Leistung dank unseres Algorithmus. Neue, im Lernen befindliche, zu wiederholende und neu zu lernende Karten werden in einer täglichen Lernwarteschlange organisiert.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>Analysiere und verbessere dich</h3>
+            <p>Nutze die Paketstatistiken, um Genauigkeit, Lernzeit, schwierige Karten, Wiederholungsverlauf und künftige Auslastung zu prüfen. Exportiere deine Daten, wann immer du willst.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Hauptfunktionen</span>
+          <h2>Alles, was du brauchst, um konzentriert Vokabeln zu lernen.</h2>
+        </div>
+        <div class="grid four feature-grid">
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>.flashjp-Pakete</h3><p>Importiere FlashLingo-Pakete, die eine SQLite-Datenbank, Metadaten, Audio, Bilder und empfohlene Paketeinstellungen enthalten können.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Erkennung und Produktion</h3><p>Jedes Wort kann zwei Lernrichtungen erzeugen: das Wort in der Zielsprache erkennen und es aus seiner Bedeutung produzieren.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Schreibmodus</h3><p>Bei Produktionskarten kannst du im Schreibmodus deine Antwort eingeben, sie mit dem Zielwort vergleichen und „Good“ erst freischalten, wenn du den konfigurierten Mindestprozentsatz erreichst.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Erweiterte Einstellungen</h3><p>Jedes Paket kann eigene Tageslimits, Lernschritte, Verhalten bei Fehlern, Algorithmus-Parameter, Mischung, Erinnerungen, Schreibmodus und Rückgängig haben.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Detaillierte Statistiken</h3><p>Prüfe Genauigkeit, Lernzeit, Wiederholungsprognose, tägliche Aktivität, schwierige Karten und Sitzungsverlauf mit klaren Diagrammen und Zusammenfassungen.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>CSV, PDF und Backups</h3><p>Exportiere Lernstatistiken als CSV oder PDF und erstelle manuelle <code>.flashjp</code>-Backups des Fortschritts jedes Pakets, wann immer du deine Daten sichern oder verschieben möchtest.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Lokale Erinnerungen</h3><p>Aktiviere optionale Erinnerungen pro Paket. FlashLingo nutzt lokale Benachrichtigungen, um dich zu erinnern, wenn Karten auf Wiederholung warten.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Mehrsprachige Oberfläche</h3><p>FlashLingo bietet eine Oberfläche auf Englisch, Spanisch, Rumänisch, Deutsch, Französisch, Japanisch und Chinesisch.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section privacy-band">
+      <div class="page privacy-layout">
+        <div class="section-header reveal">
+          <span class="eyebrow">Datenschutz / Local-first</span>
+          <h2>Dein Lernfortschritt gehört dir.</h2>
+          <p class="lead">FlashLingo ist als Local-first-App konzipiert. Du brauchst kein Konto, und FlashLingo nutzt keinen eigenen Server, um deine Pakete oder deinen Fortschritt zu speichern.</p>
+          <p>Deine importierten Pakete, Mediendateien, dein Lernverlauf, deine Paketeinstellungen, Sitzungen und Statistiken werden im lokalen Speicher der App auf deinem Gerät gespeichert.</p>
+          <a class="button surface" href="privacy.html">Datenschutzerklärung lesen</a>
+        </div>
+        <ul class="privacy-list reveal">
+          <li>Du brauchst kein Konto.</li>
+          <li>Keine eigene Analyse und kein eigener Server zur Fehlerberichterstattung.</li>
+          <li>Der Lernfortschritt wird lokal gespeichert.</li>
+          <li>Paket-Backups werden nur erstellt, wenn du sie exportierst.</li>
+          <li>Werbung wird über Google AdMob in kompatiblen mobilen Builds bereitgestellt.</li>
+          <li>Datenschutzoptionen für Werbung werden bei Bedarf über den Einwilligungsfluss von Google verwaltet.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="descargar" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Download</span>
+          <h2>Wähle deine Plattform.</h2>
+          <p class="lead">Die Buttons sind bereit, auf die offiziellen Stores und Builds zu verlinken, sobald diese veröffentlicht sind.</p>
+        </div>
+        <div class="download-grid">
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="34" height="34">
+            <strong>Bei Google Play herunterladen</strong>
+            <span>Android</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="34" height="34">
+            <strong>Im App Store laden</strong>
+            <span>iOS</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="34" height="34">
+            <strong>Für Windows herunterladen</strong>
+            <span>Desktop</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mazos" class="section privacy-band">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Offizielle Pakete</span>
+          <h2>Kostenlose Pakete für FlashLingo</h2>
+          <p class="lead">FlashLingo-Pakete verwenden das <code>.flashjp</code>-Format. Offizielle Pakete enthalten Vokabeln, Beispielsätze, Übersetzungen, Lesungen, Audio, Bilder, Paketsymbole und empfohlene Lerneinstellungen.</p>
+          <p>Lade ein Paket herunter, importiere es in die App und beginne lokal zu lernen.</p>
+          <div class="section-actions">
+            <a class="button surface" href="decks.html">Pakete herunterladen</a>
+          </div>
+          <div class="notice warning">
+            <strong>Wichtiger Hinweis:</strong> Pakete werden zu Bildungszwecken angeboten. Der Inhalt kann Fehler enthalten. Wenn du ein Problem findest, melde es über den Support.
+          </div>
+        </div>
+        <figure class="phone-shot deck-preview-shot reveal">
+          <div class="phone-frame"><img src="/Images/Menu_GER.jpg" alt="Menü eines Pakets in FlashLingo" loading="lazy"></div>
+          <figcaption>Pakete mit Aktionen für Einstellungen, Durchsuchen, Statistiken und Export.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crear-mazos" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Für Paket-Ersteller</span>
+          <h2>Erstelle deine eigenen Pakete für FlashLingo.</h2>
+          <p class="lead">FlashLingo ist rund um portable Pakete aufgebaut. Ein <code>.flashjp</code>-Paket kann eine Datenbank, ein Manifest, Audiodateien, Bilder, Paketsymbole und Einstellungswerte enthalten.</p>
+          <p>So kannst du reichhaltigere Vokabelpakete mit Beispielen, Übersetzungen, Lesungen, Multimedia und benutzerdefinierten Lerneinstellungen erstellen.</p>
+          <p>Und nicht nur das: Du kannst Pakete zu jedem Thema oder Zweck erstellen, da das <code>.flashjp</code>-Format sehr flexibel ist.</p>
+          <div class="section-actions">
+            <a class="button surface" href="make_decks.html">Lerne, wie du deine Pakete erstellst</a>
+            <a class="button surface" href="flashjp-format.html">Formatdokumentation lesen</a>
+          </div>
+        </div>
+        <div class="panel creator-table reveal">
+          <div class="creator-row"><strong>SQLite</strong><span>Karteikarteninhalt auf Basis einer lokalen Datenbank.</span></div>
+          <div class="creator-row"><strong>manifest.json</strong><span>Paket-Metadaten und empfohlene Einstellungen.</span></div>
+          <div class="creator-row"><strong>Media</strong><span>Verweise auf Audio, Bilder und Paketsymbole.</span></div>
+          <div class="creator-row"><strong>Zwei Richtungen</strong><span>Erzeugung von Erkennungs- und Produktionskarten.</span></div>
+          <div class="creator-row"><strong>Aktualisierungen</strong><span>Paket-Aktualisierungen ohne Fortschrittsverlust.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capturas" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Visuelle Vorschau</span>
+          <h2>Für lange Lernsitzungen konzipiert.</h2>
+          <p class="lead">FlashLingo kombiniert eine klare Oberfläche mit fortschrittlichen Werkzeugen, um deinen Fortschritt zu lernen, zu wiederholen und zu analysieren, ohne die Konzentration zu verlieren.</p>
+        </div>
+        <div class="preview-tabs compact-preview reveal" data-preview-tabs>
+          <div class="preview-controls" role="tablist" aria-label="FlashLingo-Screenshots">
+            <button type="button" role="tab" aria-selected="true" data-preview-target="screen-home">Start</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-study">Lernen</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-write">Schreibmodus</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-stats">Statistiken</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-import">Import</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-panel is-active" id="screen-home">
+              <div class="phone-frame"><img src="/Images/dashboard_GER.jpg" alt="FlashLingo-Paketstart" loading="lazy"></div>
+              <figcaption><strong>Paket-Start.</strong> Sieh auf einen Blick neue, im Lernen befindliche, zu wiederholende, überfällige Karten und die aktuelle Genauigkeit.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-study">
+              <div class="phone-frame"><img src="/Images/Japones2_GER.jpg" alt="Lernsitzung in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Lernsitzung.</strong> Lerne übersichtliche Karten mit Beispielen, Audio, Bildern, Lesungen und klaren Good/Bad-Aktionen.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-write">
+              <div class="phone-frame"><img src="/Images/Espanol1_GER.jpg" alt="Produktionskarte in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Schreibmodus.</strong> Gib deine Antwort ein und vergleiche sie mit dem Zielwort, bevor du die Karte bewertest.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-stats">
+              <div class="phone-frame"><img src="/Images/Estadisticas7_GER.jpg" alt="Statistiken und Prognose in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Statistiken.</strong> Analysiere deinen Fortschritt mit Diagrammen, Prognosen, täglicher Aktivität und schwierigen Karten.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-import">
+              <div class="phone-frame"><img src="/Images/Config1_GER.jpg" alt="Paketeinstellungen in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Paketimport.</strong> Sieh dir <code>.flashjp</code>-Pakete in der Vorschau an und importiere sie mit klarem Fortschritt, Diagnosen und Konfliktbehandlung.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section privacy-band">
+      <div class="page grid two">
+        <div class="section-header reveal">
+          <span class="eyebrow">Häufige Fragen</span>
+          <h2>Häufig gestellte Fragen</h2>
+        </div>
+        <div class="faq-list reveal" data-faq>
+          <details open><summary>Brauche ich ein Konto?</summary><p>Nein. FlashLingo benötigt kein Konto zum Lernen. Deine Pakete und dein Fortschritt werden lokal auf deinem Gerät gespeichert.</p></details>
+          <details><summary>Synchronisiert FlashLingo meinen Fortschritt in die Cloud?</summary><p>Nein. Die aktuelle Version enthält keine Cloud-Synchronisierung. Du kannst den Fortschritt eines Pakets manuell als <code>.flashjp</code>-Backup exportieren.</p></details>
+          <details><summary>Was ist eine .flashjp-Datei?</summary><p>Eine <code>.flashjp</code>-Datei ist ein FlashLingo-Paket, das zum Importieren offizieller Pakete oder zum Wiederherstellen von Fortschritts-Backups verwendet wird.</p></details>
+          <details><summary>Kann ich offline lernen?</summary><p>Du kannst die bereits importierten Pakete lokal lernen. Einige Funktionen wie Werbung oder das Öffnen externer Links können eine Internetverbindung erfordern.</p></details>
+          <details><summary>Enthält die App Werbung?</summary><p>Ja, aber sie ist nicht aufdringlich und beeinträchtigt das Lernen nicht. FlashLingo kann in kompatiblen mobilen Builds Werbung über Google AdMob anzeigen.</p></details>
+          <details><summary>Kann ich meinen Fortschritt exportieren?</summary><p>Ja. Du kannst Statistiken als CSV/PDF exportieren und für jedes Paket ein manuelles <code>.flashjp</code>-Backup erstellen.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="page cta-band reveal">
+        <span class="eyebrow">Jetzt starten</span>
+        <h2>Beginne, deinen Wortschatz schnell und effizient aufzubauen.</h2>
+        <p>Importiere deine Pakete, lerne mit verteilter Wiederholung, überprüfe deine Statistiken und behalte deinen Lernfortschritt auf deinem Gerät.</p>
+        <div class="download-actions">
+          <a class="download-button" href="download.html"><img src="/assets/icons/google-play.svg" alt="" width="24" height="24"><span>Bei Google Play herunterladen</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/app-store.svg" alt="" width="24" height="24"><span>Im App Store laden</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/windows.svg" alt="" width="24" height="24"><span>Für Windows herunterladen</span></a>
+          <a class="button surface" href="decks.html">Offizielle Pakete herunterladen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="soporte" class="site-footer site-footer-home">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>FlashLingo ist eine App zum Vokabellernen mit Karteikarten, verteilter Wiederholung, lokalen Paketen und Fortschrittsstatistiken.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo / Javier Ponce. Alle Rechte vorbehalten.</p>
+      </div>
+      <div class="footer-link-grid">
+        <div class="footer-link-group">
+          <span>Produkt</span>
+          <a href="#inicio">Startseite</a>
+          <a href="download.html">Download</a>
+          <a href="metode.html">Unsere Methode</a>
+          <a href="decks.html">Offizielle Pakete</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Ressourcen</span>
+          <a href="make_decks.html">Pakete erstellen</a>
+          <a href="contact.html">Support</a>
+          <a href="privacy.html">Datenschutz</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Rechtliches</span>
+          <a href="terms.html">Nutzungsbedingungen</a>
+          <a href="legal.html">Impressum</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

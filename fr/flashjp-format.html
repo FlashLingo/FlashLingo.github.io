@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
   (function(){var S=['es','en','ro','de','fr'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
   </script>
-  <title>The .flashjp format - FlashLingo</title>
-  <meta name="description" content="Technical reference of the FlashLingo .flashjp package format: encrypted container, manifest.json, SQLite contract, media and progress backups.">
-  <link rel="canonical" href="https://flashlingo.github.io/en/flashjp-format.html">
+  <title>Le format .flashjp - FlashLingo</title>
+  <meta name="description" content="Référence technique du format de paquets .flashjp de FlashLingo : conteneur chiffré, manifest.json, contrat SQLite, médias et sauvegardes de progression.">
+  <link rel="canonical" href="https://flashlingo.github.io/fr/flashjp-format.html">
   <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/flashjp-format.html">
   <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/flashjp-format.html">
   <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html">
@@ -17,19 +17,22 @@
   <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="FlashLingo">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="fr_FR">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta property="og:title" content="The .flashjp package format - FlashLingo">
-  <meta property="og:description" content="Technical reference of the FlashLingo .flashjp package format: encrypted container, manifest.json, SQLite contract, media and progress backups.">
-  <meta property="og:url" content="https://flashlingo.github.io/en/flashjp-format.html">
-  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:title" content="Le format de paquets .flashjp - FlashLingo">
+  <meta property="og:description" content="Référence technique du format de paquets .flashjp de FlashLingo : conteneur chiffré, manifest.json, contrat SQLite, médias et sauvegardes de progression.">
+  <meta property="og:url" content="https://flashlingo.github.io/fr/flashjp-format.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-fr.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="FlashLingo - Learn vocabulary with flashcards">
+  <meta property="og:image:alt" content="FlashLingo - Apprends du vocabulaire avec des flashcards">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The .flashjp package format - FlashLingo">
-  <meta name="twitter:description" content="Technical reference of the FlashLingo .flashjp package format: encrypted container, manifest.json, SQLite contract, media and progress backups.">
-  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta name="twitter:title" content="Le format de paquets .flashjp - FlashLingo">
+  <meta name="twitter:description" content="Référence technique du format de paquets .flashjp de FlashLingo : conteneur chiffré, manifest.json, contrat SQLite, médias et sauvegardes de progression.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-fr.png">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -46,24 +49,24 @@
       </a>
       <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
         <a href="/flashjp-format.html" data-lang-switch="es">ES</a>
-        <a href="/en/flashjp-format.html" data-lang-switch="en" aria-current="page">EN</a>
+        <a href="/en/flashjp-format.html" data-lang-switch="en">EN</a>
         <a href="/ro/flashjp-format.html" data-lang-switch="ro">RO</a>
         <a href="/de/flashjp-format.html" data-lang-switch="de">DE</a>
-        <a href="/fr/flashjp-format.html" data-lang-switch="fr">FR</a>
+        <a href="/fr/flashjp-format.html" data-lang-switch="fr" aria-current="page">FR</a>
       </div>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="Ouvrir la navigation" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
-      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="metode.html">Our Method</a>
-        <a href="decks.html">Official Decks</a>
-        <a href="make_decks.html">Create Decks</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="legal.html">Legal</a>
-        <a href="contact.html">Support</a>
+      <nav class="site-nav" aria-label="Navigation principale" data-site-nav>
+        <a href="index.html">Accueil</a>
+        <a href="download.html">T&eacute;l&eacute;charger</a>
+        <a href="metode.html">Notre m&eacute;thode</a>
+        <a href="decks.html">Paquets officiels</a>
+        <a href="make_decks.html">Cr&eacute;er des paquets</a>
+        <a href="privacy.html">Confidentialit&eacute;</a>
+        <a href="terms.html">Conditions</a>
+        <a href="legal.html">Mentions l&eacute;gales</a>
+        <a href="contact.html">Assistance</a>
       </nav>
     </div>
   </header>
@@ -71,17 +74,17 @@
   <main class="legal-page">
     <section class="legal-hero">
       <span class="eyebrow">Documentation</span>
-      <h1>The <code>.flashjp</code> package format</h1>
-      <p class="lead">Technical reference of the package format FlashLingo consumes when importing official decks and user progress backups. This page is a reference for creators and developers.</p>
+      <h1>Le format de paquets <code>.flashjp</code></h1>
+      <p class="lead">Référence technique du format de paquets que FlashLingo utilise lors de l'import des paquets officiels et des sauvegardes de progression. Cette page est une référence pour les créateurs et développeurs ; les détails techniques restent en anglais afin de conserver les noms exacts des champs, clés et colonnes.</p>
       <div class="meta-grid">
         <div class="meta-item"><span class="meta-label">Extension</span><code>.flashjp</code></div>
-        <div class="meta-item"><span class="meta-label">Official container</span>FLJPENC1 (signed + AES-256-GCM)</div>
-        <div class="meta-item"><span class="meta-label">User backup</span>ZIP flashlingo_user_backup_v1</div>
-        <div class="meta-item"><span class="meta-label">Database</span>SQLite (flashcards table)</div>
+        <div class="meta-item"><span class="meta-label">Conteneur officiel</span>FLJPENC1 (signé + AES-256-GCM)</div>
+        <div class="meta-item"><span class="meta-label">Sauvegarde utilisateur</span>ZIP flashlingo_user_backup_v1</div>
+        <div class="meta-item"><span class="meta-label">Base de données</span>SQLite (table flashcards)</div>
       </div>
       <div class="section-actions">
-        <a class="button surface" href="make_decks.html">Back to Create Decks</a>
-        <a class="button surface" href="https://github.com/FlashLingo/FlashLingo.github.io/blob/main/Documentacion/flashjp-format.md" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+        <a class="button surface" href="make_decks.html">Retour à Créer des paquets</a>
+        <a class="button surface" href="https://github.com/FlashLingo/FlashLingo.github.io/blob/main/Documentacion/flashjp-format.md" target="_blank" rel="noopener noreferrer">Voir la source sur GitHub</a>
       </div>
     </section>
 
@@ -214,17 +217,17 @@ images/card_001.png</code></pre>
           <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
           <span class="brand-name"><span>Flash</span>Lingo</span>
         </a>
-        <p>&copy; <span data-year>2026</span> FlashLingo. Deck format documentation.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo. Documentation du format de paquets.</p>
       </div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="metode.html">Our Method</a>
-        <a href="decks.html">Official Decks</a>
-        <a href="make_decks.html">Create Decks</a>
-        <a href="contact.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="index.html">Accueil</a>
+        <a href="download.html">T&eacute;l&eacute;charger</a>
+        <a href="metode.html">Notre m&eacute;thode</a>
+        <a href="decks.html">Paquets officiels</a>
+        <a href="make_decks.html">Cr&eacute;er des paquets</a>
+        <a href="contact.html">Assistance</a>
+        <a href="privacy.html">Confidentialit&eacute;</a>
+        <a href="terms.html">Conditions</a>
       </div>
     </div>
   </footer>

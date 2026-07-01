@@ -121,13 +121,18 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   })();
 
-  const isEn = document.documentElement.lang === "en";
+  const lang = document.documentElement.lang || "es";
+  const t = (map) => map[lang] || map.es;
 
   document.querySelectorAll("[data-download-button]").forEach((button) => {
     button.addEventListener("click", () => {
-      showToast(isEn
-        ? "Official download links will be added once the release is ready."
-        : "Los enlaces oficiales de descarga se anadiran cuando la publicacion este lista.");
+      showToast(t({
+        es: "Los enlaces oficiales de descarga se anadiran cuando la publicacion este lista.",
+        en: "Official download links will be added once the release is ready.",
+        ro: "Linkurile oficiale de descarcare se vor adauga cand lansarea va fi gata.",
+        de: "Offizielle Download-Links werden hinzugefügt, sobald die Veröffentlichung bereit ist.",
+        fr: "Les liens de téléchargement officiels seront ajoutés dès que la version sera prête."
+      }));
     });
   });
 
@@ -146,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("[data-coming-soon]").forEach((button) => {
     button.addEventListener("click", () => {
-      showToast(isEn ? "Coming soon" : "Proximamente");
+      showToast(t({ es: "Proximamente", en: "Coming soon", ro: "In curand", de: "Demnächst", fr: "Bientôt disponible" }));
     });
   });
 

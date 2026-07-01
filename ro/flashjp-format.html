@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
   (function(){var S=['es','en','ro','de','fr'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
   </script>
-  <title>The .flashjp format - FlashLingo</title>
-  <meta name="description" content="Technical reference of the FlashLingo .flashjp package format: encrypted container, manifest.json, SQLite contract, media and progress backups.">
-  <link rel="canonical" href="https://flashlingo.github.io/en/flashjp-format.html">
+  <title>Formatul .flashjp - FlashLingo</title>
+  <meta name="description" content="Referință tehnică a formatului de pachete .flashjp FlashLingo: container criptat, manifest.json, contract SQLite, media și backupuri de progres.">
+  <link rel="canonical" href="https://flashlingo.github.io/ro/flashjp-format.html">
   <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/flashjp-format.html">
   <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/flashjp-format.html">
   <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html">
@@ -17,19 +17,20 @@
   <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="FlashLingo">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="ro_RO">
   <meta property="og:locale:alternate" content="es_ES">
-  <meta property="og:title" content="The .flashjp package format - FlashLingo">
-  <meta property="og:description" content="Technical reference of the FlashLingo .flashjp package format: encrypted container, manifest.json, SQLite contract, media and progress backups.">
-  <meta property="og:url" content="https://flashlingo.github.io/en/flashjp-format.html">
-  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Formatul de pachete .flashjp - FlashLingo">
+  <meta property="og:description" content="Referință tehnică a formatului de pachete .flashjp FlashLingo: container criptat, manifest.json, contract SQLite, media și backupuri de progres.">
+  <meta property="og:url" content="https://flashlingo.github.io/ro/flashjp-format.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ro.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="FlashLingo - Learn vocabulary with flashcards">
+  <meta property="og:image:alt" content="FlashLingo - Invata vocabular cu flashcards">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The .flashjp package format - FlashLingo">
-  <meta name="twitter:description" content="Technical reference of the FlashLingo .flashjp package format: encrypted container, manifest.json, SQLite contract, media and progress backups.">
-  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta name="twitter:title" content="Formatul de pachete .flashjp - FlashLingo">
+  <meta name="twitter:description" content="Referință tehnică a formatului de pachete .flashjp FlashLingo: container criptat, manifest.json, contract SQLite, media și backupuri de progres.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ro.png">
   <link rel="icon" href="/assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -46,42 +47,42 @@
       </a>
       <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
         <a href="/flashjp-format.html" data-lang-switch="es">ES</a>
-        <a href="/en/flashjp-format.html" data-lang-switch="en" aria-current="page">EN</a>
-        <a href="/ro/flashjp-format.html" data-lang-switch="ro">RO</a>
+        <a href="/en/flashjp-format.html" data-lang-switch="en">EN</a>
+        <a href="/ro/flashjp-format.html" data-lang-switch="ro" aria-current="page">RO</a>
         <a href="/de/flashjp-format.html" data-lang-switch="de">DE</a>
         <a href="/fr/flashjp-format.html" data-lang-switch="fr">FR</a>
       </div>
-      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+      <button class="nav-toggle" type="button" aria-label="Deschide navigarea" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
-      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="metode.html">Our Method</a>
-        <a href="decks.html">Official Decks</a>
-        <a href="make_decks.html">Create Decks</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+      <nav class="site-nav" aria-label="Navigare principala" data-site-nav>
+        <a href="index.html">Acas&#259;</a>
+        <a href="download.html">Descarc&#259;</a>
+        <a href="metode.html">Metoda noastr&#259;</a>
+        <a href="decks.html">Pachete oficiale</a>
+        <a href="make_decks.html">Creeaz&#259; pachete</a>
+        <a href="privacy.html">Confiden&#539;ialitate</a>
+        <a href="terms.html">Termeni</a>
         <a href="legal.html">Legal</a>
-        <a href="contact.html">Support</a>
+        <a href="contact.html">Asisten&#539;&#259;</a>
       </nav>
     </div>
   </header>
 
   <main class="legal-page">
     <section class="legal-hero">
-      <span class="eyebrow">Documentation</span>
-      <h1>The <code>.flashjp</code> package format</h1>
-      <p class="lead">Technical reference of the package format FlashLingo consumes when importing official decks and user progress backups. This page is a reference for creators and developers.</p>
+      <span class="eyebrow">Documentație</span>
+      <h1>Formatul de pachete <code>.flashjp</code></h1>
+      <p class="lead">Referință tehnică a formatului de pachete pe care FlashLingo îl folosește la importul pachetelor oficiale și al backupurilor de progres. Această pagină este o referință pentru creatori și dezvoltatori; detaliile tehnice rămân în engleză pentru a păstra numele exacte ale câmpurilor, cheilor și coloanelor.</p>
       <div class="meta-grid">
-        <div class="meta-item"><span class="meta-label">Extension</span><code>.flashjp</code></div>
-        <div class="meta-item"><span class="meta-label">Official container</span>FLJPENC1 (signed + AES-256-GCM)</div>
-        <div class="meta-item"><span class="meta-label">User backup</span>ZIP flashlingo_user_backup_v1</div>
-        <div class="meta-item"><span class="meta-label">Database</span>SQLite (flashcards table)</div>
+        <div class="meta-item"><span class="meta-label">Extensie</span><code>.flashjp</code></div>
+        <div class="meta-item"><span class="meta-label">Container oficial</span>FLJPENC1 (semnat + AES-256-GCM)</div>
+        <div class="meta-item"><span class="meta-label">Backup utilizator</span>ZIP flashlingo_user_backup_v1</div>
+        <div class="meta-item"><span class="meta-label">Bază de date</span>SQLite (tabel flashcards)</div>
       </div>
       <div class="section-actions">
-        <a class="button surface" href="make_decks.html">Back to Create Decks</a>
-        <a class="button surface" href="https://github.com/FlashLingo/FlashLingo.github.io/blob/main/Documentacion/flashjp-format.md" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+        <a class="button surface" href="make_decks.html">Înapoi la Creează pachete</a>
+        <a class="button surface" href="https://github.com/FlashLingo/FlashLingo.github.io/blob/main/Documentacion/flashjp-format.md" target="_blank" rel="noopener noreferrer">Vezi sursa pe GitHub</a>
       </div>
     </section>
 
@@ -214,17 +215,17 @@ images/card_001.png</code></pre>
           <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
           <span class="brand-name"><span>Flash</span>Lingo</span>
         </a>
-        <p>&copy; <span data-year>2026</span> FlashLingo. Deck format documentation.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo. Documentația formatului de pachete.</p>
       </div>
       <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="download.html">Download</a>
-        <a href="metode.html">Our Method</a>
-        <a href="decks.html">Official Decks</a>
-        <a href="make_decks.html">Create Decks</a>
-        <a href="contact.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="index.html">Acas&#259;</a>
+        <a href="download.html">Descarc&#259;</a>
+        <a href="metode.html">Metoda noastr&#259;</a>
+        <a href="decks.html">Pachete oficiale</a>
+        <a href="make_decks.html">Creeaz&#259; pachete</a>
+        <a href="contact.html">Asisten&#539;&#259;</a>
+        <a href="privacy.html">Confiden&#539;ialitate</a>
+        <a href="terms.html">Termeni</a>
       </div>
     </div>
   </footer>
