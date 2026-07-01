@@ -121,23 +121,41 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   })();
 
+  const isEn = document.documentElement.lang === "en";
+
   document.querySelectorAll("[data-download-button]").forEach((button) => {
     button.addEventListener("click", () => {
-      showToast("Los enlaces oficiales de descarga se anadiran cuando la publicacion este lista.");
+      showToast(isEn
+        ? "Official download links will be added once the release is ready."
+        : "Los enlaces oficiales de descarga se anadiran cuando la publicacion este lista.");
     });
   });
 
   document.querySelectorAll("[data-language-select]").forEach((select) => {
     const panel = document.querySelector("[data-language-panel]");
+    const flags = panel ? panel.querySelectorAll(".flag-button[data-lang]") : [];
     select.addEventListener("change", () => {
       if (!panel) return;
       panel.hidden = !select.value;
+      flags.forEach((flag) => {
+        // Hide the deck for the user's own native language.
+        flag.hidden = Boolean(select.value) && flag.dataset.lang === select.value;
+      });
     });
   });
 
   document.querySelectorAll("[data-coming-soon]").forEach((button) => {
     button.addEventListener("click", () => {
-      showToast("Proximamente");
+      showToast(isEn ? "Coming soon" : "Proximamente");
+    });
+  });
+
+  // Persist the manual language choice so the auto-detection in <head> respects it.
+  document.querySelectorAll("[data-lang-switch]").forEach((link) => {
+    link.addEventListener("click", () => {
+      try {
+        localStorage.setItem("fl-lang", link.dataset.langSwitch);
+      } catch (e) {}
     });
   });
 });

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import markdown; print\\('markdown', markdown.__version__\\)\")",
+      "Bash(py -c \"import markdown; print\\('markdown', markdown.__version__\\)\")",
+      "Bash(cat)",
+      "Bash(python /tmp/build_doc.py)",
+      "Bash(py /tmp/build_doc.py)",
+      "Bash(python \"C:/Users/Javier/AppData/Local/Temp/claude/C--GitHub-FlashLingo-github-io/cc0b6501-dc9d-499c-a0d8-0113fa31fcc8/scratchpad/build_doc.py\")",
+      "Bash(py \"C:/Users/Javier/AppData/Local/Temp/claude/C--GitHub-FlashLingo-github-io/cc0b6501-dc9d-499c-a0d8-0113fa31fcc8/scratchpad/build_doc.py\")"
+    ]
+  }
+}

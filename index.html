@@ -3,20 +3,88 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en'],p=location.pathname,isEn=/^\/en(\/|$)/.test(p),cur=isEn?'en':'es',st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var rest=isEn?(p.replace(/^\/en/,'')||'/'):p;location.replace(t==='en'?('/en'+(rest==='/'?'/':rest)):rest)}}})();
+  </script>
   <title>FlashLingo - Aprende vocabulario con flashcards locales</title>
   <meta name="description" content="FlashLingo es una app de flashcards para estudiar vocabulario con mazos .flashjp, repeticion espaciada, audio, modo escritura, estadisticas y progreso local-first.">
-  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
-  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="canonical" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="FlashLingo - Aprende vocabulario con flashcards locales">
+  <meta property="og:description" content="App de flashcards para estudiar vocabulario con mazos .flashjp, repeticion espaciada, audio, modo escritura, estadisticas y progreso local-first.">
+  <meta property="og:url" content="https://flashlingo.github.io/">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - Aprende vocabulario con flashcards">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlashLingo - Aprende vocabulario con flashcards locales">
+  <meta name="twitter:description" content="App de flashcards para estudiar vocabulario con mazos .flashjp, repeticion espaciada, audio, modo escritura, estadisticas y progreso local-first.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://flashlingo.github.io/#website",
+        "url": "https://flashlingo.github.io/",
+        "name": "FlashLingo",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://flashlingo.github.io/#org" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://flashlingo.github.io/#org",
+        "name": "FlashLingo",
+        "url": "https://flashlingo.github.io/",
+        "logo": "https://flashlingo.github.io/assets/logo-192.png",
+        "email": "flashlingo.lenguageapp@gmail.com",
+        "founder": "Javier Ponce"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://flashlingo.github.io/#app",
+        "name": "FlashLingo",
+        "operatingSystem": "Android",
+        "applicationCategory": "EducationalApplication",
+        "description": "App de flashcards para estudiar vocabulario con mazos .flashjp, repeticion espaciada, audio, modo escritura, estadisticas y progreso local-first.",
+        "url": "https://flashlingo.github.io/",
+        "image": "https://flashlingo.github.io/assets/og-image.png",
+        "inLanguage": ["es", "en", "ro", "de", "fr", "ja", "zh"],
+        "author": { "@id": "https://flashlingo.github.io/#org" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#inicio" aria-label="FlashLingo">
-        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <img class="brand-mark" src="assets/logo-192.png" alt="" width="46" height="46">
         <span class="brand-name"><span>Flash</span>Lingo</span>
       </a>
+      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
+        <a href="/" data-lang-switch="es" aria-current="page">ES</a>
+        <a href="/en/" data-lang-switch="en">EN</a>
+      </div>
       <button class="nav-toggle" type="button" aria-label="Abrir navegacion" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
@@ -42,7 +110,7 @@
       <div class="hero-scrim" aria-hidden="true"></div>
       <div class="hero-content">
         <div class="hero-logo-row">
-          <img src="ICO/ICO_2.png" alt="" width="58" height="58">
+          <img src="assets/logo-192.png" alt="" width="58" height="58">
           <span>Flashcards local-first</span>
         </div>
         <h1>
@@ -240,7 +308,7 @@
           <p>Pero no solo eso: puedes crear mazos para cualquier tema o proposito, ya que el formato <code>.flashjp</code> es muy flexible.</p>
           <div class="section-actions">
             <a class="button surface" href="make_decks.html">Aprende como crear tus mazos</a>
-            <a class="button surface" href="Documentacion/flashjp-format.md">Leer documentacion del formato</a>
+            <a class="button surface" href="flashjp-format.html">Leer documentacion del formato</a>
           </div>
         </div>
         <div class="panel creator-table reveal">
@@ -330,7 +398,7 @@
     <div class="footer-inner">
       <div class="footer-brand-block">
         <a class="brand" href="#inicio" aria-label="FlashLingo">
-          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <img class="brand-mark" src="assets/logo-192.png" alt="" width="46" height="46">
           <span class="brand-name"><span>Flash</span>Lingo</span>
         </a>
         <p>FlashLingo es una app para estudiar vocabulario con flashcards, repeticion espaciada, mazos locales y estadisticas de progreso.</p>

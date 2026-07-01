@@ -3,10 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en'],p=location.pathname,isEn=/^\/en(\/|$)/.test(p),cur=isEn?'en':'es',st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var rest=isEn?(p.replace(/^\/en/,'')||'/'):p;location.replace(t==='en'?('/en'+(rest==='/'?'/':rest)):rest)}}})();
+  </script>
   <title>Nuestro Metodo - FlashLingo</title>
   <meta name="description" content="Metodo de estudio de FlashLingo: mazos locales, repeticion espaciada, tarjetas de reconocimiento y produccion, estadisticas y control del progreso.">
-  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
-  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="canonical" href="https://flashlingo.github.io/metode.html">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/metode.html">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/metode.html">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Nuestro Metodo - FlashLingo">
+  <meta property="og:description" content="Metodo de estudio de FlashLingo: mazos locales, repeticion espaciada, tarjetas de reconocimiento y produccion, estadisticas y control del progreso.">
+  <meta property="og:url" content="https://flashlingo.github.io/metode.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - Aprende vocabulario con flashcards">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nuestro Metodo - FlashLingo">
+  <meta name="twitter:description" content="Metodo de estudio de FlashLingo: mazos locales, repeticion espaciada, tarjetas de reconocimiento y produccion, estadisticas y control del progreso.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
@@ -14,9 +37,13 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="FlashLingo">
-        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <img class="brand-mark" src="assets/logo-192.png" alt="" width="46" height="46">
         <span class="brand-name"><span>Flash</span>Lingo</span>
       </a>
+      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
+        <a href="/metode.html" data-lang-switch="es" aria-current="page">ES</a>
+        <a href="/en/metode.html" data-lang-switch="en">EN</a>
+      </div>
       <button class="nav-toggle" type="button" aria-label="Abrir navegacion" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
@@ -103,7 +130,7 @@
     <div class="footer-inner">
       <div>
         <a class="brand" href="index.html" aria-label="FlashLingo">
-          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <img class="brand-mark" src="assets/logo-192.png" alt="" width="46" height="46">
           <span class="brand-name"><span>Flash</span>Lingo</span>
         </a>
         <p>&copy; <span data-year>2026</span> FlashLingo. Metodo de estudio local-first.</p>

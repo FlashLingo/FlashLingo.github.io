@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en'],p=location.pathname,isEn=/^\/en(\/|$)/.test(p),cur=isEn?'en':'es',st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var rest=isEn?(p.replace(/^\/en/,'')||'/'):p;location.replace(t==='en'?('/en'+(rest==='/'?'/':rest)):rest)}}})();
+  </script>
+  <title>FlashLingo - Learn vocabulary with local flashcards</title>
+  <meta name="description" content="FlashLingo is a flashcard app to study vocabulary with .flashjp decks, spaced repetition, audio, write mode, statistics and local-first progress.">
+  <link rel="canonical" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:title" content="FlashLingo - Learn vocabulary with local flashcards">
+  <meta property="og:description" content="FlashLingo is a flashcard app to study vocabulary with .flashjp decks, spaced repetition, audio, write mode, statistics and local-first progress.">
+  <meta property="og:url" content="https://flashlingo.github.io/en/">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - Learn vocabulary with flashcards">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlashLingo - Learn vocabulary with local flashcards">
+  <meta name="twitter:description" content="FlashLingo is a flashcard app to study vocabulary with .flashjp decks, spaced repetition, audio, write mode, statistics and local-first progress.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-en.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://flashlingo.github.io/en/#website", "url": "https://flashlingo.github.io/en/", "name": "FlashLingo", "inLanguage": "en", "publisher": { "@id": "https://flashlingo.github.io/#org" } },
+      { "@type": "Organization", "@id": "https://flashlingo.github.io/#org", "name": "FlashLingo", "url": "https://flashlingo.github.io/", "logo": "https://flashlingo.github.io/assets/logo-192.png", "email": "flashlingo.lenguageapp@gmail.com", "founder": "Javier Ponce" },
+      { "@type": "SoftwareApplication", "@id": "https://flashlingo.github.io/#app", "name": "FlashLingo", "operatingSystem": "Android", "applicationCategory": "EducationalApplication", "description": "A flashcard app to study vocabulary with .flashjp decks, spaced repetition, audio, write mode, statistics and local-first progress.", "url": "https://flashlingo.github.io/", "image": "https://flashlingo.github.io/assets/og-image-en.png", "inLanguage": ["es", "en", "ro", "de", "fr", "ja", "zh"], "author": { "@id": "https://flashlingo.github.io/#org" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
+        <a href="/" data-lang-switch="es">ES</a>
+        <a href="/en/" data-lang-switch="en" aria-current="page">EN</a>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation" data-site-nav>
+        <a href="#inicio">Home</a>
+        <a href="download.html">Download</a>
+        <a href="metode.html">Our Method</a>
+        <a href="decks.html">Official Decks</a>
+        <a href="make_decks.html">Create Decks</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="legal.html">Legal</a>
+        <a href="contact.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <main>
+    <section id="inicio" class="hero-home">
+      <img class="hero-bg" src="/Images/dashboard_ENG.jpg" alt="FlashLingo main screen with language decks" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-logo-row">
+          <img src="/assets/logo-192.png" alt="" width="58" height="58">
+          <span>Local-first flashcards</span>
+        </div>
+        <h1>
+          <span class="hero-title-kicker">Acquire, learn and study vocabulary with</span>
+          <span class="hero-title-brand"><span>Flash</span>Lingo.</span>
+        </h1>
+        <p class="hero-lead">FlashLingo is a flashcard app for language learners who want to learn and acquire vocabulary quickly and efficiently, with control over their decks, progress, study pace and learning data.</p>
+        <p class="hero-lead hero-lead-secondary">Import <code>.flashjp</code> decks, study recognition and production cards, practice with audio and write mode, and analyze your progress with detailed statistics, with no account required.</p>
+        <div class="download-actions hero-downloads">
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="24" height="24">
+            <span>Download on Google Play</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="24" height="24">
+            <span>Download on the App Store</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="24" height="24">
+            <span>Download for Windows</span>
+          </a>
+          <a class="button secondary" href="decks.html">Download official decks</a>
+        </div>
+        <p class="hero-note">Local study. No account or sign-up required. Your progress stays on your device.</p>
+      </div>
+    </section>
+
+    <section class="trust-band" aria-label="Quick features">
+      <div class="trust-track" data-trust-track>
+        <span>Android app</span>
+        <span>Local-first progress</span>
+        <span>.flashjp deck import</span>
+        <span>Spaced repetition</span>
+        <span>Audio and images</span>
+        <span>Write mode</span>
+        <span>CSV/PDF exports</span>
+        <span>Manual per-deck backup</span>
+      </div>
+    </section>
+
+    <section id="metodo" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Our Method</span>
+          <h2>A flashcard app with an innovative method for learners who want more control.</h2>
+          <p class="lead">Many language apps use outdated methods, don't deliver fast progress, force you to create an account, hide how the study system works, or limit how much you can study or personalize your learning. FlashLingo takes a different approach.</p>
+          <p>You import your own decks, study locally on your device, tune each deck to your pace and keep your progress under your control.</p>
+          <p>Our learning method and algorithm let you acquire and learn vocabulary fast and efficiently, at your own pace.</p>
+        </div>
+        <div class="method-stack reveal">
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Local learning</h3>
+            <p>Your decks, progress, settings, sessions and statistics are stored locally on your device. You don't need an account to start studying.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Built for studying vocabulary seriously</h3>
+            <p>Study recognition and production cards, use audio and example sentences, enable write mode and let spaced repetition schedule your reviews.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>Export what matters</h3>
+            <p>Review your performance with statistics, export reports as CSV or PDF and create manual <code>.flashjp</code> backups of your deck progress.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">How it works</span>
+          <h2>How FlashLingo works</h2>
+        </div>
+        <div class="timeline" data-timeline>
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>Import a deck</h3>
+            <p>Choose an official <code>.flashjp</code> deck or restore a user progress backup. FlashLingo verifies the package, reads its manifest, imports the database and prepares the deck so you can start studying and building vocabulary.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>Study your cards</h3>
+            <p>Practice recognition cards to understand words and production cards to actively recall them. Cards can include definitions, examples, translations, readings, audio, images and additional forms.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>Review with spaced repetition</h3>
+            <p>FlashLingo schedules your reviews based on your performance thanks to our algorithm. New, learning, review and relearning cards are organized within a daily study queue.</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>Analyze and improve</h3>
+            <p>Use deck statistics to review your accuracy, study time, difficult cards, review history and upcoming load. Export your data whenever you need.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Main features</span>
+          <h2>Everything you need to study vocabulary with focus.</h2>
+        </div>
+        <div class="grid four feature-grid">
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>.flashjp deck packages</h3><p>Import FlashLingo packages that can contain a SQLite database, metadata, audio, images and recommended deck settings.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Recognition and production</h3><p>Each word can generate two study directions: recognizing the word in the target language and producing it from its meaning.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Write mode</h3><p>On production cards, write mode lets you type your answer, compare it with the target word and unlock Good only when you reach the configured minimum percentage.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Advanced settings</h3><p>Each deck can have its own daily limits, learning steps, lapse behavior, algorithm parameters, mixing, reminders, write mode and undo.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Detailed statistics</h3><p>Check accuracy, study time, review forecast, daily activity, difficult cards and session history through clear charts and summaries.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>CSV, PDF and backups</h3><p>Export study statistics as CSV or PDF, and create manual <code>.flashjp</code> backups of each deck's progress whenever you want to keep or move your data.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Local reminders</h3><p>Enable optional per-deck reminders. FlashLingo uses local notifications to remind you when cards are waiting for review.</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>Multilingual interface</h3><p>FlashLingo supports an interface in English, Spanish, Romanian, German, French, Japanese and Chinese.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section privacy-band">
+      <div class="page privacy-layout">
+        <div class="section-header reveal">
+          <span class="eyebrow">Privacy / Local-first</span>
+          <h2>Your study progress belongs to you.</h2>
+          <p class="lead">FlashLingo is designed as a local-first app. You don't need to create an account, and FlashLingo doesn't use its own server to store your decks or progress.</p>
+          <p>Your imported decks, media files, study history, deck settings, sessions and statistics are stored in the app's local storage on your device.</p>
+          <a class="button surface" href="privacy.html">Read the Privacy Policy</a>
+        </div>
+        <ul class="privacy-list reveal">
+          <li>You don't need to create an account.</li>
+          <li>No first-party analytics or first-party crash-reporting server.</li>
+          <li>Study progress is stored locally.</li>
+          <li>Deck backups are created only when you choose to export them.</li>
+          <li>Ads are provided by Google AdMob on compatible mobile builds.</li>
+          <li>Ad privacy options are handled through Google's consent flow when required.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="descargar" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Download</span>
+          <h2>Choose your platform.</h2>
+          <p class="lead">The buttons are ready to link to the official stores and builds once they are published.</p>
+        </div>
+        <div class="download-grid">
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="34" height="34">
+            <strong>Download on Google Play</strong>
+            <span>Android</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="34" height="34">
+            <strong>Download on the App Store</strong>
+            <span>iOS</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="34" height="34">
+            <strong>Download for Windows</strong>
+            <span>Desktop</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mazos" class="section privacy-band">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">Official decks</span>
+          <h2>Free decks for FlashLingo</h2>
+          <p class="lead">FlashLingo decks use the <code>.flashjp</code> format. Official decks include vocabulary, example sentences, translations, readings, audio, images, deck icons and recommended study settings.</p>
+          <p>Download a deck, import it into the app and start studying locally.</p>
+          <div class="section-actions">
+            <a class="button surface" href="decks.html">Download decks</a>
+          </div>
+          <div class="notice warning">
+            <strong>Important note:</strong> decks are provided for educational purposes. Content may contain errors. If you find a problem, report it through support.
+          </div>
+        </div>
+        <figure class="phone-shot deck-preview-shot reveal">
+          <div class="phone-frame"><img src="/Images/Menu_ENG.jpg" alt="Deck menu in FlashLingo" loading="lazy"></div>
+          <figcaption>Decks with settings, browsing, statistics and export actions.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crear-mazos" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">For deck creators</span>
+          <h2>Create your own decks for FlashLingo.</h2>
+          <p class="lead">FlashLingo is built around portable deck packages. A <code>.flashjp</code> package can contain a database, a manifest, audio files, images, deck icons and settings values.</p>
+          <p>This lets you create richer vocabulary decks, with examples, translations, readings, multimedia and custom study settings.</p>
+          <p>And not only that: you can create decks for any topic or purpose, because the <code>.flashjp</code> format is very flexible.</p>
+          <div class="section-actions">
+            <a class="button surface" href="make_decks.html">Learn how to create your decks</a>
+            <a class="button surface" href="flashjp-format.html">Read the format documentation</a>
+          </div>
+        </div>
+        <div class="panel creator-table reveal">
+          <div class="creator-row"><strong>SQLite</strong><span>Local database-based flashcard content.</span></div>
+          <div class="creator-row"><strong>manifest.json</strong><span>Deck metadata and recommended settings.</span></div>
+          <div class="creator-row"><strong>Media</strong><span>References to audio, images and deck icons.</span></div>
+          <div class="creator-row"><strong>Two directions</strong><span>Generation of recognition and production cards.</span></div>
+          <div class="creator-row"><strong>Updates</strong><span>Deck updates without losing progress.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capturas" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">Visual preview</span>
+          <h2>Designed for long study sessions.</h2>
+          <p class="lead">FlashLingo combines a clean interface with advanced tools to study, review and analyze your progress without losing focus.</p>
+        </div>
+        <div class="preview-tabs compact-preview reveal" data-preview-tabs>
+          <div class="preview-controls" role="tablist" aria-label="FlashLingo screenshots">
+            <button type="button" role="tab" aria-selected="true" data-preview-target="screen-home">Home</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-study">Study</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-write">Write mode</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-stats">Statistics</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-import">Import</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-panel is-active" id="screen-home">
+              <div class="phone-frame"><img src="/Images/dashboard_ENG.jpg" alt="FlashLingo deck home" loading="lazy"></div>
+              <figcaption><strong>Deck home.</strong> See new, learning, review, overdue cards and recent accuracy at a glance.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-study">
+              <div class="phone-frame"><img src="/Images/Japones2_ENG.jpg" alt="Study session in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Study session.</strong> Study clean cards with examples, audio, images, readings and clear Good/Bad actions.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-write">
+              <div class="phone-frame"><img src="/Images/Aleman2_ENG.jpg" alt="Production card in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Write mode.</strong> Type your answer and compare it with the target word before grading the card.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-stats">
+              <div class="phone-frame"><img src="/Images/Estadisticas7_ENG.jpg" alt="Statistics and forecast in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Statistics.</strong> Analyze your progress with charts, forecasts, daily activity and difficult cards.</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-import">
+              <div class="phone-frame"><img src="/Images/Config1_ENG.jpg" alt="Deck settings in FlashLingo" loading="lazy"></div>
+              <figcaption><strong>Deck import.</strong> Preview and import <code>.flashjp</code> decks with clear progress, diagnostics and conflict handling.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section privacy-band">
+      <div class="page grid two">
+        <div class="section-header reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-list reveal" data-faq>
+          <details open><summary>Do I need to create an account?</summary><p>No. FlashLingo doesn't require an account to study. Your decks and progress are stored locally on your device.</p></details>
+          <details><summary>Does FlashLingo sync my progress to the cloud?</summary><p>No. The current version doesn't include cloud sync. You can manually export a deck's progress as a <code>.flashjp</code> backup.</p></details>
+          <details><summary>What is a .flashjp file?</summary><p>A <code>.flashjp</code> file is a FlashLingo package used to import official decks or restore user progress backups.</p></details>
+          <details><summary>Can I study offline?</summary><p>You can study the decks you already imported locally. Some features, like ads or opening external links, may require an internet connection.</p></details>
+          <details><summary>Does the app contain ads?</summary><p>Yes, but they are non-intrusive and don't affect studying. FlashLingo may show ads through Google AdMob on compatible mobile builds.</p></details>
+          <details><summary>Can I export my progress?</summary><p>Yes. You can export statistics as CSV/PDF and create a manual <code>.flashjp</code> backup for each deck.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="page cta-band reveal">
+        <span class="eyebrow">Start now</span>
+        <h2>Start building your vocabulary quickly and efficiently.</h2>
+        <p>Import your decks, study with spaced repetition, review your statistics and keep your learning progress on your device.</p>
+        <div class="download-actions">
+          <a class="download-button" href="download.html"><img src="/assets/icons/google-play.svg" alt="" width="24" height="24"><span>Download on Google Play</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/app-store.svg" alt="" width="24" height="24"><span>Download on the App Store</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/windows.svg" alt="" width="24" height="24"><span>Download for Windows</span></a>
+          <a class="button surface" href="decks.html">Download official decks</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="soporte" class="site-footer site-footer-home">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>FlashLingo is an app for studying vocabulary with flashcards, spaced repetition, local decks and progress statistics.</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo / Javier Ponce. All rights reserved.</p>
+      </div>
+      <div class="footer-link-grid">
+        <div class="footer-link-group">
+          <span>Product</span>
+          <a href="#inicio">Home</a>
+          <a href="download.html">Download</a>
+          <a href="metode.html">Our Method</a>
+          <a href="decks.html">Official Decks</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Resources</span>
+          <a href="make_decks.html">Create Decks</a>
+          <a href="contact.html">Support</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <div class="footer-link-group">
+          <span>Legal</span>
+          <a href="terms.html">Terms</a>
+          <a href="legal.html">Legal Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

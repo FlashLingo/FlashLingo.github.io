@@ -243,6 +243,39 @@ textarea {
   color: var(--primary-strong);
 }
 
+.lang-switch-nav {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  background: var(--surface-soft);
+}
+
+.lang-switch-nav a {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 11px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.lang-switch-nav a:hover {
+  color: var(--primary-strong);
+}
+
+.lang-switch-nav a[aria-current="page"] {
+  background: var(--primary);
+  color: #10262b;
+}
+
 .page {
   width: var(--page);
   margin: 0 auto;
@@ -1329,6 +1362,37 @@ code {
   background: color-mix(in srgb, var(--text), transparent 92%);
 }
 
+pre {
+  overflow-x: auto;
+  margin: 0 0 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  background: color-mix(in srgb, var(--text), transparent 95%);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.doc-card h2 {
+  margin-top: 2.2rem;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.doc-card h2:first-child {
+  margin-top: 0;
+}
+
+.doc-card > p:first-child {
+  color: var(--muted);
+}
+
 hr {
   border: 0;
   border-top: 1px solid var(--border);
@@ -1444,6 +1508,14 @@ hr {
 }
 
 @media (max-width: 640px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .lang-switch-nav a {
+    padding: 4px 9px;
+  }
+
   .brand-name {
     font-size: 1.28rem;
   }

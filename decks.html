@@ -3,10 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en'],p=location.pathname,isEn=/^\/en(\/|$)/.test(p),cur=isEn?'en':'es',st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var rest=isEn?(p.replace(/^\/en/,'')||'/'):p;location.replace(t==='en'?('/en'+(rest==='/'?'/':rest)):rest)}}})();
+  </script>
   <title>Mazos - FlashLingo</title>
   <meta name="description" content="Pagina de mazos oficiales de FlashLingo. Los paquetes .flashjp para Android estaran disponibles aqui cuando sean publicados.">
-  <link rel="icon" type="image/png" href="ICO/ICO_2.png">
-  <link rel="apple-touch-icon" href="ICO/ICO_2.png">
+  <link rel="canonical" href="https://flashlingo.github.io/decks.html">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/decks.html">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/decks.html">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="Mazos Oficiales - FlashLingo">
+  <meta property="og:description" content="Mazos oficiales .flashjp de FlashLingo para estudiar vocabulario. Las descargas para Android estaran disponibles aqui cuando sean publicadas.">
+  <meta property="og:url" content="https://flashlingo.github.io/decks.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - Aprende vocabulario con flashcards">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mazos Oficiales - FlashLingo">
+  <meta name="twitter:description" content="Mazos oficiales .flashjp de FlashLingo para estudiar vocabulario. Las descargas para Android estaran disponibles aqui cuando sean publicadas.">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image.png">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
 </head>
@@ -14,9 +37,13 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="index.html" aria-label="FlashLingo">
-        <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+        <img class="brand-mark" src="assets/logo-192.png" alt="" width="46" height="46">
         <span class="brand-name"><span>Flash</span>Lingo</span>
       </a>
+      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
+        <a href="/decks.html" data-lang-switch="es" aria-current="page">ES</a>
+        <a href="/en/decks.html" data-lang-switch="en">EN</a>
+      </div>
       <button class="nav-toggle" type="button" aria-label="Abrir navegacion" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>
       </button>
@@ -44,13 +71,13 @@
         <span>Idioma materno</span>
         <select id="native-language" data-language-select>
           <option value="">Seleccione un idioma</option>
-          <option value="es">Espanol</option>
-          <option value="en">Ingles</option>
-          <option value="fr">Frances</option>
-          <option value="de">Aleman</option>
-          <option value="ro">Rumano</option>
-          <option value="ja">Japones</option>
-          <option value="he">Hebreo</option>
+          <option value="es">Espa&ntilde;ol</option>
+          <option value="en">English</option>
+          <option value="fr">Fran&ccedil;ais</option>
+          <option value="de">Deutsch</option>
+          <option value="ro">Rom&acirc;n&#259;</option>
+          <option value="ja">&#26085;&#26412;&#35486;</option>
+          <option value="he">&#1506;&#1489;&#1512;&#1497;&#1514;</option>
         </select>
       </label>
 
@@ -60,33 +87,33 @@
           <h2>Elige el idioma que quieres estudiar.</h2>
         </div>
         <div class="flag-grid" aria-label="Idiomas de mazos oficiales">
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="en" data-coming-soon>
             <img src="assets/flags/en.png" alt="" width="96" height="64">
-            <span>Ingles</span>
+            <span>English</span>
           </button>
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="es" data-coming-soon>
             <img src="assets/flags/es.png" alt="" width="96" height="64">
-            <span>Espanol</span>
+            <span>Espa&ntilde;ol</span>
           </button>
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="fr" data-coming-soon>
             <img src="assets/flags/fr.png" alt="" width="96" height="64">
-            <span>Frances</span>
+            <span>Fran&ccedil;ais</span>
           </button>
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="de" data-coming-soon>
             <img src="assets/flags/de.png" alt="" width="96" height="64">
-            <span>Aleman</span>
+            <span>Deutsch</span>
           </button>
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="ro" data-coming-soon>
             <img src="assets/flags/ro.png" alt="" width="96" height="64">
-            <span>Rumano</span>
+            <span>Rom&acirc;n&#259;</span>
           </button>
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="ja" data-coming-soon>
             <img src="assets/flags/ja.png" alt="" width="96" height="64">
-            <span>Japones</span>
+            <span>&#26085;&#26412;&#35486;</span>
           </button>
-          <button class="flag-button" type="button" data-coming-soon>
+          <button class="flag-button" type="button" data-lang="he" data-coming-soon>
             <img src="assets/flags/he.png" alt="" width="96" height="64">
-            <span>Hebreo</span>
+            <span>&#1506;&#1489;&#1512;&#1497;&#1514;</span>
           </button>
         </div>
       </div>
@@ -103,7 +130,7 @@
     <div class="footer-inner">
       <div>
         <a class="brand" href="index.html" aria-label="FlashLingo">
-          <img class="brand-mark" src="ICO/ICO_2.png" alt="" width="46" height="46">
+          <img class="brand-mark" src="assets/logo-192.png" alt="" width="46" height="46">
           <span class="brand-name"><span>Flash</span>Lingo</span>
         </a>
         <p>&copy; <span data-year>2026</span> FlashLingo. Mazos oficiales para estudiar vocabulario en Android.</p>
