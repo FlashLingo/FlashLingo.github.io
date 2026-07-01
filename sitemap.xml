@@ -8,6 +8,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -20,6 +22,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,6 +36,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -44,6 +50,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -56,6 +64,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -68,6 +106,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -80,6 +120,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -92,6 +134,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -104,6 +148,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -116,6 +162,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/download.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/download.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/download.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/download.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/download.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/download.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/download.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/download.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/download.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -128,6 +204,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -140,6 +218,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -152,6 +232,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -164,6 +246,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -176,6 +260,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/decks.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/decks.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -188,6 +302,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -200,6 +316,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -212,6 +330,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -224,6 +344,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -236,6 +358,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/metode.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/metode.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -248,6 +400,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -260,6 +414,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -272,6 +428,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -284,6 +442,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -296,6 +456,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/make_decks.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/make_decks.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -308,6 +498,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -320,6 +512,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -332,6 +526,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -344,6 +540,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -356,6 +554,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/flashjp-format.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/flashjp-format.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -368,6 +596,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -380,6 +610,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -392,6 +624,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -404,6 +638,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -416,6 +652,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/contact.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -428,6 +694,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -440,6 +708,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -452,6 +722,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -464,6 +736,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -476,6 +750,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/privacy.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -488,6 +792,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -500,6 +806,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -512,6 +820,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -524,6 +834,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -536,6 +848,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/terms.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -548,6 +890,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -560,6 +904,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -572,6 +918,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -584,6 +932,8 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -596,6 +946,36 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/ja/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://flashlingo.github.io/zh/legal.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://flashlingo.github.io/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/legal.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/legal.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/legal.html"/>
     <lastmod>2026-07-02</lastmod>
     <changefreq>yearly</changefreq>

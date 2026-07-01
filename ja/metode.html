@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>学習メソッド - FlashLingo</title>
+  <meta name="description" content="FlashLingoの学習メソッド: ローカルデッキ、間隔反復、認識カードと産出カード、統計、進捗の管理。">
+  <link rel="canonical" href="https://flashlingo.github.io/ja/metode.html">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/metode.html">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/metode.html">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:title" content="学習メソッド - FlashLingo">
+  <meta property="og:description" content="FlashLingoの学習メソッド: ローカルデッキ、間隔反復、認識カードと産出カード、統計、進捗の管理。">
+  <meta property="og:url" content="https://flashlingo.github.io/ja/metode.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - フラッシュカードで語彙を学ぶ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="学習メソッド - FlashLingo">
+  <meta name="twitter:description" content="FlashLingoの学習メソッド: ローカルデッキ、間隔反復、認識カードと産出カード、統計、進捗の管理。">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>JA</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/metode.html" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/metode.html" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/metode.html" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/metode.html" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/metode.html" data-lang="fr">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/metode.html" data-lang="ja" aria-current="page">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/metode.html" data-lang="zh">中文</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開く" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="メインナビゲーション" data-site-nav>
+        <a href="index.html">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="legal.html">法的通知</a>
+        <a href="contact.html">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="legal-hero">
+      <span class="eyebrow">学習メソッド</span>
+      <h1>自分のペースで、管理しながら語彙を学ぶ。</h1>
+      <p class="lead">FlashLingoは、持ち運び可能なデッキ、ローカルファースト学習、認識カードと産出カード、書き取りモード、音声、間隔反復を組み合わせ、着実に語彙を積み上げられます。</p>
+      <div class="meta-grid">
+        <div class="meta-item"><span class="meta-label">焦点</span>語彙と例文</div>
+        <div class="meta-item"><span class="meta-label">学習</span>認識と産出</div>
+        <div class="meta-item"><span class="meta-label">進捗</span>間隔反復と統計</div>
+        <div class="meta-item"><span class="meta-label">データ</span>ローカルファースト・アカウント不要</div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="grid three">
+        <article class="feature-card reveal">
+          <div class="feature-accent"></div>
+          <h3>ローカル学習</h3>
+          <p>デッキ、進捗、設定、セッション、統計は端末に保存されます。学習にアカウントは不要です。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-accent"></div>
+          <h3>能動的な練習</h3>
+          <p>カードは理解と能動的な想起を鍛えます。書き取りモードで、評価の前に答えを確認できます。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-accent"></div>
+          <h3>測定可能な復習</h3>
+          <p>アルゴリズムが成績に応じて復習を予定し、正答率・今後の負荷・難しいカードを理解するための統計を表示します。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">学習の流れ</span>
+          <h2>インポート、学習、復習、上達。</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>デッキをインポート</h3>
+            <p><code>.flashjp</code>パッケージを選び、内容を確認し、ローカルで学習できるようにカードを準備します。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>カードを学習</h3>
+            <p>定義、例文、翻訳、読み、音声、画像とともに認識と産出を練習します。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>適切な時期に復習</h3>
+            <p>間隔反復が、新規・学習中・復習・再学習のカードを毎日のキューに整理します。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>ペースを調整</h3>
+            <p>デッキごとに上限、ステップ、リマインダー、パラメータを変更し、負荷を目標に合わせます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. ローカルファーストの学習法。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

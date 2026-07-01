@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>FlashLingo - ローカルフラッシュカードで語彙を学ぶ</title>
+  <meta name="description" content="FlashLingoは、.flashjpデッキ、間隔反復、音声、書き取りモード、統計、ローカルファーストの進捗で語彙を学ぶフラッシュカードアプリです。">
+  <link rel="canonical" href="https://flashlingo.github.io/ja/">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:title" content="FlashLingo - ローカルフラッシュカードで語彙を学ぶ">
+  <meta property="og:description" content="FlashLingoは、.flashjpデッキ、間隔反復、音声、書き取りモード、統計、ローカルファーストの進捗で語彙を学ぶフラッシュカードアプリです。">
+  <meta property="og:url" content="https://flashlingo.github.io/ja/">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - フラッシュカードで語彙を学ぶ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlashLingo - ローカルフラッシュカードで語彙を学ぶ">
+  <meta name="twitter:description" content="FlashLingoは、.flashjpデッキ、間隔反復、音声、書き取りモード、統計、ローカルファーストの進捗で語彙を学ぶフラッシュカードアプリです。">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://flashlingo.github.io/ja/#website", "url": "https://flashlingo.github.io/ja/", "name": "FlashLingo", "inLanguage": "ja", "publisher": { "@id": "https://flashlingo.github.io/#org" } },
+      { "@type": "Organization", "@id": "https://flashlingo.github.io/#org", "name": "FlashLingo", "url": "https://flashlingo.github.io/", "logo": "https://flashlingo.github.io/assets/logo-192.png", "email": "flashlingo.lenguageapp@gmail.com", "founder": "Javier Ponce" },
+      { "@type": "SoftwareApplication", "@id": "https://flashlingo.github.io/#app", "name": "FlashLingo", "operatingSystem": "Android", "applicationCategory": "EducationalApplication", "description": "flashcard app to study vocabulary with .flashjp decks, spaced repetition, audio, write mode, statistics and local-first progress.", "url": "https://flashlingo.github.io/", "image": "https://flashlingo.github.io/assets/og-image-ja.png", "inLanguage": ["es", "en", "ro", "de", "fr", "ja", "zh"], "author": { "@id": "https://flashlingo.github.io/#org" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>JA</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/" data-lang="fr">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/" data-lang="ja" aria-current="page">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/" data-lang="zh">中文</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開く" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="メインナビゲーション" data-site-nav>
+        <a href="#inicio">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="legal.html">法的通知</a>
+        <a href="contact.html">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <main>
+    <section id="inicio" class="hero-home">
+      <img class="hero-bg" src="/Images/dashboard_ENG.jpg" alt="言語デッキが並ぶFlashLingoのメイン画面" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-logo-row">
+          <img src="/assets/logo-192.png" alt="" width="58" height="58">
+          <span>ローカルファーストのフラッシュカード</span>
+        </div>
+        <h1>
+          <span class="hero-title-kicker">語彙を習得し、学び、勉強しよう</span>
+          <span class="hero-title-brand"><span>Flash</span>Lingo。</span>
+        </h1>
+        <p class="hero-lead">FlashLingoは、語彙を速く効率的に習得・学習したい語学学習者のためのフラッシュカードアプリです。デッキ、進捗、学習ペース、学習データを自分で管理できます。</p>
+        <p class="hero-lead hero-lead-secondary"><code>.flashjp</code>デッキをインポートし、認識カードと産出カードで学習し、音声と書き取りモードで練習し、詳細な統計で進捗を分析できます。アカウントは不要です。</p>
+        <div class="download-actions hero-downloads">
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="24" height="24">
+            <span>Google Playでダウンロード</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="24" height="24">
+            <span>App Storeでダウンロード</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="24" height="24">
+            <span>Windows版をダウンロード</span>
+          </a>
+          <a class="button secondary" href="decks.html">公式デッキをダウンロード</a>
+        </div>
+        <p class="hero-note">ローカル学習。アカウントも登録も不要。進捗はあなたの端末に保存されます。</p>
+      </div>
+    </section>
+
+    <section class="trust-band" aria-label="クイック機能">
+      <div class="trust-track" data-trust-track>
+        <span>Androidアプリ</span>
+        <span>ローカルファーストの進捗</span>
+        <span>.flashjpデッキのインポート</span>
+        <span>間隔反復</span>
+        <span>音声と画像</span>
+        <span>書き取りモード</span>
+        <span>CSV/PDFエクスポート</span>
+        <span>デッキごとの手動バックアップ</span>
+      </div>
+    </section>
+
+    <section id="metodo" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">学習メソッド</span>
+          <h2>もっと自分で管理したい人のための、革新的なメソッドを備えたフラッシュカードアプリ。</h2>
+          <p class="lead">多くの語学アプリは、古い手法を使い、速い上達を提供せず、アカウント作成を強制し、学習システムの仕組みを隠し、学習量やカスタマイズを制限します。FlashLingoは異なるアプローチを提案します。</p>
+          <p>自分のデッキをインポートし、端末上でローカルに学習し、各デッキを自分のペースに合わせて調整し、進捗を自分で管理できます。</p>
+          <p>私たちの学習メソッドとアルゴリズムにより、自分のペースで速く効率的に語彙を習得・学習できます。</p>
+        </div>
+        <div class="method-stack reveal">
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>ローカル学習</h3>
+            <p>デッキ、進捗、設定、セッション、統計は端末にローカルで保存されます。学習を始めるのにアカウントは不要です。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>本格的な語彙学習のために</h3>
+            <p>認識カードと産出カードで学習し、音声や例文を使い、書き取りモードを有効にし、間隔反復に復習の予定を任せましょう。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>重要なものをエクスポート</h3>
+            <p>統計でパフォーマンスを確認し、CSVやPDFでレポートを書き出し、デッキの進捗の手動<code>.flashjp</code>バックアップを作成できます。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">使い方</span>
+          <h2>FlashLingoの使い方</h2>
+        </div>
+        <div class="timeline" data-timeline>
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>デッキをインポート</h3>
+            <p>公式の<code>.flashjp</code>デッキを選ぶか、進捗のバックアップを復元します。FlashLingoはパッケージを検証し、マニフェストを読み込み、データベースをインポートして、学習と語彙構築を始められるようにデッキを準備します。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>カードを学習</h3>
+            <p>認識カードで単語を理解し、産出カードで能動的に思い出します。カードには定義、例文、翻訳、読み、音声、画像、追加の形が含まれます。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>間隔反復で復習</h3>
+            <p>FlashLingoはアルゴリズムにより、あなたの成績に応じて復習を予定します。新規・学習中・復習・再学習のカードは、毎日の学習キューにまとめられます。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>分析して上達</h3>
+            <p>デッキの統計で、正答率、学習時間、難しいカード、復習履歴、今後の負荷を確認できます。必要なときにデータをエクスポートしましょう。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">主な機能</span>
+          <h2>集中して語彙を学ぶために必要なすべて。</h2>
+        </div>
+        <div class="grid four feature-grid">
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>.flashjpデッキ</h3><p>SQLiteデータベース、メタデータ、音声、画像、推奨されるデッキ設定を含むFlashLingoパッケージをインポートできます。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>認識と産出</h3><p>各単語は2つの学習方向を生成できます。対象言語で単語を認識し、意味から単語を産出します。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>書き取りモード</h3><p>産出カードでは、書き取りモードで答えを入力し、対象の単語と比較し、設定した最小の割合に達したときだけGoodを解除できます。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>詳細設定</h3><p>各デッキは、独自の1日の上限、学習ステップ、誤答時の動作、アルゴリズムのパラメータ、混合、リマインダー、書き取りモード、取り消しを持てます。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>詳細な統計</h3><p>正答率、学習時間、復習の予測、毎日の活動、難しいカード、セッション履歴を、分かりやすいグラフと要約で確認できます。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>CSV・PDF・バックアップ</h3><p>学習統計をCSVやPDFで書き出し、データを保存・移動したいときにデッキごとの進捗の手動<code>.flashjp</code>バックアップを作成できます。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>ローカル通知</h3><p>デッキごとに任意のリマインダーを有効にできます。FlashLingoはローカル通知で、復習を待つカードがあることを知らせます。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>多言語インターフェース</h3><p>FlashLingoは、英語・スペイン語・ルーマニア語・ドイツ語・フランス語・日本語・中国語のインターフェースに対応しています。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section privacy-band">
+      <div class="page privacy-layout">
+        <div class="section-header reveal">
+          <span class="eyebrow">プライバシー / ローカルファースト</span>
+          <h2>あなたの学習の進捗はあなたのものです。</h2>
+          <p class="lead">FlashLingoはローカルファーストのアプリとして設計されています。アカウントは不要で、FlashLingoはデッキや進捗を保存する独自サーバーを使いません。</p>
+          <p>インポートしたデッキ、メディアファイル、学習履歴、デッキ設定、セッション、統計は、端末上のアプリのローカルストレージに保存されます。</p>
+          <a class="button surface" href="privacy.html">プライバシーポリシーを読む</a>
+        </div>
+        <ul class="privacy-list reveal">
+          <li>アカウントは不要です。</li>
+          <li>独自の分析や独自のエラー報告サーバーはありません。</li>
+          <li>学習の進捗はローカルに保存されます。</li>
+          <li>デッキのバックアップは、あなたがエクスポートを選んだときだけ作成されます。</li>
+          <li>広告は、対応するモバイルビルドでGoogle AdMobにより提供されます。</li>
+          <li>広告のプライバシー設定は、必要に応じてGoogleの同意フローで管理されます。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="descargar" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">ダウンロード</span>
+          <h2>プラットフォームを選択。</h2>
+          <p class="lead">公開され次第、公式ストアとビルドへのリンクをこのボタンに設定できるよう準備しています。</p>
+        </div>
+        <div class="download-grid">
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="34" height="34">
+            <strong>Google Playでダウンロード</strong>
+            <span>Android</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="34" height="34">
+            <strong>App Storeでダウンロード</strong>
+            <span>iOS</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="34" height="34">
+            <strong>Windows版をダウンロード</strong>
+            <span>Desktop</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mazos" class="section privacy-band">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">公式デッキ</span>
+          <h2>FlashLingoの無料デッキ</h2>
+          <p class="lead">FlashLingoのデッキは<code>.flashjp</code>形式を使います。公式デッキには、語彙、例文、翻訳、読み、音声、画像、デッキアイコン、推奨される学習設定が含まれます。</p>
+          <p>デッキをダウンロードし、アプリにインポートして、ローカルで学習を始めましょう。</p>
+          <div class="section-actions">
+            <a class="button surface" href="decks.html">デッキをダウンロード</a>
+          </div>
+          <div class="notice warning">
+            <strong>重要な注意:</strong> デッキは教育目的で提供されます。内容には誤りが含まれる場合があります。問題を見つけたら、サポートから報告してください。
+          </div>
+        </div>
+        <figure class="phone-shot deck-preview-shot reveal">
+          <div class="phone-frame"><img src="/Images/Menu_ENG.jpg" alt="FlashLingoのデッキメニュー" loading="lazy"></div>
+          <figcaption>設定、閲覧、統計、エクスポートの操作ができるデッキ。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crear-mazos" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">デッキ作成者向け</span>
+          <h2>FlashLingo用の自分のデッキを作ろう。</h2>
+          <p class="lead">FlashLingoは、持ち運び可能なパッケージを中心に構築されています。<code>.flashjp</code>パッケージには、データベース、マニフェスト、音声ファイル、画像、デッキアイコン、設定値を含められます。</p>
+          <p>これにより、例文、翻訳、読み、マルチメディア、カスタム学習設定を備えた、より充実した語彙デッキを作成できます。</p>
+          <p>それだけでなく、<code>.flashjp</code>形式は非常に柔軟なので、どんなテーマや目的のデッキでも作成できます。</p>
+          <div class="section-actions">
+            <a class="button surface" href="make_decks.html">デッキの作り方を学ぶ</a>
+            <a class="button surface" href="flashjp-format.html">形式のドキュメントを読む</a>
+          </div>
+        </div>
+        <div class="panel creator-table reveal">
+          <div class="creator-row"><strong>SQLite</strong><span>ローカルデータベースに基づくフラッシュカードの内容。</span></div>
+          <div class="creator-row"><strong>manifest.json</strong><span>デッキのメタデータと推奨設定。</span></div>
+          <div class="creator-row"><strong>Media</strong><span>音声、画像、デッキアイコンへの参照。</span></div>
+          <div class="creator-row"><strong>2つの方向</strong><span>認識カードと産出カードの生成。</span></div>
+          <div class="creator-row"><strong>更新</strong><span>進捗を失わないデッキの更新。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capturas" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">ビジュアルプレビュー</span>
+          <h2>長時間の学習セッションのために設計。</h2>
+          <p class="lead">FlashLingoは、すっきりしたインターフェースと高度なツールを組み合わせ、集中を切らさずに学習・復習・進捗分析ができます。</p>
+        </div>
+        <div class="preview-tabs compact-preview reveal" data-preview-tabs>
+          <div class="preview-controls" role="tablist" aria-label="FlashLingoのスクリーンショット">
+            <button type="button" role="tab" aria-selected="true" data-preview-target="screen-home">ホーム</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-study">学習</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-write">書き取りモード</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-stats">統計</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-import">インポート</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-panel is-active" id="screen-home">
+              <div class="phone-frame"><img src="/Images/dashboard_ENG.jpg" alt="FlashLingoのデッキホーム" loading="lazy"></div>
+              <figcaption><strong>デッキホーム。</strong> 新規・学習中・復習・延滞のカードと最近の正答率をひと目で確認。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-study">
+              <div class="phone-frame"><img src="/Images/Japones2_ENG.jpg" alt="FlashLingoの学習セッション" loading="lazy"></div>
+              <figcaption><strong>学習セッション。</strong> 例文、音声、画像、読み、明確なGood/Bad操作を備えたすっきりしたカードで学習。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-write">
+              <div class="phone-frame"><img src="/Images/Aleman2_ENG.jpg" alt="FlashLingoの産出カード" loading="lazy"></div>
+              <figcaption><strong>書き取りモード。</strong> 答えを入力し、カードを評価する前に対象の単語と比較。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-stats">
+              <div class="phone-frame"><img src="/Images/Estadisticas7_ENG.jpg" alt="FlashLingoの統計と予測" loading="lazy"></div>
+              <figcaption><strong>統計。</strong> グラフ、予測、毎日の活動、難しいカードで進捗を分析。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-import">
+              <div class="phone-frame"><img src="/Images/Config1_ENG.jpg" alt="FlashLingoのデッキ設定" loading="lazy"></div>
+              <figcaption><strong>デッキのインポート。</strong> 明確な進捗、診断、競合処理とともに<code>.flashjp</code>デッキをプレビューしてインポート。</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section privacy-band">
+      <div class="page grid two">
+        <div class="section-header reveal">
+          <span class="eyebrow">よくある質問</span>
+          <h2>よくある質問</h2>
+        </div>
+        <div class="faq-list reveal" data-faq>
+          <details open><summary>アカウントは必要ですか？</summary><p>いいえ。FlashLingoは学習にアカウントを必要としません。デッキと進捗は端末にローカルで保存されます。</p></details>
+          <details><summary>FlashLingoは進捗をクラウドに同期しますか？</summary><p>いいえ。現在のバージョンにクラウド同期はありません。デッキの進捗を手動で<code>.flashjp</code>バックアップとしてエクスポートできます。</p></details>
+          <details><summary>.flashjpファイルとは何ですか？</summary><p><code>.flashjp</code>ファイルは、公式デッキのインポートや進捗バックアップの復元に使うFlashLingoのパッケージです。</p></details>
+          <details><summary>オフラインで学習できますか？</summary><p>すでにインポートしたデッキはローカルで学習できます。広告や外部リンクを開くなど一部の機能はインターネット接続が必要な場合があります。</p></details>
+          <details><summary>アプリに広告は含まれますか？</summary><p>はい。ただし邪魔にならず学習に影響しません。FlashLingoは対応するモバイルビルドでGoogle AdMobにより広告を表示することがあります。</p></details>
+          <details><summary>進捗をエクスポートできますか？</summary><p>はい。統計をCSV/PDFでエクスポートし、各デッキの手動<code>.flashjp</code>バックアップを作成できます。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="page cta-band reveal">
+        <span class="eyebrow">今すぐ始める</span>
+        <h2>語彙を速く効率的に身につけ始めよう。</h2>
+        <p>デッキをインポートし、間隔反復で学習し、統計を確認し、学習の進捗を端末に保存しましょう。</p>
+        <div class="download-actions">
+          <a class="download-button" href="download.html"><img src="/assets/icons/google-play.svg" alt="" width="24" height="24"><span>Google Playでダウンロード</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/app-store.svg" alt="" width="24" height="24"><span>App Storeでダウンロード</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/windows.svg" alt="" width="24" height="24"><span>Windows版をダウンロード</span></a>
+          <a class="button surface" href="decks.html">公式デッキをダウンロード</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="soporte" class="site-footer site-footer-home">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>FlashLingoは、フラッシュカード、間隔反復、ローカルデッキ、進捗統計で語彙を学ぶためのアプリです。</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo / Javier Ponce. 無断複製・転載を禁じます。</p>
+      </div>
+      <div class="footer-link-grid">
+        <div class="footer-link-group">
+          <span>製品</span>
+          <a href="#inicio">ホーム</a>
+          <a href="download.html">ダウンロード</a>
+          <a href="metode.html">学習メソッド</a>
+          <a href="decks.html">公式デッキ</a>
+        </div>
+        <div class="footer-link-group">
+          <span>リソース</span>
+          <a href="make_decks.html">デッキを作成</a>
+          <a href="contact.html">サポート</a>
+          <a href="privacy.html">プライバシー</a>
+        </div>
+        <div class="footer-link-group">
+          <span>法的情報</span>
+          <a href="terms.html">利用規約</a>
+          <a href="legal.html">法的通知</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

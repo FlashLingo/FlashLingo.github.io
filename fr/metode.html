@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-  (function(){var S=['es','en','ro','de','fr'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
   </script>
   <title>Notre méthode - FlashLingo</title>
   <meta name="description" content="La méthode d'étude de FlashLingo : paquets locaux, répétition espacée, cartes de reconnaissance et de production, statistiques et contrôle de la progression.">
@@ -14,6 +14,8 @@
   <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html">
   <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html">
   <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html">
   <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="FlashLingo">
@@ -47,12 +49,20 @@
         <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
         <span class="brand-name"><span>Flash</span>Lingo</span>
       </a>
-      <div class="lang-switch-nav" role="group" aria-label="Idioma / Language">
-        <a href="/metode.html" data-lang-switch="es">ES</a>
-        <a href="/en/metode.html" data-lang-switch="en">EN</a>
-        <a href="/ro/metode.html" data-lang-switch="ro">RO</a>
-        <a href="/de/metode.html" data-lang-switch="de">DE</a>
-        <a href="/fr/metode.html" data-lang-switch="fr" aria-current="page">FR</a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>FR</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/metode.html" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/metode.html" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/metode.html" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/metode.html" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/metode.html" data-lang="fr" aria-current="page">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/metode.html" data-lang="ja">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/metode.html" data-lang="zh">中文</a></li>
+        </ul>
       </div>
       <button class="nav-toggle" type="button" aria-label="Ouvrir la navigation" aria-expanded="false" data-nav-toggle>
         <span class="nav-toggle-lines" aria-hidden="true"></span>

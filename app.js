@@ -131,7 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
         en: "Official download links will be added once the release is ready.",
         ro: "Linkurile oficiale de descarcare se vor adauga cand lansarea va fi gata.",
         de: "Offizielle Download-Links werden hinzugefügt, sobald die Veröffentlichung bereit ist.",
-        fr: "Les liens de téléchargement officiels seront ajoutés dès que la version sera prête."
+        fr: "Les liens de téléchargement officiels seront ajoutés dès que la version sera prête.",
+        ja: "公式のダウンロードリンクは、リリースの準備が整い次第追加されます。",
+        zh: "正式下载链接将在版本发布后添加。"
       }));
     });
   });
@@ -151,16 +153,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll("[data-coming-soon]").forEach((button) => {
     button.addEventListener("click", () => {
-      showToast(t({ es: "Proximamente", en: "Coming soon", ro: "In curand", de: "Demnächst", fr: "Bientôt disponible" }));
+      showToast(t({ es: "Proximamente", en: "Coming soon", ro: "In curand", de: "Demnächst", fr: "Bientôt disponible", ja: "近日公開", zh: "即将推出" }));
     });
   });
 
-  // Persist the manual language choice so the auto-detection in <head> respects it.
-  document.querySelectorAll("[data-lang-switch]").forEach((link) => {
-    link.addEventListener("click", () => {
-      try {
-        localStorage.setItem("fl-lang", link.dataset.langSwitch);
-      } catch (e) {}
+  // Language dropdown: open/close, close on outside click / Escape, and persist the
+  // manual choice in localStorage so the auto-detection in <head> respects it.
+  document.querySelectorAll("[data-lang-menu]").forEach((menu) => {
+    const toggle = menu.querySelector("[data-lang-toggle]");
+    const list = menu.querySelector(".lang-menu-list");
+    if (!toggle || !list) return;
+    const close = () => {
+      toggle.setAttribute("aria-expanded", "false");
+      list.hidden = true;
+    };
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      list.hidden = isOpen;
+    });
+    list.querySelectorAll("a[data-lang]").forEach((link) => {
+      link.addEventListener("click", () => {
+        try {
+          localStorage.setItem("fl-lang", link.dataset.lang);
+        } catch (e) {}
+      });
+    });
+    document.addEventListener("click", (event) => {
+      if (!menu.contains(event.target)) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
     });
   });
 });

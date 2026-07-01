@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>我们的方法 - FlashLingo</title>
+  <meta name="description" content="FlashLingo 的学习方法：本地卡组、间隔重复、识别卡和产出卡、统计以及进度管理。">
+  <link rel="canonical" href="https://flashlingo.github.io/zh/metode.html">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/metode.html">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/metode.html">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/metode.html">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/metode.html">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/metode.html">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/metode.html">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/metode.html">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/metode.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:title" content="我们的方法 - FlashLingo">
+  <meta property="og:description" content="FlashLingo 的学习方法：本地卡组、间隔重复、识别卡和产出卡、统计以及进度管理。">
+  <meta property="og:url" content="https://flashlingo.github.io/zh/metode.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-zh.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - 用抽认卡学习词汇">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="我们的方法 - FlashLingo">
+  <meta name="twitter:description" content="FlashLingo 的学习方法：本地卡组、间隔重复、识别卡和产出卡、统计以及进度管理。">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-zh.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>ZH</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/metode.html" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/metode.html" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/metode.html" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/metode.html" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/metode.html" data-lang="fr">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/metode.html" data-lang="ja">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/metode.html" data-lang="zh" aria-current="page">中文</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="主导航" data-site-nav>
+        <a href="index.html">首页</a>
+        <a href="download.html">下载</a>
+        <a href="metode.html">我们的方法</a>
+        <a href="decks.html">官方卡组</a>
+        <a href="make_decks.html">创建卡组</a>
+        <a href="privacy.html">隐私</a>
+        <a href="terms.html">条款</a>
+        <a href="legal.html">法律声明</a>
+        <a href="contact.html">支持</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="legal-hero">
+      <span class="eyebrow">我们的方法</span>
+      <h1>以自己的节奏、掌控地学习词汇。</h1>
+      <p class="lead">FlashLingo 结合可移植卡组、本地优先学习、识别卡和产出卡、书写模式、音频和间隔重复，让你稳步积累词汇。</p>
+      <div class="meta-grid">
+        <div class="meta-item"><span class="meta-label">重点</span>词汇和例句</div>
+        <div class="meta-item"><span class="meta-label">学习</span>识别与产出</div>
+        <div class="meta-item"><span class="meta-label">进度</span>间隔重复与统计</div>
+        <div class="meta-item"><span class="meta-label">数据</span>本地优先且无需账户</div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="grid three">
+        <article class="feature-card reveal">
+          <div class="feature-accent"></div>
+          <h3>本地学习</h3>
+          <p>你的卡组、进度、设置、会话和统计都保存在你的设备上。学习无需账户。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-accent"></div>
+          <h3>主动练习</h3>
+          <p>卡片可训练理解和主动回忆。书写模式帮助你在评价前检查答案。</p>
+        </article>
+        <article class="feature-card reveal">
+          <div class="feature-accent"></div>
+          <h3>可衡量的复习</h3>
+          <p>算法根据表现安排复习，并显示统计以了解准确率、未来负荷和困难卡片。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">学习流程</span>
+          <h2>导入、学习、复习并提升。</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>导入卡组</h3>
+            <p>选择一个 <code>.flashjp</code> 卡包，查看其内容，并准备卡片以便本地学习。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>学习卡片</h3>
+            <p>用定义、例句、翻译、读音、音频和图片练习识别与产出。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>及时复习</h3>
+            <p>间隔重复将新卡、学习中、复习和重新学习的卡片整理进每日队列。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>调整你的节奏</h3>
+            <p>按卡组更改上限、步骤、提醒和参数，使负荷适应你的目标。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. 本地优先的学习方法。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">首页</a>
+        <a href="download.html">下载</a>
+        <a href="metode.html">我们的方法</a>
+        <a href="decks.html">官方卡组</a>
+        <a href="make_decks.html">创建卡组</a>
+        <a href="privacy.html">隐私</a>
+        <a href="privacy.html">隐私</a>
+        <a href="terms.html">条款</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

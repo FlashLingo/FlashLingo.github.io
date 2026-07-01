@@ -243,37 +243,74 @@ textarea {
   color: var(--primary-strong);
 }
 
-.lang-switch-nav {
+.lang-menu {
+  position: relative;
   margin-left: auto;
+}
+
+.lang-menu-btn {
+  min-height: 38px;
   display: inline-flex;
   align-items: center;
-  gap: 2px;
+  gap: 5px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 3px;
+  padding: 6px 12px;
   background: var(--surface-soft);
-}
-
-.lang-switch-nav a {
-  min-height: 32px;
-  display: inline-flex;
-  align-items: center;
-  border-radius: 999px;
-  padding: 4px 9px;
-  color: var(--muted);
-  font-size: 0.8rem;
+  color: var(--text);
+  font-size: 0.85rem;
   font-weight: 850;
-  letter-spacing: 0.01em;
-  text-decoration: none;
+  letter-spacing: 0.02em;
+  cursor: pointer;
 }
 
-.lang-switch-nav a:hover {
+.lang-menu-btn:hover {
+  border-color: var(--primary);
   color: var(--primary-strong);
 }
 
-.lang-switch-nav a[aria-current="page"] {
-  background: var(--primary);
-  color: #10262b;
+.lang-menu-caret {
+  font-size: 0.7em;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.lang-menu-list {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 70;
+  min-width: 168px;
+  margin: 0;
+  padding: 6px;
+  display: grid;
+  gap: 2px;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+
+.lang-menu-list a {
+  display: block;
+  border-radius: 10px;
+  padding: 9px 12px;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.lang-menu-list a:hover {
+  background: var(--surface-soft);
+  color: var(--primary-strong);
+}
+
+.lang-menu-list a[aria-current="page"] {
+  background: color-mix(in srgb, var(--primary), transparent 86%);
+  color: var(--primary-strong);
+  font-weight: 850;
 }
 
 .page {
@@ -1509,18 +1546,12 @@ hr {
 
 @media (max-width: 640px) {
   .header-inner {
-    gap: 8px;
+    gap: 10px;
   }
 
-  .lang-switch-nav {
-    gap: 1px;
-    padding: 2px;
-  }
-
-  .lang-switch-nav a {
-    min-height: 30px;
-    padding: 3px 6px;
-    font-size: 0.74rem;
+  .lang-menu-btn {
+    padding: 6px 10px;
+    font-size: 0.82rem;
   }
 
   .brand-name {
@@ -1628,23 +1659,17 @@ hr {
   }
 
   .brand-name {
-    font-size: 1.02rem;
+    font-size: 1.12rem;
   }
 
   .brand-mark {
-    width: 34px;
-    height: 34px;
-    border-radius: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 13px;
   }
 
-  .lang-switch-nav {
-    gap: 1px;
-    padding: 2px;
-  }
-
-  .lang-switch-nav a {
-    min-height: 28px;
-    padding: 2px 5px;
-    font-size: 0.7rem;
+  .lang-menu-btn {
+    padding: 6px 9px;
+    font-size: 0.8rem;
   }
 }

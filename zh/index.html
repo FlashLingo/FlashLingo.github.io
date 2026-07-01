@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>FlashLingo - 用本地抽认卡学习词汇</title>
+  <meta name="description" content="FlashLingo 是一款用 .flashjp 卡组、间隔重复、音频、书写模式、统计和本地优先进度来学习词汇的抽认卡应用。">
+  <link rel="canonical" href="https://flashlingo.github.io/zh/">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="ja_JP">
+  <meta property="og:title" content="FlashLingo - 用本地抽认卡学习词汇">
+  <meta property="og:description" content="FlashLingo 是一款用 .flashjp 卡组、间隔重复、音频、书写模式、统计和本地优先进度来学习词汇的抽认卡应用。">
+  <meta property="og:url" content="https://flashlingo.github.io/zh/">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-zh.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - 用抽认卡学习词汇">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlashLingo - 用本地抽认卡学习词汇">
+  <meta name="twitter:description" content="FlashLingo 是一款用 .flashjp 卡组、间隔重复、音频、书写模式、统计和本地优先进度来学习词汇的抽认卡应用。">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-zh.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "WebSite", "@id": "https://flashlingo.github.io/zh/#website", "url": "https://flashlingo.github.io/zh/", "name": "FlashLingo", "inLanguage": "zh", "publisher": { "@id": "https://flashlingo.github.io/#org" } },
+      { "@type": "Organization", "@id": "https://flashlingo.github.io/#org", "name": "FlashLingo", "url": "https://flashlingo.github.io/", "logo": "https://flashlingo.github.io/assets/logo-192.png", "email": "flashlingo.lenguageapp@gmail.com", "founder": "Javier Ponce" },
+      { "@type": "SoftwareApplication", "@id": "https://flashlingo.github.io/#app", "name": "FlashLingo", "operatingSystem": "Android", "applicationCategory": "EducationalApplication", "description": "flashcard app to study vocabulary with .flashjp decks, spaced repetition, audio, write mode, statistics and local-first progress.", "url": "https://flashlingo.github.io/", "image": "https://flashlingo.github.io/assets/og-image-zh.png", "inLanguage": ["es", "en", "ro", "de", "fr", "ja", "zh"], "author": { "@id": "https://flashlingo.github.io/#org" }, "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>ZH</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/" data-lang="fr">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/" data-lang="ja">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/" data-lang="zh" aria-current="page">中文</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="打开导航" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="主导航" data-site-nav>
+        <a href="#inicio">首页</a>
+        <a href="download.html">下载</a>
+        <a href="metode.html">我们的方法</a>
+        <a href="decks.html">官方卡组</a>
+        <a href="make_decks.html">创建卡组</a>
+        <a href="privacy.html">隐私</a>
+        <a href="terms.html">条款</a>
+        <a href="legal.html">法律声明</a>
+        <a href="contact.html">支持</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <main>
+    <section id="inicio" class="hero-home">
+      <img class="hero-bg" src="/Images/dashboard_ENG.jpg" alt="带有语言卡组的 FlashLingo 主界面" fetchpriority="high">
+      <div class="hero-scrim" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="hero-logo-row">
+          <img src="/assets/logo-192.png" alt="" width="58" height="58">
+          <span>本地优先的抽认卡</span>
+        </div>
+        <h1>
+          <span class="hero-title-kicker">习得、学习和复习词汇，就用</span>
+          <span class="hero-title-brand"><span>Flash</span>Lingo。</span>
+        </h1>
+        <p class="hero-lead">FlashLingo 是一款抽认卡应用，面向想要快速高效地学习和习得词汇的语言学习者，让你掌控自己的卡组、进度、学习节奏和学习数据。</p>
+        <p class="hero-lead hero-lead-secondary">导入 <code>.flashjp</code> 卡组，学习识别卡和产出卡，用音频和书写模式练习，并通过详细的统计分析你的进度，无需账户。</p>
+        <div class="download-actions hero-downloads">
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="24" height="24">
+            <span>在 Google Play 下载</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="24" height="24">
+            <span>在 App Store 下载</span>
+          </a>
+          <a class="download-button" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="24" height="24">
+            <span>下载 Windows 版</span>
+          </a>
+          <a class="button secondary" href="decks.html">下载官方卡组</a>
+        </div>
+        <p class="hero-note">本地学习。无需账户或注册。你的进度保留在你的设备上。</p>
+      </div>
+    </section>
+
+    <section class="trust-band" aria-label="快速功能">
+      <div class="trust-track" data-trust-track>
+        <span>Android 应用</span>
+        <span>本地优先的进度</span>
+        <span>.flashjp 卡组导入</span>
+        <span>间隔重复</span>
+        <span>音频和图片</span>
+        <span>书写模式</span>
+        <span>CSV/PDF 导出</span>
+        <span>按卡组手动备份</span>
+      </div>
+    </section>
+
+    <section id="metodo" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">我们的方法</span>
+          <h2>一款采用创新方法的抽认卡应用，面向想要更多掌控的人。</h2>
+          <p class="lead">许多语言应用使用过时的方法，不能带来快速的进步，强制你创建账户，隐藏学习系统的运作方式，或者限制你能学习或个性化的内容。FlashLingo 提出了不同的方式。</p>
+          <p>你导入自己的卡组，在设备上本地学习，按自己的节奏调整每个卡组，并掌控自己的进度。</p>
+          <p>我们的学习方法和算法让你以自己的节奏快速高效地习得和学习词汇。</p>
+        </div>
+        <div class="method-stack reveal">
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>本地学习</h3>
+            <p>你的卡组、进度、设置、会话和统计都本地保存在你的设备上。开始学习无需账户。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>为认真学习词汇而设计</h3>
+            <p>学习识别卡和产出卡，使用音频和例句，启用书写模式，让间隔重复安排你的复习。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-accent"></div>
+            <h3>导出重要内容</h3>
+            <p>用统计查看你的表现，将报告导出为 CSV 或 PDF，并创建卡组进度的手动 <code>.flashjp</code> 备份。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section privacy-band">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">如何运作</span>
+          <h2>FlashLingo 如何运作</h2>
+        </div>
+        <div class="timeline" data-timeline>
+          <article class="timeline-step reveal">
+            <span>01</span>
+            <h3>导入卡组</h3>
+            <p>选择官方 <code>.flashjp</code> 卡组或恢复进度备份。FlashLingo 会验证卡包、读取清单、导入数据库并准备卡组，让你可以开始学习并积累词汇。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>02</span>
+            <h3>学习你的卡片</h3>
+            <p>用识别卡理解单词，用产出卡主动回忆。卡片可以包含定义、例句、翻译、读音、音频、图片和额外形式。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>03</span>
+            <h3>用间隔重复复习</h3>
+            <p>FlashLingo 依据我们的算法，根据你的表现安排复习。新卡、学习中、复习和重新学习的卡片会被整理进每日学习队列。</p>
+          </article>
+          <article class="timeline-step reveal">
+            <span>04</span>
+            <h3>分析并提升</h3>
+            <p>使用卡组统计查看你的准确率、学习时间、困难卡片、复习历史和未来负荷。随时导出你的数据。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciones" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">主要功能</span>
+          <h2>专注学习词汇所需的一切。</h2>
+        </div>
+        <div class="grid four feature-grid">
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>.flashjp 卡组</h3><p>导入可包含 SQLite 数据库、元数据、音频、图片和推荐卡组设置的 FlashLingo 卡包。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>识别与产出</h3><p>每个单词可生成两个学习方向：在目标语言中识别单词，以及根据其含义产出单词。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>书写模式</h3><p>在产出卡上，书写模式让你输入答案、与目标单词比较，并且只有在达到所配置的最低百分比时才解锁 Good。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>高级设置</h3><p>每个卡组可拥有自己的每日上限、学习步骤、答错行为、算法参数、混合、提醒、书写模式和撤销。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>详细统计</h3><p>通过清晰的图表和摘要查看准确率、学习时间、复习预测、每日活动、困难卡片和会话历史。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>CSV、PDF 和备份</h3><p>将学习统计导出为 CSV 或 PDF，并在你想保存或迁移数据时为每个卡组创建进度的手动 <code>.flashjp</code> 备份。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>本地提醒</h3><p>为每个卡组启用可选提醒。FlashLingo 使用本地通知，在有卡片等待复习时提醒你。</p></article>
+          <article class="feature-card reveal"><div class="feature-accent"></div><h3>多语言界面</h3><p>FlashLingo 提供英语、西班牙语、罗马尼亚语、德语、法语、日语和中文界面。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacidad" class="section privacy-band">
+      <div class="page privacy-layout">
+        <div class="section-header reveal">
+          <span class="eyebrow">隐私 / 本地优先</span>
+          <h2>你的学习进度属于你。</h2>
+          <p class="lead">FlashLingo 被设计为一款本地优先的应用。你无需账户，FlashLingo 也不使用自有服务器来存储你的卡组或进度。</p>
+          <p>你导入的卡组、媒体文件、学习历史、卡组设置、会话和统计都保存在你设备上应用的本地存储中。</p>
+          <a class="button surface" href="privacy.html">阅读隐私政策</a>
+        </div>
+        <ul class="privacy-list reveal">
+          <li>你无需创建账户。</li>
+          <li>没有自有分析，也没有自有的错误报告服务器。</li>
+          <li>学习进度本地保存。</li>
+          <li>只有在你选择导出时才会创建卡组备份。</li>
+          <li>广告由 Google AdMob 在兼容的移动版本中提供。</li>
+          <li>广告隐私选项在需要时通过 Google 的同意流程管理。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="descargar" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">下载</span>
+          <h2>选择你的平台。</h2>
+          <p class="lead">这些按钮已准备好在发布后链接到官方商店和版本。</p>
+        </div>
+        <div class="download-grid">
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/google-play.svg" alt="" width="34" height="34">
+            <strong>在 Google Play 下载</strong>
+            <span>Android</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/app-store.svg" alt="" width="34" height="34">
+            <strong>在 App Store 下载</strong>
+            <span>iOS</span>
+          </a>
+          <a class="download-card reveal" href="download.html">
+            <img src="/assets/icons/windows.svg" alt="" width="34" height="34">
+            <strong>下载 Windows 版</strong>
+            <span>Desktop</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="mazos" class="section privacy-band">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">官方卡组</span>
+          <h2>FlashLingo 的免费卡组</h2>
+          <p class="lead">FlashLingo 卡组使用 <code>.flashjp</code> 格式。官方卡组包含词汇、例句、翻译、读音、音频、图片、卡组图标和推荐的学习设置。</p>
+          <p>下载一个卡组，导入到应用中，开始本地学习。</p>
+          <div class="section-actions">
+            <a class="button surface" href="decks.html">下载卡组</a>
+          </div>
+          <div class="notice warning">
+            <strong>重要提示：</strong> 卡组以教育为目的提供。内容可能包含错误。如果你发现问题，请通过支持反馈。
+          </div>
+        </div>
+        <figure class="phone-shot deck-preview-shot reveal">
+          <div class="phone-frame"><img src="/Images/Menu_ENG.jpg" alt="FlashLingo 中一个卡组的菜单" loading="lazy"></div>
+          <figcaption>带有设置、浏览、统计和导出操作的卡组。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="crear-mazos" class="section">
+      <div class="page grid two showcase">
+        <div class="section-header reveal">
+          <span class="eyebrow">面向卡组创作者</span>
+          <h2>为 FlashLingo 创建你自己的卡组。</h2>
+          <p class="lead">FlashLingo 围绕可移植的卡包构建。一个 <code>.flashjp</code> 卡包可以包含数据库、清单、音频文件、图片、卡组图标和设置值。</p>
+          <p>这让你可以创建更丰富的词汇卡组，包含例句、翻译、读音、多媒体和自定义学习设置。</p>
+          <p>不仅如此：由于 <code>.flashjp</code> 格式非常灵活，你可以为任何主题或目的创建卡组。</p>
+          <div class="section-actions">
+            <a class="button surface" href="make_decks.html">了解如何创建卡组</a>
+            <a class="button surface" href="flashjp-format.html">阅读格式文档</a>
+          </div>
+        </div>
+        <div class="panel creator-table reveal">
+          <div class="creator-row"><strong>SQLite</strong><span>基于本地数据库的抽认卡内容。</span></div>
+          <div class="creator-row"><strong>manifest.json</strong><span>卡组元数据和推荐设置。</span></div>
+          <div class="creator-row"><strong>Media</strong><span>对音频、图片和卡组图标的引用。</span></div>
+          <div class="creator-row"><strong>两个方向</strong><span>生成识别卡和产出卡。</span></div>
+          <div class="creator-row"><strong>更新</strong><span>更新卡组而不丢失进度。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="capturas" class="section">
+      <div class="page">
+        <div class="section-header reveal">
+          <span class="eyebrow">视觉预览</span>
+          <h2>专为长时间学习会话而设计。</h2>
+          <p class="lead">FlashLingo 将简洁的界面与高级工具结合，让你在学习、复习和分析进度时不失专注。</p>
+        </div>
+        <div class="preview-tabs compact-preview reveal" data-preview-tabs>
+          <div class="preview-controls" role="tablist" aria-label="FlashLingo 截图">
+            <button type="button" role="tab" aria-selected="true" data-preview-target="screen-home">首页</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-study">学习</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-write">书写模式</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-stats">统计</button>
+            <button type="button" role="tab" aria-selected="false" data-preview-target="screen-import">导入</button>
+          </div>
+          <div class="preview-stage">
+            <figure class="preview-panel is-active" id="screen-home">
+              <div class="phone-frame"><img src="/Images/dashboard_ENG.jpg" alt="FlashLingo 卡组首页" loading="lazy"></div>
+              <figcaption><strong>卡组首页。</strong> 一眼查看新卡、学习中、待复习、逾期的卡片和最近的准确率。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-study">
+              <div class="phone-frame"><img src="/Images/Japones2_ENG.jpg" alt="FlashLingo 学习会话" loading="lazy"></div>
+              <figcaption><strong>学习会话。</strong> 学习简洁的卡片，带有例句、音频、图片、读音和清晰的 Good/Bad 操作。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-write">
+              <div class="phone-frame"><img src="/Images/Aleman2_ENG.jpg" alt="FlashLingo 产出卡" loading="lazy"></div>
+              <figcaption><strong>书写模式。</strong> 输入你的答案，在评价卡片前与目标单词比较。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-stats">
+              <div class="phone-frame"><img src="/Images/Estadisticas7_ENG.jpg" alt="FlashLingo 统计和预测" loading="lazy"></div>
+              <figcaption><strong>统计。</strong> 通过图表、预测、每日活动和困难卡片分析你的进度。</figcaption>
+            </figure>
+            <figure class="preview-panel" id="screen-import">
+              <div class="phone-frame"><img src="/Images/Config1_ENG.jpg" alt="FlashLingo 卡组设置" loading="lazy"></div>
+              <figcaption><strong>导入卡组。</strong> 预览并导入 <code>.flashjp</code> 卡组，进度清晰，带诊断和冲突处理。</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section privacy-band">
+      <div class="page grid two">
+        <div class="section-header reveal">
+          <span class="eyebrow">常见问题</span>
+          <h2>常见问题</h2>
+        </div>
+        <div class="faq-list reveal" data-faq>
+          <details open><summary>我需要账户吗？</summary><p>不需要。FlashLingo 不需要账户即可学习。你的卡组和进度本地保存在你的设备上。</p></details>
+          <details><summary>FlashLingo 会把我的进度同步到云端吗？</summary><p>不会。当前版本不包含云同步。你可以手动将卡组的进度导出为 <code>.flashjp</code> 备份。</p></details>
+          <details><summary>什么是 .flashjp 文件？</summary><p><code>.flashjp</code> 文件是 FlashLingo 的卡包，用于导入官方卡组或恢复进度备份。</p></details>
+          <details><summary>我可以离线学习吗？</summary><p>你可以本地学习已导入的卡组。某些功能（如广告或打开外部链接）可能需要互联网连接。</p></details>
+          <details><summary>应用包含广告吗？</summary><p>是的，但它们不具侵扰性，也不影响学习。FlashLingo 可能在兼容的移动版本中通过 Google AdMob 显示广告。</p></details>
+          <details><summary>我可以导出我的进度吗？</summary><p>可以。你可以将统计导出为 CSV/PDF，并为每个卡组创建手动 <code>.flashjp</code> 备份。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="page cta-band reveal">
+        <span class="eyebrow">立即开始</span>
+        <h2>开始快速高效地积累你的词汇。</h2>
+        <p>导入你的卡组，用间隔重复学习，查看你的统计，并把你的学习进度保留在设备上。</p>
+        <div class="download-actions">
+          <a class="download-button" href="download.html"><img src="/assets/icons/google-play.svg" alt="" width="24" height="24"><span>在 Google Play 下载</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/app-store.svg" alt="" width="24" height="24"><span>在 App Store 下载</span></a>
+          <a class="download-button" href="download.html"><img src="/assets/icons/windows.svg" alt="" width="24" height="24"><span>下载 Windows 版</span></a>
+          <a class="button surface" href="decks.html">下载官方卡组</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="soporte" class="site-footer site-footer-home">
+    <div class="footer-inner">
+      <div class="footer-brand-block">
+        <a class="brand" href="#inicio" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>FlashLingo 是一款用抽认卡、间隔重复、本地卡组和进度统计来学习词汇的应用。</p>
+        <p>&copy; <span data-year>2026</span> FlashLingo / Javier Ponce. 版权所有。</p>
+      </div>
+      <div class="footer-link-grid">
+        <div class="footer-link-group">
+          <span>产品</span>
+          <a href="#inicio">首页</a>
+          <a href="download.html">下载</a>
+          <a href="metode.html">我们的方法</a>
+          <a href="decks.html">官方卡组</a>
+        </div>
+        <div class="footer-link-group">
+          <span>资源</span>
+          <a href="make_decks.html">创建卡组</a>
+          <a href="contact.html">支持</a>
+          <a href="privacy.html">隐私</a>
+        </div>
+        <div class="footer-link-group">
+          <span>法律</span>
+          <a href="terms.html">条款</a>
+          <a href="legal.html">法律声明</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

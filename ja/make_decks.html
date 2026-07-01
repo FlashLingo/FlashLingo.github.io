@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>デッキを作成 - FlashLingo</title>
+  <meta name="description" content="SQLite、マニフェスト、マルチメディア、学習設定を用いてFlashLingo用の.flashjpデッキを作成するガイド。">
+  <link rel="canonical" href="https://flashlingo.github.io/ja/make_decks.html">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/make_decks.html">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/make_decks.html">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/make_decks.html">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/make_decks.html">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/make_decks.html">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/make_decks.html">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/make_decks.html">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/make_decks.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:title" content="デッキを作成 - FlashLingo">
+  <meta property="og:description" content="SQLite、マニフェスト、マルチメディア、学習設定を用いてFlashLingo用の.flashjpデッキを作成するガイド。">
+  <meta property="og:url" content="https://flashlingo.github.io/ja/make_decks.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - フラッシュカードで語彙を学ぶ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="デッキを作成 - FlashLingo">
+  <meta name="twitter:description" content="SQLite、マニフェスト、マルチメディア、学習設定を用いてFlashLingo用の.flashjpデッキを作成するガイド。">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>JA</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/make_decks.html" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/make_decks.html" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/make_decks.html" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/make_decks.html" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/make_decks.html" data-lang="fr">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/make_decks.html" data-lang="ja" aria-current="page">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/make_decks.html" data-lang="zh">中文</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開く" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="メインナビゲーション" data-site-nav>
+        <a href="index.html">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="legal.html">法的通知</a>
+        <a href="contact.html">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="legal-hero coming-soon-page">
+      <span class="eyebrow">デッキを作成</span>
+      <h1>近日公開！</h1>
+      <p class="lead">デッキ作成ツールはまだ利用できません。FlashLingo対応のパッケージを作成する明確な方法を準備しており、準備ができ次第ここで情報を公開します。</p>
+      <div class="section-actions">
+        <a class="button surface" href="decks.html">公式デッキを見る</a>
+        <a class="button surface" href="contact.html">サポートに連絡</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. デッキ作成のためのリソース。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

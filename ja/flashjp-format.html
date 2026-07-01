@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  </script>
+  <title>.flashjp形式 - FlashLingo</title>
+  <meta name="description" content="FlashLingoの.flashjpパッケージ形式の技術リファレンス: 暗号化コンテナ、manifest.json、SQLite契約、メディア、進捗バックアップ。">
+  <link rel="canonical" href="https://flashlingo.github.io/ja/flashjp-format.html">
+  <link rel="alternate" hreflang="es" href="https://flashlingo.github.io/flashjp-format.html">
+  <link rel="alternate" hreflang="en" href="https://flashlingo.github.io/en/flashjp-format.html">
+  <link rel="alternate" hreflang="ro" href="https://flashlingo.github.io/ro/flashjp-format.html">
+  <link rel="alternate" hreflang="de" href="https://flashlingo.github.io/de/flashjp-format.html">
+  <link rel="alternate" hreflang="fr" href="https://flashlingo.github.io/fr/flashjp-format.html">
+  <link rel="alternate" hreflang="ja" href="https://flashlingo.github.io/ja/flashjp-format.html">
+  <link rel="alternate" hreflang="zh" href="https://flashlingo.github.io/zh/flashjp-format.html">
+  <link rel="alternate" hreflang="x-default" href="https://flashlingo.github.io/flashjp-format.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlashLingo">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="es_ES">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ro_RO">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta property="og:locale:alternate" content="zh_CN">
+  <meta property="og:title" content=".flashjpパッケージ形式 - FlashLingo">
+  <meta property="og:description" content="FlashLingoの.flashjpパッケージ形式の技術リファレンス: 暗号化コンテナ、manifest.json、SQLite契約、メディア、進捗バックアップ。">
+  <meta property="og:url" content="https://flashlingo.github.io/ja/flashjp-format.html">
+  <meta property="og:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="FlashLingo - フラッシュカードで語彙を学ぶ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content=".flashjpパッケージ形式 - FlashLingo">
+  <meta name="twitter:description" content="FlashLingoの.flashjpパッケージ形式の技術リファレンス: 暗号化コンテナ、manifest.json、SQLite契約、メディア、進捗バックアップ。">
+  <meta name="twitter:image" content="https://flashlingo.github.io/assets/og-image-ja.png">
+  <link rel="icon" href="/assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="FlashLingo">
+        <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+        <span class="brand-name"><span>Flash</span>Lingo</span>
+      </a>
+      <div class="lang-menu" data-lang-menu>
+        <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <span data-lang-current>JA</span>
+          <span class="lang-menu-caret" aria-hidden="true">▾</span>
+        </button>
+        <ul class="lang-menu-list" role="menu" hidden>
+          <li role="none"><a role="menuitem" href="/flashjp-format.html" data-lang="es">Español</a></li>
+          <li role="none"><a role="menuitem" href="/en/flashjp-format.html" data-lang="en">English</a></li>
+          <li role="none"><a role="menuitem" href="/ro/flashjp-format.html" data-lang="ro">Română</a></li>
+          <li role="none"><a role="menuitem" href="/de/flashjp-format.html" data-lang="de">Deutsch</a></li>
+          <li role="none"><a role="menuitem" href="/fr/flashjp-format.html" data-lang="fr">Français</a></li>
+          <li role="none"><a role="menuitem" href="/ja/flashjp-format.html" data-lang="ja" aria-current="page">日本語</a></li>
+          <li role="none"><a role="menuitem" href="/zh/flashjp-format.html" data-lang="zh">中文</a></li>
+        </ul>
+      </div>
+      <button class="nav-toggle" type="button" aria-label="ナビゲーションを開く" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-lines" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" aria-label="メインナビゲーション" data-site-nav>
+        <a href="index.html">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+        <a href="legal.html">法的通知</a>
+        <a href="contact.html">サポート</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <section class="legal-hero">
+      <span class="eyebrow">ドキュメント</span>
+      <h1><code>.flashjp</code>パッケージ形式</h1>
+      <p class="lead">FlashLingoが公式デッキと進捗バックアップのインポート時に使うパッケージ形式の技術リファレンスです。このページは作成者と開発者向けのリファレンスで、フィールド、キー、列の正確な名前を保つため、技術的な詳細は英語のままです。</p>
+      <div class="meta-grid">
+        <div class="meta-item"><span class="meta-label">拡張子</span><code>.flashjp</code></div>
+        <div class="meta-item"><span class="meta-label">公式コンテナ</span>FLJPENC1 (署名 + AES-256-GCM)</div>
+        <div class="meta-item"><span class="meta-label">ユーザーバックアップ</span>ZIP flashlingo_user_backup_v1</div>
+        <div class="meta-item"><span class="meta-label">データベース</span>SQLite (flashcards テーブル)</div>
+      </div>
+      <div class="section-actions">
+        <a class="button surface" href="make_decks.html">デッキ作成に戻る</a>
+        <a class="button surface" href="https://github.com/FlashLingo/FlashLingo.github.io/blob/main/Documentacion/flashjp-format.md" target="_blank" rel="noopener noreferrer">GitHubでソースを見る</a>
+      </div>
+    </section>
+
+    <article class="legal-card doc-card" lang="en">
+      <p>This document summarizes the package contract consumed by <code>lib/features/importer/importer_service.dart</code>. For the full <code>manifest.json</code> reference, see <a href="https://github.com/FlashLingo/FlashLingo.github.io/blob/main/Documentacion/manifest-json-mazos.md" target="_blank" rel="noopener noreferrer">manifest-json-mazos.md</a>.</p>
+      <h2>Accepted Extensions</h2>
+      <p>FlashLingo accepts package files with this extension:</p>
+      <ul><li><code>.flashjp</code></li></ul>
+      <p>Plain <code>.zip</code> files are not accepted by the app. A ZIP renamed to <code>.flashjp</code> is accepted only when it is an app-generated user backup with a valid <code>backup_manifest.json</code> using <code>flashlingo_user_backup_v1</code>. Official deck packages remain signed/encrypted containers.</p>
+      <p>Accepted <code>.flashjp</code> profiles:</p>
+      <ul><li>official deck package: binary container that starts with <code>FLJPENC1\n</code>, includes a signed JSON header, and stores the original ZIP package as an AES-256-GCM encrypted payload.</li><li>user progress backup: ordinary ZIP generated by the app, with <code>backup_manifest.json.package_kind = user_backup</code> and <code>backup_manifest.json.format = flashlingo_user_backup_v1</code>.</li></ul>
+      <h2>Official Deck Packages</h2>
+      <p>Accepted encrypted formats:</p>
+      <ul><li><code>flashlingo_encrypted_v2</code>: legacy large-deck format. It signs only the protected header; the header contains the SHA-256 of the ciphertext and the SHA-256 of the decrypted ZIP.</li><li><code>flashlingo_encrypted_v3</code>: current generated format. It uses the same signed protected header model, but encrypts the ZIP payload as independent 4 MiB AES-256-GCM chunks so Android can decrypt large decks with native crypto without loading the full payload into memory.</li></ul>
+      <p>The importer verifies:</p>
+      <ul><li>file extension is <code>.flashjp</code></li><li>container magic is <code>FLJPENC1\n</code></li><li>publisher is <code>FlashLingo - Javier Ponce</code></li><li>publisher role is <code>official</code></li><li>signing key id matches the bundled Ed25519 public key</li><li>encryption key id matches the bundled AES key</li><li>ciphertext SHA-256 matches the header</li><li>Ed25519 header signature is valid</li><li>decrypted ZIP SHA-256 matches the header</li></ul>
+      <p>Security model:</p>
+      <ul><li>The Ed25519 signature is the authenticity/integrity boundary: only packages signed with the private publisher key should import as official packages.</li><li>The AES key used to decrypt official packages is bundled in the Flutter app so the app can import decks offline. Treat encryption as package container protection, not as DRM or a confidentiality guarantee against reverse engineering of the client.</li><li>The Ed25519 private signing key must never be shipped with the app or stored in the repository.</li></ul>
+      <p>Only after those checks does the importer decrypt the ZIP to a temporary app file. It then reads the ZIP central directory, reads <code>manifest.json</code>, writes only the SQLite database to temporary storage, copies referenced media entries directly into the app-local media directory, and deletes the temporary ZIP. It does not decode or extract the full ZIP archive just to inspect package metadata.</p>
+      <h2>Official Deck Archive Layouts</h2>
+      <p>The decrypted ZIP payload accepts both layouts:</p>
+      <ol><li>Flat archive contents.</li><li>A single wrapper directory containing the package contents.</li></ol>
+      <p>Examples:</p>
+      <pre><code>manifest.json
+flashcards.db
+audio/word_001.mp3
+images/card_001.png</code></pre>
+      <pre><code>starter_pack/
+  manifest.json
+  flashcards.db
+  audio/word_001.mp3
+  images/card_001.png</code></pre>
+      <p>If more than one <code>manifest.json</code> exists, the importer uses the one whose path is closest to the archive root.</p>
+      <h2>Official Deck Required Files</h2>
+      <ul><li><code>manifest.json</code></li><li>SQLite database file referenced by <code>manifest.json.db_filename</code></li></ul>
+      <h2>Official Deck <code>manifest.json</code></h2>
+      <p>Required root keys:</p>
+      <ul><li><code>language_id</code></li><li><code>pack_name</code></li><li><code>db_filename</code></li></ul>
+      <p>Optional root keys:</p>
+      <ul><li><code>settings</code></li><li><code>new_card_min_correct_reps</code></li><li><code>new_card_intra_day_minutes</code></li><li><code>deck_icon</code></li><li><code>deckIcon</code></li><li><code>deck_icon_path</code></li><li><code>deckIconPath</code></li><li><code>icon</code></li><li><code>icon_path</code></li><li><code>iconPath</code></li></ul>
+      <p>Example:</p>
+      <pre><code>{
+  &quot;language_id&quot;: &quot;ja&quot;,
+  &quot;pack_name&quot;: &quot;FlashLingo Starter&quot;,
+  &quot;db_filename&quot;: &quot;flashcards.db&quot;,
+  &quot;new_card_min_correct_reps&quot;: 2,
+  &quot;new_card_intra_day_minutes&quot;: 10,
+  &quot;deck_icon&quot;: &quot;images/cover.png&quot;,
+  &quot;settings&quot;: {
+    &quot;new_cards_per_day&quot;: 20,
+    &quot;max_reviews_per_day&quot;: 200,
+    &quot;hide_new_cards_on_review_overflow&quot;: false,
+    &quot;study_reminders_enabled&quot;: true,
+    &quot;study_reminder_interval_hours&quot;: 3,
+    &quot;day_cutoff_hour&quot;: 4,
+    &quot;day_cutoff_minute&quot;: 0,
+    &quot;learning_steps&quot;: [1.0, 4.0],
+    &quot;enable_write_mode&quot;: false,
+    &quot;enable_undo&quot;: true,
+    &quot;study_mix_mode&quot;: &quot;reviews_first&quot;,
+    &quot;interleave_reviews_count&quot;: 2,
+    &quot;interleave_new_cards_count&quot;: 1
+  }
+}</code></pre>
+      <h2>Official Deck Supported Settings Keys</h2>
+      <p>Supported deck setting keys inside <code>manifest.json.settings</code>:</p>
+      <ul><li><code>new_cards_per_day</code></li><li><code>max_reviews_per_day</code></li><li><code>hide_new_cards_on_review_overflow</code></li><li><code>study_reminders_enabled</code></li><li><code>study_reminder_interval_hours</code></li><li><code>day_cutoff_hour</code></li><li><code>day_cutoff_minute</code></li><li><code>new_card_min_correct_reps</code></li><li><code>new_card_intra_day_minutes</code></li><li><code>lapse_tolerance</code></li><li><code>use_fixed_interval_on_lapse</code></li><li><code>lapse_fixed_interval</code></li><li><code>p_min</code></li><li><code>alpha</code></li><li><code>beta</code></li><li><code>offset</code></li><li><code>initial_nt</code></li><li><code>learning_steps</code></li><li><code>enable_write_mode</code></li><li><code>write_mode_threshold</code></li><li><code>write_mode_max_reps</code></li><li><code>enable_undo</code></li><li><code>study_mix_mode</code></li><li><code>interleave_reviews_count</code></li><li><code>interleave_new_cards_count</code></li><li><code>deck_icon</code></li><li><code>deckIcon</code></li><li><code>deck_icon_path</code></li><li><code>deckIconPath</code></li><li><code>icon</code></li><li><code>icon_path</code></li><li><code>iconPath</code></li></ul>
+      <p><code>new_card_min_correct_reps</code> and <code>new_card_intra_day_minutes</code> may be placed at root or inside <code>settings</code>. If both are present, the value inside <code>settings</code> overrides the root value.</p>
+      <p>Boolean parsing accepts:</p>
+      <ul><li><code>true</code> / <code>false</code></li><li><code>1</code> / <code>0</code></li><li><code>yes</code> / <code>no</code></li><li><code>si</code> / <code>si</code> with accent</li></ul>
+      <h2>Official Deck SQLite Contract</h2>
+      <p>The importer reads a table named <code>flashcards</code>.</p>
+      <p>Columns currently consumed:</p>
+      <ul><li><code>ID</code></li><li><code>PALABRA</code></li><li><code>SIGNIFICADO</code></li><li><code>AUDIO_PALABRA</code></li><li><code>AUDIO_ORACION</code></li><li><code>IMAGEN</code></li><li><code>ORACION</code></li><li><code>TRADUCCION</code></li><li><code>LECTURA_PALABRA</code></li><li><code>LECTURA_ORACION</code></li><li><code>FORMAS</code></li></ul>
+      <p>Each SQLite row produces two FlashLingo cards:</p>
+      <ul><li>recognition card: <code>{language_id}_recog</code></li><li>production card: <code>{language_id}_prod</code></li></ul>
+      <p>The logical identity used during import/update is:</p>
+      <pre><code>originalId + cardType</code></pre>
+      <p>In code this is stored as:</p>
+      <pre><code>{originalId}::{cardType}</code></pre>
+      <h2>Official Deck Card Mapping</h2>
+      <p>Recognition card:</p>
+      <ul><li>question: <code>PALABRA</code></li><li>answer: <code>SIGNIFICADO</code></li><li>sentence: <code>ORACION</code></li><li>translation: <code>TRADUCCION</code></li><li>extra data: <code>LECTURA_PALABRA</code>, <code>LECTURA_ORACION</code>, <code>FORMAS</code>, type <code>recognition</code></li></ul>
+      <p>Production card:</p>
+      <ul><li>question: <code>SIGNIFICADO</code></li><li>answer: <code>PALABRA</code></li><li>sentence: <code>TRADUCCION</code></li><li>translation: <code>ORACION</code></li><li>extra data: target reading, sentence reading, <code>FORMAS</code>, type <code>production</code></li></ul>
+      <p>Both card types reuse word audio, sentence audio, image, and initial SRS decay rate from the imported package/settings.</p>
+      <h2>Official Deck Media Resolution</h2>
+      <p>Referenced media files are copied into the app-local <code>media_assets</code> directory using UUID file names. The importer skips <code>.db</code> files, <code>manifest.json</code>, files without an extension, and media entries that are not referenced by SQLite rows or the deck icon field.</p>
+      <p>Lookup is attempted by:</p>
+      <ol><li>exact path relative to the selected package root</li><li>exact path inside the internal ZIP</li><li>basename match only when the SQLite/manifest reference is also a basename</li><li>decoded and lowercase variants of those exact rules</li><li>extensionless stem match within the same media kind</li></ol>
+      <p>The stem fallback allows <code>AUDIO_PALABRA = de-DE00001_PALABRA.wav</code> to resolve to <code>media/de-DE00001_PALABRA.mp3</code>, but only because both sides are audio. An image with the same stem is not copied for an audio reference, and an audio file is not copied for an image/icon reference. Files without an extension are skipped as media. ZIP creators should store already-compressed audio/image/video formats such as <code>.mp3</code>, <code>.jpg</code>, <code>.png</code>, <code>.webp</code>, <code>.ogg</code>, <code>.opus</code>, and <code>.mp4</code> with ZIP method <code>STORE</code> instead of <code>DEFLATE</code>.</p>
+      <h2>Official Deck Update Existing Contract</h2>
+      <p>When importing with <code>updateExisting</code>, the current UI preserves deck settings from the existing deck and only refreshes imported content and deck icon when a new icon is provided.</p>
+      <p>Fields preserved on existing cards:</p>
+      <ul><li><code>state</code></li><li><code>nextReview</code></li><li><code>reviewPriorityAnchor</code></li><li><code>manualReviewOverrideDay</code></li><li><code>lastReview</code></li><li><code>decayRate</code></li><li><code>fixedPhaseQueue</code></li><li><code>learningStep</code></li><li><code>consecutiveLapses</code></li><li><code>repetitionCount</code></li><li><code>lifetimeReviewCount</code></li><li><code>lifetimeCorrectCount</code></li><li><code>lifetimeWrongCount</code></li><li><code>totalStudyTimeMs</code></li><li>review logs</li><li>study sessions</li><li>session history</li><li>daily stats</li></ul>
+      <p>Fields refreshed from the package:</p>
+      <ul><li><code>question</code></li><li><code>answer</code></li><li><code>sentence</code></li><li><code>translation</code></li><li><code>audioPath</code></li><li><code>sentenceAudioPath</code></li><li><code>imagePath</code></li><li><code>extraDataJson</code></li><li><code>deckIconUri</code> when available</li></ul>
+      <h2>User Progress Backups</h2>
+      <p>FlashLingo can export one local deck as a <code>.flashjp</code> user backup and later import it through the same file picker. This backup profile is intentionally separate from official signed deck packages:</p>
+      <ul><li>It is generated on the device by <code>DeckProgressBackupService</code>.</li><li>It uses extension <code>.flashjp</code> for user convenience.</li><li>It is a ZIP file, not an <code>FLJPENC1</code> encrypted official container.</li><li>It does not contain the official signing private key and cannot create official <code>flashlingo_encrypted_v3</code> packages.</li><li>v1 has no user password and no extra encryption. Anyone who receives the file can inspect/import its contents.</li></ul>
+      <p>Required root files:</p>
+      <ul><li><code>backup_manifest.json</code></li><li><code>cards.json</code></li><li><code>settings.json</code></li><li><code>progress.json</code></li><li>optional <code>media/...</code> files referenced by cards or the deck icon</li></ul>
+      <p><code>backup_manifest.json</code> declares:</p>
+      <ul><li><code>package_kind = user_backup</code></li><li><code>format = flashlingo_user_backup_v1</code></li><li><code>format_version = 1</code></li><li>app/version metadata</li><li>export timestamp</li><li>source deck name and ISO code</li><li>counts for cards, review logs, session history, daily stats, and media files</li><li>SHA-256 and size for every declared JSON/media file</li></ul>
+      <p><code>cards.json</code> contains full card content plus the portable card key:</p>
+      <pre><code>originalId::cardType</code></pre>
+      <p>Each card includes question, answer, sentence, translation, extra JSON, restorable media references, SRS state, next/last review dates, learning queue, decay rate, lapse counters, lifetime review counters, and total study time.</p>
+      <p><code>settings.json</code> contains all <code>DeckSettings</code> fields, including daily counters, reminders, SRS parameters, learning steps, write mode, undo, study mix mode, and deck icon reference.</p>
+      <p><code>progress.json</code> contains:</p>
+      <ul><li><code>review_logs</code>, remapped on restore from portable card keys to new local <code>Flashcard.id</code> values</li><li><code>active_session</code>, including <code>queue_card_keys</code> that are remapped to local IDs</li><li><code>session_history</code></li><li><code>daily_stats</code></li></ul>
+      <p>Restore behavior:</p>
+      <ul><li>If the source deck name does not exist, the backup imports as a new deck.</li><li>If the source deck name exists, the UI always asks whether to restore over the existing deck or create a copy with another name.</li><li>Restore-over-existing deletes that deck&#x27;s current cards, settings, logs, active sessions, history, and daily stats, then writes the backup data.</li><li>Create-copy writes the same content/progress under the chosen new deck name.</li><li>Media is copied into the app-local <code>media_assets</code> directory with new UUID filenames.</li><li><code>DeckDailyStats</code> rows are restored and then synchronized for affected study days from logs/session history so derived values stay consistent.</li></ul>
+      <p>User backup safety limits:</p>
+      <ul><li>max ZIP file size: <code>1024 MiB</code></li><li>max real file entries: <code>12000</code></li><li>max single entry: <code>128 MiB</code></li><li>max single media file: <code>64 MiB</code></li><li>max total media bytes: <code>768 MiB</code></li><li>only relative safe ZIP paths are accepted; absolute paths, <code>..</code>, <code>.</code>, empty segments, and path segments containing <code>:</code> are rejected</li><li>declared hashes and sizes must match actual file contents</li><li>manifest counts must match JSON contents</li><li>duplicate card keys and progress references to missing cards are rejected</li></ul>
+      <h2>Importer Safety Limits</h2>
+      <p>For official deck packages, the importer decrypts a verified <code>.flashjp</code> container, reads the internal ZIP central directory with safe path validation, and rejects suspicious ZIP paths. It also applies size limits:</p>
+      <ul><li>max real file entries: <code>12000</code></li><li>max single extracted file: <code>128 MiB</code></li><li>max total extracted bytes: <code>1024 MiB</code></li><li>max single media file: <code>64 MiB</code></li><li>max total media bytes: <code>768 MiB</code></li></ul>
+      <p>SQLite rows are read in batches of <code>250</code>; Isar Community card writes are flushed in batches of <code>400</code>.</p>
+      <h2>Current Importer Guarantees</h2>
+      <ul><li>Plain ZIP files are rejected before extraction.</li><li>A ZIP renamed to <code>.flashjp</code> is accepted only if it is a valid <code>flashlingo_user_backup_v1</code> backup.</li><li>Encrypted <code>.flashjp</code> containers must pass header signature, key id, ciphertext hash, and plaintext hash validation before package contents are imported.</li><li>User backups must pass manifest version, path, size, SHA-256, count, duplicate card key, and progress-reference validation before restore.</li><li>v3 containers are decrypted in chunks; v2 containers remain accepted for compatibility.</li><li>UI imports stage the selected <code>.flashjp</code> into app cache from the system file picker before preview/import, so the importer reads an app-owned file instead of a shared-storage path.</li><li>The Riverpod importer service and controller are keep-alive providers, so a long preview/decryption operation can finish even when started from a one-shot <code>ref.read</code> flow, and the prepared preview can be reused by the import step.</li><li>ZIP metadata is read from the central directory, and only manifest, SQLite, and referenced media entries are streamed from the ZIP.</li><li>SQLite rows are read in batches.</li><li>Isar Community writes are flushed in batches.</li><li>Debug builds log per-phase import timings for verification/decryption, ZIP opening, manifest/database extraction, media reference collection, media copy, database reads, backup restore, and Isar Community writes.</li><li>Orphaned media is cleaned after import/update/delete.</li><li>The staged <code>.flashjp</code> copy is deleted when the UI import flow finishes, fails, or is cancelled.</li><li>Duplicate logical cards inside the same import are ignored after the first matching row.</li></ul>
+      <h2>Things The Importer Does Not Do</h2>
+      <ul><li>It does not delete existing cards that are missing from the new package.</li><li>It does not support remote downloads.</li><li>It does not edit cards manually inside the app.</li><li>It does not import progress counters such as <code>newCardsSeenToday</code> or <code>lastNewCardStudyDate</code> from official deck <code>manifest.json</code>. User backups do restore those deck settings because they are explicit user backup data.</li></ul>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <a class="brand" href="index.html" aria-label="FlashLingo">
+          <img class="brand-mark" src="/assets/logo-192.png" alt="" width="46" height="46">
+          <span class="brand-name"><span>Flash</span>Lingo</span>
+        </a>
+        <p>&copy; <span data-year>2026</span> FlashLingo. パッケージ形式のドキュメント。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="download.html">ダウンロード</a>
+        <a href="metode.html">学習メソッド</a>
+        <a href="decks.html">公式デッキ</a>
+        <a href="make_decks.html">デッキを作成</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
