@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
-  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'es').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'es'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
+  (function(){var S=['es','en','ro','de','fr','ja','zh'],p=location.pathname,m=p.match(/^\/(en|ro|de|fr|ja|zh)(\/|$)/),cur=m?m[1]:'es',base=m?(p.slice(m[1].length+1)||'/'):p,st=null;try{st=localStorage.getItem('fl-lang')}catch(e){}var t=st;if(!t){var n=(navigator.language||'en').slice(0,2).toLowerCase();t=S.indexOf(n)>=0?n:'en'}if(t!==cur){var r=null;try{r=sessionStorage.getItem('fl-redir')}catch(e){}if(!r){try{sessionStorage.setItem('fl-redir','1')}catch(e){}var dest=(t==='es')?base:('/'+t+(base==='/'?'/':base));location.replace(dest)}}})();
   </script>
   <title>Download - FlashLingo</title>
   <meta name="description" content="Temporäre Download-Seite von FlashLingo für Android, iOS und Windows.">
@@ -50,17 +50,18 @@
       </a>
       <div class="lang-menu" data-lang-menu>
         <button class="lang-menu-btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Idioma / Language" data-lang-toggle>
+          <img class="lang-flag" src="/assets/flags/round/de.png" alt="" width="20" height="20">
           <span data-lang-current>DE</span>
           <span class="lang-menu-caret" aria-hidden="true">▾</span>
         </button>
         <ul class="lang-menu-list" role="menu" hidden>
-          <li role="none"><a role="menuitem" href="/download.html" data-lang="es">Español</a></li>
-          <li role="none"><a role="menuitem" href="/en/download.html" data-lang="en">English</a></li>
-          <li role="none"><a role="menuitem" href="/ro/download.html" data-lang="ro">Română</a></li>
-          <li role="none"><a role="menuitem" href="/de/download.html" data-lang="de" aria-current="page">Deutsch</a></li>
-          <li role="none"><a role="menuitem" href="/fr/download.html" data-lang="fr">Français</a></li>
-          <li role="none"><a role="menuitem" href="/ja/download.html" data-lang="ja">日本語</a></li>
-          <li role="none"><a role="menuitem" href="/zh/download.html" data-lang="zh">中文</a></li>
+          <li role="none"><a role="menuitem" href="/download.html" data-lang="es"><img class="lang-flag" src="/assets/flags/round/es.png" alt="" width="20" height="20"><span>Español</span></a></li>
+          <li role="none"><a role="menuitem" href="/en/download.html" data-lang="en"><img class="lang-flag" src="/assets/flags/round/en.png" alt="" width="20" height="20"><span>English</span></a></li>
+          <li role="none"><a role="menuitem" href="/ro/download.html" data-lang="ro"><img class="lang-flag" src="/assets/flags/round/ro.png" alt="" width="20" height="20"><span>Română</span></a></li>
+          <li role="none"><a role="menuitem" href="/de/download.html" data-lang="de" aria-current="page"><img class="lang-flag" src="/assets/flags/round/de.png" alt="" width="20" height="20"><span>Deutsch</span></a></li>
+          <li role="none"><a role="menuitem" href="/fr/download.html" data-lang="fr"><img class="lang-flag" src="/assets/flags/round/fr.png" alt="" width="20" height="20"><span>Français</span></a></li>
+          <li role="none"><a role="menuitem" href="/ja/download.html" data-lang="ja"><img class="lang-flag" src="/assets/flags/round/ja.png" alt="" width="20" height="20"><span>日本語</span></a></li>
+          <li role="none"><a role="menuitem" href="/zh/download.html" data-lang="zh"><img class="lang-flag" src="/assets/flags/round/zh.png" alt="" width="20" height="20"><span>中文</span></a></li>
         </ul>
       </div>
       <button class="nav-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" data-nav-toggle>

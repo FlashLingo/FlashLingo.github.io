@@ -59,6 +59,12 @@
   box-sizing: border-box;
 }
 
+/* The `hidden` attribute must win over element `display` values (e.g. .flag-button
+   and .lang-menu-list set display:grid, which would otherwise keep them visible). */
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -252,16 +258,25 @@ textarea {
   min-height: 38px;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 5px 11px 5px 6px;
   background: var(--surface-soft);
   color: var(--text);
   font-size: 0.85rem;
   font-weight: 850;
   letter-spacing: 0.02em;
   cursor: pointer;
+}
+
+.lang-flag {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--border), transparent 25%);
 }
 
 .lang-menu-btn:hover {
@@ -293,9 +308,11 @@ textarea {
 }
 
 .lang-menu-list a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   border-radius: 10px;
-  padding: 9px 12px;
+  padding: 8px 12px;
   color: var(--text);
   font-size: 0.92rem;
   font-weight: 750;
@@ -1550,7 +1567,7 @@ hr {
   }
 
   .lang-menu-btn {
-    padding: 6px 10px;
+    padding: 5px 10px 5px 6px;
     font-size: 0.82rem;
   }
 
@@ -1669,7 +1686,7 @@ hr {
   }
 
   .lang-menu-btn {
-    padding: 6px 9px;
+    padding: 5px 9px 5px 6px;
     font-size: 0.8rem;
   }
 }

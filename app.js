@@ -138,15 +138,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Name of each deck language expressed in each selectable native language (exonyms).
+  const DECK_LANG_NAMES = {
+    es: { es: "Español", en: "Inglés", fr: "Francés", de: "Alemán", ro: "Rumano", ja: "Japonés", he: "Hebreo" },
+    en: { es: "Spanish", en: "English", fr: "French", de: "German", ro: "Romanian", ja: "Japanese", he: "Hebrew" },
+    fr: { es: "Espagnol", en: "Anglais", fr: "Français", de: "Allemand", ro: "Roumain", ja: "Japonais", he: "Hébreu" },
+    de: { es: "Spanisch", en: "Englisch", fr: "Französisch", de: "Deutsch", ro: "Rumänisch", ja: "Japanisch", he: "Hebräisch" },
+    ro: { es: "Spaniolă", en: "Engleză", fr: "Franceză", de: "Germană", ro: "Română", ja: "Japoneză", he: "Ebraică" },
+    ja: { es: "スペイン語", en: "英語", fr: "フランス語", de: "ドイツ語", ro: "ルーマニア語", ja: "日本語", he: "ヘブライ語" },
+    he: { es: "ספרדית", en: "אנגלית", fr: "צרפתית", de: "גרמנית", ro: "רומנית", ja: "יפנית", he: "עברית" }
+  };
+
   document.querySelectorAll("[data-language-select]").forEach((select) => {
     const panel = document.querySelector("[data-language-panel]");
     const flags = panel ? panel.querySelectorAll(".flag-button[data-lang]") : [];
     select.addEventListener("change", () => {
       if (!panel) return;
-      panel.hidden = !select.value;
+      const native = select.value;
+      panel.hidden = !native;
+      const names = DECK_LANG_NAMES[native];
       flags.forEach((flag) => {
+        const code = flag.dataset.lang;
         // Hide the deck for the user's own native language.
-        flag.hidden = Boolean(select.value) && flag.dataset.lang === select.value;
+        flag.hidden = Boolean(native) && code === native;
+        // Label each remaining deck in the selected native language.
+        if (names && names[code]) {
+          const label = flag.querySelector("span");
+          if (label) label.textContent = names[code];
+        }
       });
     });
   });
